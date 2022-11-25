@@ -1,0 +1,46 @@
+
+.card {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+  
+
+img{
+    border-radius: 50px;
+    width: 70%;
+}
+
+p{
+    font-size: 150%;
+    font-family: inter
+}
+
+#volver{
+    border: none;
+    padding: 2%;
+    color: white;
+    background-color: #9f67b5;
+    text-align: center;
+    width: 100%;
+    font-size: 100%;
+    font-family: inter 
+}
+
+.ojo {
+    border: none;
+    padding: 2%;
+    color: #000000;
+    background-color: #ad8cba;
+    text-align: center;
+    width: 50%;
+    font-size: 80%;
+    font-family: inter 
+}
+
+
+
+.ojo:hover{
+    background-color: #c54040;
+    color: #ffffff;
+}

@@ -1,0 +1,18 @@
+
+<div class="card">
+    <h2 id="login">INICIAR SESIÓN</h2>
+    <form>
+        <div class="inputsLogin">
+            <label class="label" for="mail">Correo electrónico</label>
+            <input type="email" id="mail" class="input" name="mail" placeholder="Ingrese su correo electrónico">
+        </div>
+        <div class="inputsLogin">
+            <label class="label" for="contarsena">Contraseña</label>
+            <input type="password" id="contrasena" class="input" name="contraseña" placeholder="Ingrese su contraseña">
+        </div>
+        <div>
+            <button id="Bingresar" type="submit" [routerLink]="['/contacts']">INGRESAR</button>
+            <a id="Lregistrarse" [routerLink]="['/signin']">¿No tienes cuenta? Regístrate!</a>
+        </div>
+    </form>
+</div>

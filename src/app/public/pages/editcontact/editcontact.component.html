@@ -1,0 +1,27 @@
+<div class="card">
+    <h2 id="editarcontacto">EDITAR CONTACTO</h2>
+    <form action="">
+        <br>
+        <div>
+            <input type="file" name="imagensubida" accept="image/png, .jpeg, .jpg">
+            <button type="submit" >Subir</button>
+        </div>
+        <br>
+        <br>
+        <div class="inputsEditarContacto">
+            <label class="label" for="nombre">Nombre</label>
+            <input type="text" id="nombre" class="input" name="nombre" placeholder="Ingrese su nombre">
+        </div>
+        <div class="inputsEditarContacto">
+            <label class="label" for="tel">Número de teléfono</label>
+            <input type="text" id="tel" class="input" name="tel" placeholder="Ingrese su numero telefónico">
+        </div>
+        <div class="inputsEditarContacto">
+            <label class="label" for="descripcion">Descripción</label>
+            <textarea name="descripcion" id="descripcion" class="input" cols="30" rows="10"></textarea>
+            
+        </div>
+        <button id="Baceptar" type="submit" [routerLink]="['/contactdetail']">ACEPTAR</button>
+    </form>
+    <button id="Bvolver" [routerLink]="['/contactdetail']">VOLVER</button>
+</div>

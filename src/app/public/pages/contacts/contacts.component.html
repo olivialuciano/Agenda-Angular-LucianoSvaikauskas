@@ -1,0 +1,27 @@
+<ul>
+    <li id="buscarli"> <input id="buscar" type="text" placeholder="Buscar contacto..."></li>
+    <li class="itemsli"><a class="items" [routerLink]="['/newcontact']">Nuevo Contacto</a></li>
+</ul>
+
+<div class="desplegable">
+    <button class="Bdesplegable"> Ordenar por </button>
+    <div class="desplegableadentro">
+      <a > alfabéticamente ascendente </a>
+      <a > alfabéticamente descendente </a>
+      <a > favoritos primero </a>
+    </div>
+</div>
+
+
+
+
+
+<div class="card">
+    <br>
+    <img src="../../../../assets/img/fotoperfil.webp" alt="">
+    <br>
+    <p>Nombre Apellido</p>
+    <p>3413478225</p>
+    <br>
+    <button [routerLink]="['/contactdetail']" >VER</button>
+</div>
