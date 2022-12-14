@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #baa4c3;
+    background-color: #E9D5DA;
 }
 
 .itemsli {
@@ -25,16 +25,16 @@ ul {
 #buscar{
     display: block;
     color: #000000;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none;
     font-family: inter;
     width: 200%;
-    border-color: #9f67b5;
+    border-color: #ffffff;
 }
 
 .items:hover {
-    background-color: #a889b5;
+    background-color: #baa4c3;
 }
 
 //menú desplegable
@@ -44,10 +44,11 @@ ul {
     color: #000000;
     padding: 8px;
     font-size: 100%;
-    border: none;
     cursor: pointer;
     width: 230%;
     font-family: inter;
+    text-align: left;
+    border-color: #000000;
 }
 
 .desplegable {

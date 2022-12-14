@@ -24,7 +24,15 @@ p{
     text-align: center;
     width: 100%;
     font-size: 100%;
-    font-family: inter 
+    font-family: inter;
+    border-radius: 7px;
+}
+
+#volver:hover{
+    background-color: #9d47bf;
+}
+#volver:focus{
+    color: #000000;
 }
 
 .ojo {
@@ -35,7 +43,8 @@ p{
     text-align: center;
     width: 50%;
     font-size: 80%;
-    font-family: inter 
+    font-family: inter;
+    border-radius: 7px;
 }
 
 
@@ -44,3 +53,9 @@ p{
     background-color: #c54040;
     color: #ffffff;
 }
+
+#wpp{
+    border-radius: 50px;
+    width: 20%;
+}
+//ESTOY ACOMODANDO LA FOTO DE WHATSAPP

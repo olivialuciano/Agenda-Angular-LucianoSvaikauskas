@@ -7,23 +7,51 @@
     border-radius: 4px;
     font-family: inter;
     font-size: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 10%;
+    width: 150%;
     margin-bottom: 1%;
+    cursor: pointer;
+}
+
+#iniciasesion:hover{
+    background-color:#a667bf;
+}
+#iniciasesion:focus{
+    color: #ffffff;
 }
 
 #registrate{
-    color: #000000;
-    position: static;
-    background-position: center;
-    display: grid;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color:#baa4c3;
+    border-radius: 4px;
+    font-family: inter;
+    font-size: 100%;
+    width: 150%;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+
+#registrate:hover{
+    background-color:#a667bf;
+}
+#registrate:focus{
+    color: #ffffff;
+}
+
+
+#botones{
+    display: inline;
 }
 
 #fotogatito{
-    width: 10%;
-    position: static;
-    place-content: end space-between;
-    border-image-width: 30px;
+    width: 25%;
+    border-radius: 10px;
+}
+
+#todo{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20%;
+    margin-right: 20%;
+
 }
