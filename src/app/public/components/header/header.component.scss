@@ -1,32 +1,25 @@
-#barratareas {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:#baa4c3 ;
-}
-.botoneras{
-    float: left;
+
+#header{
+    background-color: #FAB96B;
+    display: flex;
 }
 
-.botonera {
-    display: flex;
-    font-family: inter ;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+#gorila{
+    width: 5rem;
+    height: 5rem;
+}
+
+#logo{
+    width: 5rem;
+    height: 5rem;
 }
 
 #agenda{
-    // display: flex;
     font-family: inter ;
-    color: black;
-    // text-align: center;
-    padding: 14px 16px;
-    // text-decoration: none;
+    color: #EA777B;
     margin-left: auto;
     margin-right: auto;
+    font-size: 200%;
 }
 
 
