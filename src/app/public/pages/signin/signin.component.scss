@@ -1,68 +1,86 @@
 
-.card{
+.signin{
     width: 100%;
     height: 200%;
-    text-align: center;
+    text-align: left;
     justify-content: center;
     align-items: center;
+    margin-top: 4rem;
 }
 
 
 #registrarse{
     font-family: inter;
     font-weight: 100%;
-    font-size: 200%;
-    color: #363062;
-}
-
-.input{
-    width: 25%;
-    padding: 1% 1%;
-    box-sizing: border-box;
-    border: 2px solid #827397;
-    border-radius: 4px;
+    font-size: 170%;
+    color: #EA777B;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2%;
+    width: 9rem;
 }
 
-
+.input{  
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    display: block;
+    width: 13rem;
+    background: #F3D9D0;
+    padding: 10px 12px;
+    border-radius: 1px;
+    border: solid 1px;
+    border-color: transparent;
+    transition:  0.2s;
+  }
+.input:HOVER{
+    background-color: #FAF4E9;
+    border-color: #EA777B;
+}
 .input:focus{
-    background-color: #e2dceb;
+    background-color: #FAF4E9;
 }
 
 
 .label{
-    color: #363062;
-    font-weight: 10%;
-    width: 25%;
+    color: #94919A;
+    font-weight: 100%;
+    width: 14.5rem;
     font-family: inter;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 #Bregistrarse {
-    padding: 10px;
-    border: 1px solid gray;
-    background-color:#baa4c3;
-    border-radius: 4px;
+    border: 1px solid #EA777B;
+    background-color:#EA777B;
+    border-radius: 1px;
     font-family: inter;
     font-size: 100%;
+    color: #FAF4E9;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 10%;
+    width: 14.6rem;
+    height: 1.7rem;
     margin-bottom: 1%;
+    margin-top: 1rem;
 }
 
 #Bregistrarse:hover {
-    background-color: #d8cddc;
-}
-#Bregistrarse:focus {
-    color: white;
+    background-color: #FAB96B;
 }
 
+
 #Llogin{
+    color: #94919A;
+    font-weight: 100%;
+    font-size: 70%;
+    width: 13rem;
     font-family: inter;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

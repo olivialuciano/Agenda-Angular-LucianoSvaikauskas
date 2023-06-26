@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './public/components/header/header.component';
+// import { ContactcardComponent } from './public/components/contactcard/contactcard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    // ContactcardComponent
   ],
   imports: [
     BrowserModule,

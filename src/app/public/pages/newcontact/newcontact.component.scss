@@ -1,83 +1,106 @@
 
-.card{
-    width: 100%;
-    height: 200%;
+#barratareas {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#F19474 ;
+}
+#contacts{
+    float: left;
+    background-color: #69A2A8;
+}
+#nuevo{
+    float: left;
+    background-color: #EA777B;
+}
+#miperfil{
+    float: right;
+    background-color: #96B5B8;
+}
+#contacts:hover, #nuevo:hover, #miperfil:hover{
+    background-color: #F19474;
+}
+.botonera {
+    display: flex;
+    font-family: inter ;
+    color: #FAF4E9;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
 }
 
 
-#nuevocontacto{
-    font-family: inter;
-    font-weight: 100%;
-    font-size: 200%;
-    color: #363062;
-}
 
-.input{
-    width: 25%;
-    padding: 1% 1%;
-    box-sizing: border-box;
-    border: 2px solid #827397;
-    border-radius: 4px;
+.tarjeta {
+    text-align: center;
+    width: 20rem;
+    height: 30rem ;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2%;
+    margin-top: 1.5rem;
+    background-color: #EA777B;
+}
+  
+
+
+
+
+#imgcontacto{
+    border-radius: 50px;
+    width: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-
-.input:focus{
-    background-color: #e2dceb;
+button{
+    margin-bottom: 1rem;
 }
-
 
 .label{
-    color: #363062;
-    font-weight: 10%;
-    width: 25%;
+    color: #424242;
+    font-weight: 100%;
+    width: 17.3rem;
     font-family: inter;
     display: block;
+    text-align: left;
+    float: right;
+    font-weight: bold;
+    
+}
+.input{  
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1rem;
+    display: block;
+    width: 13rem;
+    background: #F3D9D0;
+    padding: 10px 12px;
+    border-radius: 1px;
+    border: solid 1px;
+    border-color: transparent;
+    transition:  0.2s;
+  }
+.input:HOVER{
+    background-color: #FAF4E9;
+    border-color: #EA777B;
+}
+.input:focus{
+    background-color: #FAF4E9;
 }
 
-#Bagregar {
-    padding: 10px;
-    border: 1px solid gray;
-    background-color:#baa4c3;
-    border-radius: 4px;
+#Banadir {
+    border: none;
+    background-color:#FAB96B;
+    border-radius: 1px;
     font-family: inter;
-    font-size: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10%;
+    font-size: 150%;
+    width: 5rem;
     margin-bottom: 1%;
+    color: #424242;
+    font-weight: bold;
 }
-
-#Bagregar:hover {
-    background-color: #d8cddc;
-}
-#Bagregar:focus {
-    color: white;
-}
-
-#Bvolver {
-    padding: 8px;
-    border: 1px solid gray;
-    background-color:#b18ac1;
-    border-radius: 4px;
-    font-family: inter;
-    font-size: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 8%;
-    margin-bottom: 1%;
-}
-
-#Bvolver:hover {
-    background-color: #d8cddc;
-}
-#Bvolver:focus {
-    color: white;
+#Banadir:hover {
+    background-color: #eba754;
 }

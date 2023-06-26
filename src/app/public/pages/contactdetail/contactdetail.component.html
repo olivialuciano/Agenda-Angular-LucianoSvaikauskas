@@ -1,18 +1,23 @@
+<ul id="barratareas">
+    <li id="contacts"><a class="botonera" [routerLink]="['/contacts']">Contactos</a></li>
+    <li id="nuevo"><a class="botonera" [routerLink]="['/newcontact']">Nuevo contacto</a></li>
+    <li id="miperfil"><a class="botonera" [routerLink]="['/miperfil']">Mi perfil</a></li>
+</ul>
 
-<div class="card">
+<div class="tarjeta">
     <br>
-    <img src="../../../../assets/img/fotoperfil.webp" alt="">
+    <!-- <button id="fav">☆</button> -->
+    <img id="imgcontacto" src="./../../../../assets/img/foto-perfil-agenda.webp" alt="imagen del contacto">
     <br>
-    <p>Nombre Apellido</p>
-    <p>3413478225</p>
-    <p>descripcion</p>
+    <p id="nombre">Nombre</p>
+    <p id="tel">+543413478223</p>
+    <br> 
+    <a href="tel:+543413478223"><img src="./../../../../assets/img/llamar-agenda.webp" alt="llamar"></a>
+    <a href="https://web.whatsapp.com/" target="_blank"><img src="./../../../../assets/img/wpp-agenda.jpg" alt="whatsapp"></a>
+    <a href="https://web.telegram.org/" target="_blank"><img src="./../../../../assets/img/telegram-agenda.png" alt="telegram"></a>
     <br>
-    <a href="https://web.whatsapp.com/" target="_blank"><img id="wpp" src="../../../../assets/img/whatsapp.png" alt=""></a>
+    <p id="descr">Descripcion asdasdasdas SDAFAS DADdsd asddadaf asffdaef feef</p>
     <br>
-    <button id="volver" [routerLink]="['/contacts']">VOLVER</button>
-    <br>
-    <br>
-    <button class="ojo" [routerLink]="['/editcontact']">EDITAR</button>
-    <button class="ojo" [routerLink]="['/contacts']">ELIMINAR</button>
-    
+    <button id="editar" [routerLink]="['/editcontact']">Editar</button>
+    <button id="eliminar" [routerLink]="['/contacts']">Eliminar</button>
 </div>

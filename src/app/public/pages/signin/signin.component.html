@@ -1,27 +1,22 @@
-<div class="card">
-    <h2 id="registrarse">REGISTRARSE</h2>
+<div class="signin">
+    <h2 id="registrarse">Registrarse</h2>
     <form action="">
-        <div class="inputsSignin">
-            <label class="label" for="nombre">Nombre</label>
-            <input type="text" id="nombre" class="input" name="nombre" placeholder="Ingrese su nombre">
-        </div>
-        <div class="inputsSignin">
-            <label class="label" for="apellido">Apellido</label>
-            <input type="text" id="apellido" class="input" name="apellido" placeholder="Ingrese su apellido">
-        </div>
-        <div class="inputsSignin">
-            <label class="label" for="usuario">Nombre de usuario</label>
-            <input type="text" id="usuario" class="input" name="usuario" placeholder="Ingrese su nombre de usuario">
-        </div>
-        <div class="inputsSignin">
-            <label class="label" for="mail">Correo electrónico</label>
-            <input type="email" id="mail" class="input" name="mail" placeholder="Ingrese su correo electrónico">
-        </div>
-        <div class="inputsSignin">
-            <label class="label" for="contrasena">Contraseña</label>
-            <input type="password" id="contrasena" class="input" name="contrasena" placeholder="Ingrese su nueva contraseña">
-        </div>
+        <label class="label" for="nombre">Nombre</label>
+        <input type="text" id="nombre" class="input" name="nombre" placeholder="">
+
+        <label class="label" for="apellido">Apellido</label>
+        <input type="text" id="apellido" class="input" name="apellido" placeholder="">
+
+        <label class="label" for="usuario">Nombre de usuario</label>
+        <input type="text" id="usuario" class="input" name="usuario" placeholder="">
+
+        <label class="label" for="mail">Correo electrónico</label>
+        <input type="email" id="mail" class="input" name="mail" placeholder="">
+
+        <label class="label" for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" class="input" name="contrasena" placeholder="">
+
         <button id="Bregistrarse" type="submit" [routerLink]="['/login']">REGISTRASE</button>
-        <a id="Llogin" [routerLink]="['/login']">¿Ya tienes una cuenta? Inicia sesión!</a>
+        <a id="Llogin" [routerLink]="['/']">¿Ya tienes una cuenta? Inicia sesión!</a>
     </form>
 </div>

@@ -1,42 +1,35 @@
-<!-- <ul id="barratareas">
-  <li class="botoneras"><a class="botonera" [routerLink]="['/contacts']">Contactos</a></li>
-</ul> -->
-
-<ul>
-    <br>
-    <li id="buscarli"> <input id="buscar" type="text" placeholder="Buscar contacto..."></li>
-    <li class="itemsli"><a class="items" [routerLink]="['/newcontact']">Nuevo Contacto</a></li>
+<ul id="barratareas">
+  <li id="contacts"><a class="botonera" [routerLink]="['/contacts']">Contactos</a></li>
+  <li id="nuevo"><a class="botonera" [routerLink]="['/newcontact']">Nuevo contacto</a></li>
+  <li id="miperfil"><a class="botonera" [routerLink]="['/miperfil']">Mi perfil</a></li>
 </ul>
 
-<div class="desplegable">
-    <button class="Bdesplegable"> Ordenar por... </button>
-    <div class="desplegableadentro">
-      <a > alfabéticamente ascendente </a>
-      <a > alfabéticamente descendente </a>
-    </div>
-</div>
+<input id="buscar" type="text" placeholder="Buscar..">
+
 <br>
-<div class="desplegable">
-    <button class="Bdesplegable"> Filtrar... </button>
-    <div class="desplegableadentro">
-      <a > Favoritos </a>
-      <a > blabla </a>
-      <a > adsasd </a>
-    </div>
+<div class="listacontactosflex">
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
+  <app-contactcard></app-contactcard>
 </div>
 
 
 
 
-
-<div class="card">
-    <br>
-    <img src="../../../../assets/img/fotoperfil.webp" alt="">
-    <br>
-    <p>Nombre Apellido</p>
-    <p>3413478225</p>
-    <br>
-    <button><img id="wpp" src="../../../../assets/img/whatsapp.png" alt=""></button>
-    <br>
-    <button [routerLink]="['/contactdetail']" >VER</button>
-</div>

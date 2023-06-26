@@ -1,18 +1,16 @@
 
-<div class="card">
-    <h2 id="login">INICIAR SESIÓN</h2>
+<div class="iniciarsesion">
+    <h2 id="login">Iniciar sesión</h2>
     <form>
-        <div class="inputsLogin">
-            <label class="label" for="mail">Correo electrónico</label>
-            <input type="email" id="mail" class="input" name="mail" placeholder="Ingrese su correo electrónico">
-        </div>
-        <div class="inputsLogin">
-            <label class="label" for="contarsena">Contraseña</label>
-            <input type="password" id="contrasena" class="input" name="contraseña" placeholder="Ingrese su contraseña">
-        </div>
-        <div>
-            <button id="Bingresar" type="submit" [routerLink]="['/contacts']">INGRESAR</button>
-            <a id="Lregistrarse" [routerLink]="['/signin']">¿No tienes cuenta? Regístrate!</a>
-        </div>
+        <label class="label" for="mail">Correo electrónico</label>
+        <input type="email" id="mail" class="input" name="mail" placeholder="">
+
+        <label class="label" for="contarsena">Contraseña</label>
+        <input type="password" id="contrasena" class="input" name="contraseña" placeholder="">
+
+        <label for="guardar" id="lguardar"><input type="checkbox" id="guardar" name="mantentersesioniniciada" class="guardar">Mantener mi sesión iniciada.</label>
+        
+        <button id="Bingresar" type="submit" [routerLink]="['/contacts']">INGRESAR</button>
+        <a id="Lregistrarse" [routerLink]="['/signin']">¿No tienes cuenta? Regístrate!</a>
     </form>
 </div>

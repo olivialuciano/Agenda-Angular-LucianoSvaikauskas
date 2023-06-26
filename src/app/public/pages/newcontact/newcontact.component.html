@@ -1,4 +1,32 @@
-<div class="card">
+<ul id="barratareas">
+    <li id="contacts"><a class="botonera" [routerLink]="['/contacts']">Contactos</a></li>
+    <li id="nuevo"><a class="botonera" [routerLink]="['/newcontact']">Nuevo contacto</a></li>
+    <li id="miperfil"><a class="botonera" [routerLink]="['/miperfil']">Mi perfil</a></li>
+</ul>
+
+
+<div class="tarjeta">
+
+    <img id="imgcontacto" src="./../../../../assets/img/foto-perfil-agenda.webp" alt="imagen del contacto">
+
+    <input type="file" name="imagensubida" accept="image/png, .jpeg, .jpg">
+    <button type="submit" >Subir</button>
+
+    <label class="label" for="nombre">Nombre</label>
+    <input type="nombre" id="nombre" class="input" name="nombre" placeholder="">
+
+    <label class="label" for="tel">Teléfono</label>
+    <input type="tel" id="tel" class="input" name="tel" placeholder="">
+
+    <label class="label" for="descripcion">Descripción</label>
+    <textarea name="descripcion" id="descripcion" class="input" cols="25" rows="4"></textarea>
+
+    <button id="Banadir" type="submit" [routerLink]="['/contacts']">Añadir</button>
+</div>
+
+
+
+<!-- <div class="card">
     <h2 id="nuevocontacto">NUEVO CONTACTO</h2>
     <form action="">
         <br>
@@ -24,4 +52,4 @@
         <button id="Bagregar" type="submit" [routerLink]="['/contacts']">AGREGAR</button>
     </form>
     <button id="Bvolver" [routerLink]="['/contacts']">VOLVER</button>
-</div>
+</div> -->

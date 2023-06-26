@@ -1,0 +1,34 @@
+.tarjeta {
+    display: block;
+    box-shadow: 0 2px 4px 0 #6f888a;
+    text-align: center;
+    width: 8rem;
+    height: 10rem ;
+    transition: 0.4s;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: #96B5B8;
+}
+  
+.tarjeta:hover {
+    width: 8.5rem;
+    height: 10.5rem ;
+    margin-top: 0rem;
+    margin-left: 0rem;
+}
+
+#imgcontacto{
+    margin-top: 0.8rem;
+    border-radius: 50px;
+    width: 5rem;
+}
+
+#nombre{
+    margin-top: 0.7rem;
+    font-size: 100%;
+    font-family: inter;
+    color: #FAF4E9;
+
+}

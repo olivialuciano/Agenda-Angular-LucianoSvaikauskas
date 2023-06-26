@@ -1,61 +1,124 @@
-
-.card {
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
+#barratareas {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#F19474 ;
 }
-  
+#contacts{
+    float: left;
+    background-color: #69A2A8;
+}
+#nuevo{
+    float: left;
+    background-color: #EA777B;
+}
+#miperfil{
+    float: right;
+    background-color: #96B5B8;
+}
+#contacts:hover, #nuevo:hover, #miperfil:hover{
+    background-color: #F19474;
+}
+.botonera {
+    display: flex;
+    font-family: inter ;
+    color: #FAF4E9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+
+.tarjeta {
+    text-align: center;
+    width: 20rem;
+    height: 30rem ;
+    background-color: #E8E2D8;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+
+}
+ 
+// #fav{
+//     border: none;
+//     color: #424242;
+//     background-color: #ECE778;
+//     font-size: 170%;
+//     font-family: inter;
+//     border-radius: 1px;
+//     float: right;
+//     display: block;  
+// }
+
+#imgcontacto{
+    border-radius: 50px;
+    width: 7rem;
+}
+
+#nombre{
+    font-size: 150%;
+    font-family: inter;
+    color: #424242;
+    font-weight: bold;
+}
+
+#tel{
+    font-size: 100%;
+    font-family: inter;
+    color: #424242;
+}
+
+#descr{
+    font-size: 60%;
+    font-family: inter;
+    color: #424242;
+}
+
 
 img{
     border-radius: 50px;
-    width: 70%;
+    width: 20%;
+    display: inline;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
-p{
-    font-size: 150%;
-    font-family: inter
-}
 
-#volver{
+
+
+#editar {
     border: none;
-    padding: 2%;
-    color: white;
-    background-color: #9f67b5;
+    color: #424242;
+    background-color: #FFD5A2;
     text-align: center;
-    width: 100%;
+    width: 6rem;
     font-size: 100%;
     font-family: inter;
-    border-radius: 7px;
+    border-radius: 1px;
+    display: inline;
+    float: left; 
 }
 
-#volver:hover{
-    background-color: #9d47bf;
-}
-#volver:focus{
-    color: #000000;
+#editar:hover{
+    background-color: #f0c289;
 }
 
-.ojo {
+#eliminar {
     border: none;
-    padding: 2%;
-    color: #000000;
-    background-color: #ad8cba;
+    color: #424242;
+    background-color: #F7B8B8;
     text-align: center;
-    width: 50%;
-    font-size: 80%;
+    width: 6rem;
+    font-size: 100%;
     font-family: inter;
-    border-radius: 7px;
+    border-radius: 1px;
+    display: inline;
+    float: right; 
 }
 
-
-
-.ojo:hover{
-    background-color: #c54040;
-    color: #ffffff;
+#editar:hover{
+    background-color: #f0c289;
 }
-
-#wpp{
-    border-radius: 50px;
-    width: 20%;
-}
-//ESTOY ACOMODANDO LA FOTO DE WHATSAPP
