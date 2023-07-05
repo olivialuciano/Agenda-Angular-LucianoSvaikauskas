@@ -1,12 +1,18 @@
 <ul id="barratareas">
-  <li id="contacts"><a class="botonera" [routerLink]="['/contacts']">Contactos</a></li>
-  <li id="nuevo"><a class="botonera" [routerLink]="['/newcontact']">Nuevo contacto</a></li>
-  <li id="miperfil"><a class="botonera" [routerLink]="['/miperfil']">Mi perfil</a></li>
+  <li id="grupos"><a class="botonera">Grupos</a></li>
+  <li id="historial">
+    <a class="botonera" [routerLink]="['/hist-llamadas']"
+      >Historial de llamadas</a
+    >
+  </li>
+  <li id="nuevo">
+    <a class="botonera" [routerLink]="['/newcontact']">Nuevo contacto</a>
+  </li>
 </ul>
 
-<input id="buscar" type="text" placeholder="Buscar..">
+<input id="buscar" type="text" placeholder="Buscar.." />
 
-<br>
+<br />
 <div class="listacontactosflex">
   <app-contactcard></app-contactcard>
   <app-contactcard></app-contactcard>
@@ -29,7 +35,3 @@
   <app-contactcard></app-contactcard>
   <app-contactcard></app-contactcard>
 </div>
-
-
-
-

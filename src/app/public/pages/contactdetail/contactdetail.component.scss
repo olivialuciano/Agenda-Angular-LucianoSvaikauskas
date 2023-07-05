@@ -1,124 +1,83 @@
-#barratareas {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:#F19474 ;
-}
-#contacts{
-    float: left;
-    background-color: #69A2A8;
-}
-#nuevo{
-    float: left;
-    background-color: #EA777B;
-}
-#miperfil{
-    float: right;
-    background-color: #96B5B8;
-}
-#contacts:hover, #nuevo:hover, #miperfil:hover{
-    background-color: #F19474;
-}
-.botonera {
-    display: flex;
-    font-family: inter ;
-    color: #FAF4E9;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    
-}
-
+//VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
 
 .tarjeta {
-    text-align: center;
-    width: 20rem;
-    height: 30rem ;
-    background-color: #E8E2D8;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5rem;
-
-}
- 
-// #fav{
-//     border: none;
-//     color: #424242;
-//     background-color: #ECE778;
-//     font-size: 170%;
-//     font-family: inter;
-//     border-radius: 1px;
-//     float: right;
-//     display: block;  
-// }
-
-#imgcontacto{
-    border-radius: 50px;
-    width: 7rem;
+  text-align: center;
+  width: 20rem;
+  height: 30rem;
+  background-color: $col-naranja;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 }
 
-#nombre{
-    font-size: 150%;
-    font-family: inter;
-    color: #424242;
-    font-weight: bold;
+#imgcontacto {
+  border-radius: 50px;
+  width: 7rem;
 }
 
-#tel{
-    font-size: 100%;
-    font-family: inter;
-    color: #424242;
+#nombre {
+  font-size: 150%;
+  font-family: $font;
+  color: $colorfont1;
+  font-weight: bold;
 }
 
-#descr{
-    font-size: 60%;
-    font-family: inter;
-    color: #424242;
+#tel {
+  font-size: 100%;
+  font-family: $font;
+  color: $colorfont1;
 }
 
-
-img{
-    border-radius: 50px;
-    width: 20%;
-    display: inline;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+#descr {
+  font-size: 60%;
+  font-family: $font;
+  color: $colorfont1;
 }
 
-
-
+img {
+  border-radius: 50px;
+  width: 20%;
+  display: inline;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
 
 #editar {
-    border: none;
-    color: #424242;
-    background-color: #FFD5A2;
-    text-align: center;
-    width: 6rem;
-    font-size: 100%;
-    font-family: inter;
-    border-radius: 1px;
-    display: inline;
-    float: left; 
+  margin-top: auto;
+  border: none;
+  color: $colorfont1;
+  background-color: $col-rosa;
+  text-align: center;
+  width: 6rem;
+  font-size: 100%;
+  font-family: $font;
+  border-radius: 1px;
+  float: left;
 }
 
-#editar:hover{
-    background-color: #f0c289;
+#editar:hover,
+#eliminar:hover {
+  background-color: $col-rosa-claro;
 }
 
 #eliminar {
-    border: none;
-    color: #424242;
-    background-color: #F7B8B8;
-    text-align: center;
-    width: 6rem;
-    font-size: 100%;
-    font-family: inter;
-    border-radius: 1px;
-    display: inline;
-    float: right; 
-}
-
-#editar:hover{
-    background-color: #f0c289;
+  border: none;
+  color: $colorfont1;
+  background-color: $col-rosa;
+  text-align: center;
+  width: 6rem;
+  font-size: 100%;
+  font-family: $font;
+  border-radius: 1px;
+  display: flex;
+  float: right;
+  margin-bottom: 0%;
 }

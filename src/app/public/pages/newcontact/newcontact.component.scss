@@ -1,106 +1,111 @@
+//VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
 
-#barratareas {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:#F19474 ;
+#editarcontacto {
+  font-family: $font;
+  font-weight: 100%;
+  font-size: 200%;
+  color: $colorfont1;
+  text-align: center;
 }
-#contacts{
-    float: left;
-    background-color: #69A2A8;
-}
-#nuevo{
-    float: left;
-    background-color: #EA777B;
-}
-#miperfil{
-    float: right;
-    background-color: #96B5B8;
-}
-#contacts:hover, #nuevo:hover, #miperfil:hover{
-    background-color: #F19474;
-}
-.botonera {
-    display: flex;
-    font-family: inter ;
-    color: #FAF4E9;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    
-}
-
-
 
 .tarjeta {
-    text-align: center;
-    width: 20rem;
-    height: 30rem ;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5rem;
-    background-color: #EA777B;
-}
-  
-
-
-
-
-#imgcontacto{
-    border-radius: 50px;
-    width: 5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  text-align: center;
+  width: 20rem;
+  height: 31rem;
+  background-color: $col-violeta;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 }
 
-button{
-    margin-bottom: 1rem;
+#imgcontacto {
+  border-radius: 50px;
+  width: 7rem;
+  margin-top: 1rem;
 }
 
-.label{
-    color: #424242;
-    font-weight: 100%;
-    width: 17.3rem;
-    font-family: inter;
-    display: block;
-    text-align: left;
-    float: right;
-    font-weight: bold;
-    
-}
-.input{  
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
-    display: block;
-    width: 13rem;
-    background: #F3D9D0;
-    padding: 10px 12px;
-    border-radius: 1px;
-    border: solid 1px;
-    border-color: transparent;
-    transition:  0.2s;
-  }
-.input:HOVER{
-    background-color: #FAF4E9;
-    border-color: #EA777B;
-}
-.input:focus{
-    background-color: #FAF4E9;
+#imgsubir {
+  margin-top: 1rem;
 }
 
-#Banadir {
-    border: none;
-    background-color:#FAB96B;
-    border-radius: 1px;
-    font-family: inter;
-    font-size: 150%;
-    width: 5rem;
-    margin-bottom: 1%;
-    color: #424242;
-    font-weight: bold;
+.label {
+  color: $colorfont1;
+  font-weight: 10%;
+  width: 60%;
+  font-family: $font;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
 }
-#Banadir:hover {
-    background-color: #eba754;
+
+#nombre {
+  font-size: 80%;
+  width: 75%;
+  font-family: $font;
+  color: $colorfont1;
+}
+
+#tel {
+  font-size: 80%;
+  width: 75%;
+  font-family: $font;
+  color: $colorfont1;
+}
+
+#descripcion {
+  font-size: 80%;
+  width: 75%;
+  font-family: $font;
+  color: $colorfont1;
+}
+
+img {
+  border-radius: 50px;
+  width: 20%;
+  display: inline;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.input {
+  padding: 1.5% 1.5%;
+  box-sizing: border-box;
+  border: 1px solid $col-violeta-claro;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+}
+
+.input:focus {
+  background-color: $col-violeta-claro;
+}
+
+#Bguardar {
+  border: none;
+  font-style: normal;
+  font-family: $font;
+  background-color: $col-naranja;
+  color: $colorfont1;
+  font-size: 140%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 11rem;
+  margin-left: 15%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: block;
+}
+
+#Bguardar:hover {
+  background-color: $col-rosa-claro;
 }

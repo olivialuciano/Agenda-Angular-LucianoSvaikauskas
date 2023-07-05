@@ -1,22 +1,44 @@
 <div class="signin">
-    <h2 id="registrarse">Registrarse</h2>
-    <form action="">
-        <label class="label" for="nombre">Nombre</label>
-        <input type="text" id="nombre" class="input" name="nombre" placeholder="">
+  <h2 id="registrarse">Registrarse</h2>
+  <form action="">
+    <label class="label" for="nombre">Nombre</label>
+    <input type="text" id="nombre" class="input" name="nombre" placeholder="" />
 
-        <label class="label" for="apellido">Apellido</label>
-        <input type="text" id="apellido" class="input" name="apellido" placeholder="">
+    <label class="label" for="apellido">Apellido</label>
+    <input
+      type="text"
+      id="apellido"
+      class="input"
+      name="apellido"
+      placeholder=""
+    />
 
-        <label class="label" for="usuario">Nombre de usuario</label>
-        <input type="text" id="usuario" class="input" name="usuario" placeholder="">
+    <label class="label" for="usuario">Nombre de usuario</label>
+    <input
+      type="text"
+      id="usuario"
+      class="input"
+      name="usuario"
+      placeholder=""
+    />
 
-        <label class="label" for="mail">Correo electrónico</label>
-        <input type="email" id="mail" class="input" name="mail" placeholder="">
+    <label class="label" for="mail">Correo electrónico</label>
+    <input type="email" id="mail" class="input" name="mail" placeholder="" />
 
-        <label class="label" for="contrasena">Contraseña</label>
-        <input type="password" id="contrasena" class="input" name="contrasena" placeholder="">
+    <label class="label" for="contrasena">Contraseña</label>
+    <input
+      type="password"
+      id="contrasena"
+      class="input"
+      name="contrasena"
+      placeholder=""
+    />
 
-        <button id="Bregistrarse" type="submit" [routerLink]="['/login']">REGISTRASE</button>
-        <a id="Llogin" [routerLink]="['/']">¿Ya tienes una cuenta? Inicia sesión!</a>
-    </form>
+    <button id="Bregistrarse" type="submit" [routerLink]="['/login']">
+      registrar
+    </button>
+    <a id="Llogin" [routerLink]="['/login']"
+      >¿Ya tienes una cuenta? Inicia sesión!</a
+    >
+  </form>
 </div>

@@ -1,25 +1,15 @@
-
-#header{
-    background-color: #FAB96B;
-    display: flex;
+#header {
+  background-color: #f09e42;
+  display: flex;
 }
 
-#gorila{
-    width: 5rem;
-    height: 5rem;
+.flor {
+  width: 5rem;
+  height: 5rem;
 }
 
-#logo{
-    width: 5rem;
-    height: 5rem;
+#agenda {
+  height: 5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-#agenda{
-    font-family: inter ;
-    color: #EA777B;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 200%;
-}
-
-

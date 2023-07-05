@@ -1,34 +1,40 @@
+//VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
+
 .tarjeta {
-    display: block;
-    box-shadow: 0 2px 4px 0 #6f888a;
-    text-align: center;
-    width: 8rem;
-    height: 10rem ;
-    transition: 0.4s;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
-    background-color: #96B5B8;
+  display: block;
+  box-shadow: 0 2px 4px 0 #bbad8f;
+  text-align: center;
+  width: 8rem;
+  height: 10rem;
+  transition: 0.4s;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: $col-rosa;
 }
-  
+
 .tarjeta:hover {
-    width: 8.5rem;
-    height: 10.5rem ;
-    margin-top: 0rem;
-    margin-left: 0rem;
+  transform: scale(1.1);
 }
 
-#imgcontacto{
-    margin-top: 0.8rem;
-    border-radius: 50px;
-    width: 5rem;
+#imgcontacto {
+  margin-top: 0.8rem;
+  border-radius: 50px;
+  width: 5rem;
 }
 
-#nombre{
-    margin-top: 0.7rem;
-    font-size: 100%;
-    font-family: inter;
-    color: #FAF4E9;
-
+#nombre {
+  margin-top: 0.7rem;
+  font-size: 100%;
+  font-family: $font;
+  color: $colorfont2;
 }

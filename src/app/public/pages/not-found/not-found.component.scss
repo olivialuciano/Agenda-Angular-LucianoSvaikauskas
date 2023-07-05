@@ -1,0 +1,24 @@
+//VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8rem;
+  width: 20rem;
+}
+
+p {
+  font-size: 140%;
+  font-family: $font;
+  text-align: center;
+  color: $colorfont1;
+  margin-top: 3rem;
+}
