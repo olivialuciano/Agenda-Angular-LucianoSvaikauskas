@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MiperfilComponent } from './miperfil.component';
+import { NewgroupComponent } from './newgroup.component';
 
-describe('MiperfilComponent', () => {
-  let component: MiperfilComponent;
-  let fixture: ComponentFixture<MiperfilComponent>;
+describe('NewgroupComponent', () => {
+  let component: NewgroupComponent;
+  let fixture: ComponentFixture<NewgroupComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MiperfilComponent ]
+      declarations: [ NewgroupComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MiperfilComponent);
+    fixture = TestBed.createComponent(NewgroupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

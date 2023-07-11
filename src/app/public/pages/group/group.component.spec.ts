@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HistLlamadasComponent } from './hist-llamadas.component';
+import { GroupComponent } from './group.component';
 
-describe('HistLlamadasComponent', () => {
-  let component: HistLlamadasComponent;
-  let fixture: ComponentFixture<HistLlamadasComponent>;
+describe('GroupComponent', () => {
+  let component: GroupComponent;
+  let fixture: ComponentFixture<GroupComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistLlamadasComponent ]
+      declarations: [ GroupComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HistLlamadasComponent);
+    fixture = TestBed.createComponent(GroupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

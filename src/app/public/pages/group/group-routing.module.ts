@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HistLlamadasComponent } from './hist-llamadas.component';
+import { GroupComponent } from './group.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HistLlamadasComponent,
+    component: GroupComponent,
   },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class HistLlamadasRoutingModule {}
+export class GroupRoutingModule {}

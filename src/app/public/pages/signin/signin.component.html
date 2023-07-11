@@ -1,29 +1,52 @@
 <div class="signin">
   <h2 id="registrarse">Registrarse</h2>
-  <form action="">
-    <label class="label" for="nombre">Nombre</label>
-    <input type="text" id="nombre" class="input" name="nombre" placeholder="" />
+  <form action="" (ngSubmit)="registrarme(form)" #form="ngForm">
+    <label class="label" for="nombre" autocomplete="nombre">Nombre</label>
+    <input
+      type="text"
+      id="nombre"
+      class="input"
+      name="nombre"
+      placeholder=""
+      [(ngModel)]="registerData.name"
+      #name="ngModel"
+    />
 
-    <label class="label" for="apellido">Apellido</label>
+    <label class="label" for="apellido" autocomplete="apellido">Apellido</label>
     <input
       type="text"
       id="apellido"
       class="input"
       name="apellido"
       placeholder=""
+      [(ngModel)]="registerData.lastname"
+      #name="ngModel"
     />
 
-    <label class="label" for="usuario">Nombre de usuario</label>
+    <!-- <label class="label" for="usuario">Nombre de usuario</label>
     <input
       type="text"
       id="usuario"
       class="input"
       name="usuario"
       placeholder=""
-    />
+    /> -->
 
     <label class="label" for="mail">Correo electrónico</label>
-    <input type="email" id="mail" class="input" name="mail" placeholder="" />
+    <input
+      type="email"
+      id="mail"
+      class="input"
+      name="mail"
+      placeholder=""
+      [(ngModel)]="registerData.email"
+      #email="ngModel"
+      pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+      [maxlength]="30"
+    />
+    <p id="mal-ingreso" *ngIf="email.touched && email.errors">
+      Correo electrónico inválido.
+    </p>
 
     <label class="label" for="contrasena">Contraseña</label>
     <input
@@ -32,9 +55,16 @@
       class="input"
       name="contrasena"
       placeholder=""
+      [(ngModel)]="registerData.password"
+      [required]="true"
+      [minlength]="6"
+      #password="ngModel"
     />
+    <p id="mal-ingreso" *ngIf="password.touched && password.errors">
+      Contraseña inválida. Debe tener al menos 6 caracteres.
+    </p>
 
-    <button id="Bregistrarse" type="submit" [routerLink]="['/login']">
+    <button id="Bregistrarse" type="submit" [disabled]="form.invalid">
       registrar
     </button>
     <a id="Llogin" [routerLink]="['/login']"

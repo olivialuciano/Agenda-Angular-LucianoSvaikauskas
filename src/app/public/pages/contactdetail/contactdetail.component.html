@@ -6,21 +6,33 @@
     alt="imagen del contacto"
   />
   <br />
-  <p id="nombre">Nombre</p>
-  <p id="tel">+543413478223</p>
+  <p id="nombre">{{ contact.nombre }}</p>
+  <p id="tel">{{ contact.telefono }}</p>
   <br />
-  <a href="tel:+543413478223"
+  <a href="tel:{{ contact.telefono }}"
     ><img src="./../../../../assets/img/llamar-agenda.webp" alt="llamar"
   /></a>
-  <a href="https://web.whatsapp.com/" target="_blank"
+  <a href="https://wa.me/{{ contact.telefono }}" target="_blank"
     ><img src="./../../../../assets/img/wpp-agenda.jpg" alt="whatsapp"
   /></a>
   <a href="https://web.telegram.org/" target="_blank"
     ><img src="./../../../../assets/img/telegram-agenda.png" alt="telegram"
   /></a>
   <br />
-  <p id="descr">Descripcion asdasdasdas SDAFAS DADdsd asddadaf asffdaef feef</p>
+  <p id="descr">{{ contact.descripcion }}</p>
   <br />
-  <button id="editar" [routerLink]="['/editcontact']">Editar</button>
-  <button id="eliminar" [routerLink]="['/contacts']">Eliminar</button>
+  <button
+    id="editar"
+    (dblclick)="deleteContacto(contact.id!)"
+    [routerLink]="['/editcontact']"
+  >
+    Editar
+  </button>
+  <button
+    id="eliminar"
+    (dblclick)="editContacto(contact.id!)"
+    [routerLink]="['/contacts']"
+  >
+    Eliminar
+  </button>
 </div>
