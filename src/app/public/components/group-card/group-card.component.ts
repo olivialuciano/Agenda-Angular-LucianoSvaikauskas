@@ -16,5 +16,5 @@ export class GroupCardComponent implements OnInit {
     id: 0,
     nombre: '',
   };
-  ngOnInit() {}
+  ngOnInit(): void {}
 }

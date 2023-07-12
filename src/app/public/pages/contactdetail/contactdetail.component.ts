@@ -32,6 +32,6 @@ export class ContactdetailComponent implements OnInit {
     //metodo llamado desde el boton edit del html(recibe el id del contacto)
     console.log('contacto id: ', id, ' edit');
     this.cd.idContactoForEdit = id; //cambia el valor de idContactoForEdit en el contact component
-    this.cd.abrirContactEdit = 1; //cambia el valor de abrirContactEdit en el contact component por 1 para q se cierre las contact-card y se abra el edit-form
+    this.cd.abrirContactEdit = 1; //cambia el valor de abrirContactEdit en el contact component por 1 para q se cierre las contactdetaily se abra el editcontact
   }
 }

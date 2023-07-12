@@ -1,21 +1,7 @@
-<h2 id="editarcontacto">NUEVO CONTACTO</h2>
+<h2 id="nuevocontacto">NUEVO CONTACTO</h2>
 <div class="tarjeta">
   <form action="">
-    <img
-      id="imgcontacto"
-      src="./../../../../assets/img/foto-perfil-agenda.webp"
-      alt="imagen del contacto"
-    />
     <div>
-      <input
-        id="imgsubir"
-        type="file"
-        name="imagensubida"
-        accept="image/png, .jpeg, .jpg"
-      />
-      <button type="submit">Subir</button>
-    </div>
-    <div class="inputsEditarContacto">
       <label class="label" for="nombre">Nombre</label>
       <input
         type="text"
@@ -25,8 +11,8 @@
         placeholder="Ingrese su nombre"
       />
     </div>
-    <div class="inputsEditarContacto">
-      <label class="label" for="tel">Número de teléfono</label>
+    <div>
+      <label class="label" for="tel">Teléfono</label>
       <input
         type="text"
         id="tel"
@@ -35,7 +21,7 @@
         placeholder="Ingrese su numero telefónico"
       />
     </div>
-    <div class="inputsEditarContacto">
+    <div>
       <label class="label" for="descripcion">Descripción</label>
       <textarea
         name="descripcion"
@@ -44,6 +30,14 @@
         cols="30"
         rows="3"
       ></textarea>
+    </div>
+    <div>
+      <label class="label" for="group">Grupo</label>
+      <select multiple>
+        <option *ngFor="let group of groupsData" [value]="group.nombre">
+          {{ group.nombre }}
+        </option>
+      </select>
     </div>
     <button id="Bguardar" type="submit" [routerLink]="['/contacts']">
       Guardar
