@@ -1,17 +1,36 @@
 <div class="iniciarsesion">
   <h2 id="login">Iniciar sesión</h2>
-  <form>
-    <label class="label" for="mail">Correo electrónico</label>
-    <input type="email" id="mail" class="input" name="mail" placeholder="" />
-
-    <label class="label" for="contarsena">Contraseña</label>
+  <form (ngSubmit)="login(form)" #form="ngForm">
+    <label class="label" for="email">Correo electrónico</label>
     <input
-      type="password"
-      id="contrasena"
+      type="email"
+      id="email"
       class="input"
-      name="contraseña"
+      name="Email"
       placeholder=""
+      [(ngModel)]="authData.email"
+      #email="ngModel"
+      pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
     />
+    <p id="mal-ingreso" *ngIf="email.touched && email.errors">
+      Correo electrónico no válido.
+    </p>
+    <!-- for="password" -->
+    <label class="label" for="contrasena">Contraseña</label>
+    <input
+      type="contrasena"
+      id="password"
+      class="input"
+      name="password"
+      placeholder=""
+      [(ngModel)]="authData.password"
+      [required]="true"
+      [minlength]="6"
+      #password="ngModel"
+    />
+    <p id="mal-ingreso" *ngIf="password.touched && password.errors">
+      Contraseña inválida. Debe tener al menos 6 caracteres.
+    </p>
 
     <label for="guardar" id="lguardar"
       ><input
@@ -22,7 +41,7 @@
       />Mantener mi sesión iniciada.</label
     >
 
-    <button id="Bingresar" type="submit" [routerLink]="['/contacts']">
+    <button id="Bingresar" type="submit" [disabled]="form.invalid">
       ingresar
     </button>
     <a id="Lregistrarse" [routerLink]="['/signin']"

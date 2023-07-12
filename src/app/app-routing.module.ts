@@ -47,17 +47,29 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'hist-llamadas',
-    loadChildren: () =>
-      import('./public/pages/hist-llamadas/hist-llamadas.module').then(
-        (m) => m.HistLlamadasModule
-      ),
-  },
-  {
     path: 'alumnas',
     loadChildren: () =>
       import('./public/pages/alumnas/alumnas.module').then(
         (m) => m.AlumnasModule
+      ),
+  },
+  {
+    path: 'group',
+    loadChildren: () =>
+      import('./public/pages/group/group.module').then((m) => m.GroupModule),
+  },
+  {
+    path: 'groupdetail',
+    loadChildren: () =>
+      import('./public/pages/groupdetail/groupdetail.module').then(
+        (m) => m.GroupdetailModule
+      ),
+  },
+  {
+    path: 'newgroup',
+    loadChildren: () =>
+      import('./public/pages/newgroup/newgroup.module').then(
+        (m) => m.NewgroupModule
       ),
   },
   {
