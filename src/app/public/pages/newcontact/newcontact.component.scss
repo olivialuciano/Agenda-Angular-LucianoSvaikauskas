@@ -8,7 +8,7 @@ $col-violeta-claro: #e9ebf9;
 $colorfont1: #424242;
 $col-naranja: #f09e42;
 
-#editarcontacto {
+#nuevocontacto {
   font-family: $font;
   font-weight: 100%;
   font-size: 200%;
@@ -19,21 +19,11 @@ $col-naranja: #f09e42;
 .tarjeta {
   text-align: center;
   width: 20rem;
-  height: 31rem;
+  height: 29rem;
   background-color: $col-violeta;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
-}
-
-#imgcontacto {
-  border-radius: 50px;
-  width: 7rem;
-  margin-top: 1rem;
-}
-
-#imgsubir {
-  margin-top: 1rem;
+  padding-top: 2rem;
 }
 
 .label {
@@ -45,38 +35,21 @@ $col-naranja: #f09e42;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-#nombre {
+#nombre,
+#tel,
+#descripcion,
+select {
   font-size: 80%;
   width: 75%;
   font-family: $font;
   color: $colorfont1;
 }
 
-#tel {
-  font-size: 80%;
-  width: 75%;
-  font-family: $font;
-  color: $colorfont1;
-}
-
-#descripcion {
-  font-size: 80%;
-  width: 75%;
-  font-family: $font;
-  color: $colorfont1;
-}
-
-img {
-  border-radius: 50px;
-  width: 20%;
-  display: inline;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-}
-
-.input {
+.input,
+select {
   padding: 1.5% 1.5%;
   box-sizing: border-box;
   border: 1px solid $col-violeta-claro;
@@ -86,7 +59,8 @@ img {
   margin-bottom: 2%;
 }
 
-.input:focus {
+.input:focus,
+select:focus {
   background-color: $col-violeta-claro;
 }
 
