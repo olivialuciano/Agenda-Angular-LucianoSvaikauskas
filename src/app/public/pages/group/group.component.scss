@@ -1,0 +1,61 @@
+//VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
+
+// .listagruposflex {
+//   width: 100%;
+//   display: flex;
+//   //flex-direction: row;
+//   justify-content: flex-start;
+//   flex-wrap: wrap;
+// }
+
+#grupo {
+    font-family: $font;
+    font-weight: 100%;
+    font-size: 170%;
+    color: $colorfont1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 9rem;
+  }
+
+
+#nuevo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background-color: $col-violeta
+  }
+
+
+.botonera {
+    display: flex;
+    font-family: $font;
+    color: #faf4e9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+.listagruposflex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  

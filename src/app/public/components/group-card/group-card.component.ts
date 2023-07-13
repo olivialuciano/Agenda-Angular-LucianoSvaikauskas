@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./group-card.component.css'],
 })
 export class GroupCardComponent implements OnInit {
-  constructor(private cc: GroupComponent, private router: Router) {}
+  constructor(private gc: GroupComponent, private router: Router) {}
 
   @Input() group: GroupJsonPlaceholder = {
     //recibe los datos del grupo

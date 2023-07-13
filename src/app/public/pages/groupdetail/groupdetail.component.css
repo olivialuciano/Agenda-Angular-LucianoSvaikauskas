@@ -1,0 +1,36 @@
+
+.tarjeta {
+  text-align: center;
+  width: 20rem;
+  height: 30rem;
+  background-color: #f09e42;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+#nombre {
+  font-size: 150%;
+  font-family: "Merriweather", serif;
+  color: #424242;
+  font-weight: bold;
+}
+
+
+#eliminar:hover {
+  background-color: #fbe4e4;
+}
+
+#eliminar {
+  border: none;
+  color: #424242;
+  background-color: #feb4b4;
+  text-align: center;
+  width: 6rem;
+  font-size: 100%;
+  font-family: "Merriweather", serif;
+  border-radius: 1px;
+  display: flex;
+  float: right;
+  margin-bottom: 0%;
+}
