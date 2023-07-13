@@ -1,0 +1,14 @@
+
+.tarjeta {
+  display: block;
+  box-shadow: 0 2px 4px 0 #bbad8f;
+  text-align: center;
+  width: 30rem;
+  height: 8rem;
+  transition: 0.4s;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: #feb4b4;
+}

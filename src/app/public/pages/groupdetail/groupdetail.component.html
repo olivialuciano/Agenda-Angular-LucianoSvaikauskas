@@ -1,3 +1,13 @@
-<p>
-  groupdetail works!
-</p>
+<div class="tarjeta">
+  <br />
+  <br />
+  <p id="nombre">{{ group.nombre }}</p>
+  <br />
+  <button
+    id="eliminar"
+    (dblclick)="deleteGroup(group.id!)"
+    [routerLink]="['/groups']"
+  >
+    Eliminar
+  </button>
+</div>

@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { GroupdetailRoutingModule } from './groupdetail-routing.module';
+import { GroupdetailComponent } from './groupdetail.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    GroupdetailComponent
+  ],
   imports: [
     CommonModule,
     GroupdetailRoutingModule

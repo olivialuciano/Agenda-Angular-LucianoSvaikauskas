@@ -19,12 +19,13 @@ $col-naranja: #f09e42;
 .tarjeta {
   text-align: center;
   width: 20rem;
-  height: 31rem;
+  height: 20rem;
   background-color: $col-violeta;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
 }
+
 
 #imgcontacto {
   border-radius: 50px;
@@ -49,7 +50,7 @@ $col-naranja: #f09e42;
 
 #nombre {
   font-size: 80%;
-  width: 75%;
+  width: 60%;
   font-family: $font;
   color: $colorfont1;
 }
@@ -102,7 +103,7 @@ img {
   width: 11rem;
   margin-left: 15%;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 12rem;
   display: block;
 }
 
