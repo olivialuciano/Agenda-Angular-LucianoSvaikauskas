@@ -1,3 +1,12 @@
+//VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
 
 .tarjeta {
   text-align: center;
@@ -16,7 +25,6 @@
   font-weight: bold;
 }
 
-
 #eliminar:hover {
   background-color: #fbe4e4;
 }
@@ -33,4 +41,13 @@
   display: flex;
   float: right;
   margin-bottom: 0%;
+}
+
+.listacontactosflex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: space-between;
 }

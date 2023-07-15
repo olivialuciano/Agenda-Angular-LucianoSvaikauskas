@@ -1,20 +1,20 @@
 <div class="tarjeta">
   <br />
   <br />
-  <p id="nombre">{{ contact.nombre }}</p>
-  <p id="tel">{{ contact.telefono }}</p>
+  <p id="Name">{{ contact.Name }}</p>
+  <p id="CelularNumber">{{ contact.CelularNumber }}</p>
   <br />
-  <a href="tel:{{ contact.telefono }}"
+  <a href="tel:{{ contact.CelularNumber }}"
     ><img src="./../../../../assets/img/llamar-agenda.webp" alt="llamar"
   /></a>
-  <a href="https://wa.me/{{ contact.telefono }}" target="_blank"
+  <a href="https://wa.me/{{ contact.CelularNumber }}" target="_blank"
     ><img src="./../../../../assets/img/wpp-agenda.jpg" alt="whatsapp"
   /></a>
   <a href="https://web.telegram.org/" target="_blank"
     ><img src="./../../../../assets/img/telegram-agenda.png" alt="telegram"
   /></a>
   <br />
-  <p id="descr">{{ contact.descripcion }}</p>
+  <p id="Description">{{ contact.Description }}</p>
   <br />
   <button
     id="editar"

@@ -1,23 +1,23 @@
 <div class="signin">
   <h2 id="registrarse">Registrarse</h2>
   <form action="" (ngSubmit)="registrarme(form)" #form="ngForm">
-    <label class="label" for="nombre" autocomplete="nombre">Nombre</label>
+    <label class="label" for="name" autocomplete="name">Nombre</label>
     <input
       type="text"
-      id="nombre"
+      id="name"
       class="input"
-      name="nombre"
+      name="name"
       placeholder=""
       [(ngModel)]="registerData.name"
       #name="ngModel"
     />
 
-    <label class="label" for="apellido" autocomplete="apellido">Apellido</label>
+    <label class="label" for="lastname" autocomplete="lastname">Apellido</label>
     <input
       type="text"
-      id="apellido"
+      id="lastname"
       class="input"
-      name="apellido"
+      name="lastname"
       placeholder=""
       [(ngModel)]="registerData.lastname"
       #name="ngModel"
@@ -32,12 +32,12 @@
       placeholder=""
     /> -->
 
-    <label class="label" for="mail">Correo electrónico</label>
+    <label class="label" for="email">Correo electrónico</label>
     <input
       type="email"
-      id="mail"
+      id="email"
       class="input"
-      name="mail"
+      name="email"
       placeholder=""
       [(ngModel)]="registerData.email"
       #email="ngModel"
@@ -48,12 +48,12 @@
       Correo electrónico inválido.
     </p>
 
-    <label class="label" for="contrasena">Contraseña</label>
+    <label class="label" for="password">Contraseña</label>
     <input
       type="password"
-      id="contrasena"
+      id="password"
       class="input"
-      name="contrasena"
+      name="password"
       placeholder=""
       [(ngModel)]="registerData.password"
       [required]="true"

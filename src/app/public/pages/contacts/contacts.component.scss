@@ -16,19 +16,20 @@ $col-naranja: #f09e42;
   overflow: hidden;
   background-color: $colorfont2;
 }
-#grupos,
-#historial {
+#grupos {
   float: left;
   background-color: $col-rosa;
 }
 
-#nuevo {
+.nuevo {
   float: right;
   background-color: $col-violeta;
 }
+#profile {
+  background-color: $col-naranja;
+}
 #grupos:hover,
-#historial:hover,
-#nuevo:hover {
+.nuevo:hover {
   background-color: $col-naranja;
 }
 .botonera {

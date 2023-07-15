@@ -14,10 +14,10 @@ export class ContactdetailComponent implements OnInit {
   @Input() contact: ContactJsonPlaceholder = {
     //recibe los datos del contacto
     id: 0,
-    nombre: '',
-    telefono: '',
-    celular: '',
-    descripcion: '',
+    Name: '',
+    CelularNumber: '',
+    TelephoneNumber: '',
+    Description: '',
   };
 
   ngOnInit(): void {}

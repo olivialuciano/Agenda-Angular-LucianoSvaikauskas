@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-group-card',
   templateUrl: './group-card.component.html',
-  styleUrls: ['./group-card.component.css'],
+  styleUrls: ['./group-card.component.scss'],
 })
 export class GroupCardComponent implements OnInit {
   constructor(private gc: GroupComponent, private router: Router) {}

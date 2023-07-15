@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ContactJsonPlaceholder } from 'src/app/interfaces/contact.interface';
 import { GroupJsonPlaceholder } from 'src/app/interfaces/group.interface';
+import { ContactService } from 'src/app/services/contact.service.service';
 import { GroupService } from 'src/app/services/group.service';
 
 @Component({
@@ -9,14 +12,53 @@ import { GroupService } from 'src/app/services/group.service';
   styleUrls: ['./newcontact.component.scss'],
 })
 export class NewcontactComponent implements OnInit {
-  groupsData: GroupJsonPlaceholder[] = [];
-  constructor(private gs: GroupService, private router: Router) {}
+  // groupsData: GroupJsonPlaceholder[] = [];
+
+  contactData: ContactJsonPlaceholder = {
+    id: 0,
+    Name: '',
+    TelephoneNumber: '',
+    CelularNumber: '',
+    Description: '',
+  };
+
+  constructor(
+    private cs: ContactService,
+    private gs: GroupService,
+    private router: Router,
+    private ar: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getData();
+    this.ar.params.subscribe((params) => {
+      const sub: any = params['id'] || null;
+      // this.contactData.agendaId =parseInt(sub)
+    });
   }
 
-  async getData(): Promise<void> {
-    this.groupsData = await this.gs.getGroup(); //rellena ContactData con todos los contactos de una agenda
+  async newcontact(form: NgForm) {
+    /***************** */
+    console.log(form.value);
+    const contactocreado = this.cs.addContact(this.contactData); //ejectua addContact del contact service con los valores del form
+    console.log(
+      'el contacto ',
+      (await contactocreado).Name,
+      ' fue creado con el id: ',
+      (await contactocreado).id
+    );
+    this.router.navigate(['/contacts']); //cuando iniciamos secion nos lleva a contactos if(await contactocreado)
   }
 }
+
+// ngOnInit(): void {
+//   // this.getData();
+//   this.addContact()
+// }
+
+// // async getData(): Promise<void> {
+// //   this.groupsData = await this.gs.getGroup(); //rellena ContactData con todos los contactos de una agenda
+// // }
+
+// async newContact(): Promise<void>{
+//   this.
+// }

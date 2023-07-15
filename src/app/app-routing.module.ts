@@ -73,6 +73,20 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'profile',
+    loadChildren: () =>
+      import('./public/pages/profile/profile.module').then(
+        (m) => m.ProfileModule
+      ),
+  },
+  {
+    path: 'editprofile',
+    loadChildren: () =>
+      import('./public/pages/editprofile/editprofile.module').then(
+        (m) => m.EditprofileModule
+      ),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./public/pages/not-found/not-found.module').then(

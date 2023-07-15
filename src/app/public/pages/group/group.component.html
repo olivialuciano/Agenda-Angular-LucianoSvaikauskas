@@ -1,20 +1,23 @@
-<h2 id="grupo">GRUPOS</h2>
-
-  <li id="nuevo">
+<ul id="barratareas">
+  <li id="grupos">
+    <a class="botonera" [routerLink]="['/contacts']">Contactos</a>
+  </li>
+  <li class="nuevo" id="profile">
+    <a class="botonera" [routerLink]="['/profile']">Perfil</a>
+  </li>
+  <li class="nuevo">
     <a class="botonera" [routerLink]="['/newgroup']">Nuevo grupo</a>
   </li>
-  
-
+</ul>
 <div class="listagruposflex">
   <app-group-card></app-group-card>
   <app-group-card></app-group-card>
   <app-group-card></app-group-card>
-  
 </div>
 <br />
-<div class="listagruposflex">
+<!-- <div class="listagruposflex">
   <app-group-card
     *ngFor="let group of groupsData"
     [group]="group"
   ></app-group-card>
-</div>
+</div> -->

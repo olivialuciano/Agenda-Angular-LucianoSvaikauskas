@@ -1,0 +1,28 @@
+//VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
+
+.tarjeta {
+  box-shadow: 0 2px 4px 0 #bbad8f;
+  width: 28rem;
+  height: 3rem;
+  transition: 0.4s;
+  background-color: $col-naranja;
+}
+
+.tarjeta:hover {
+  transform: scale(1.1);
+}
+
+#nombre {
+  font-size: 130%;
+  font-family: $font;
+  color: $colorfont2;
+  text-align: center;
+}

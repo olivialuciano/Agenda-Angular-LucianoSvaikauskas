@@ -19,27 +19,17 @@ $col-naranja: #f09e42;
 .tarjeta {
   text-align: center;
   width: 20rem;
-  height: 20rem;
+  height: 10rem;
   background-color: $col-violeta;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-}
-
-
-#imgcontacto {
-  border-radius: 50px;
-  width: 7rem;
-  margin-top: 1rem;
-}
-
-#imgsubir {
-  margin-top: 1rem;
+  padding-top: 1.4rem;
 }
 
 .label {
   color: $colorfont1;
-  font-weight: 10%;
+  font-weight: 20%;
   width: 60%;
   font-family: $font;
   display: block;
@@ -49,32 +39,10 @@ $col-naranja: #f09e42;
 }
 
 #nombre {
-  font-size: 80%;
+  font-size: 75%;
   width: 60%;
   font-family: $font;
   color: $colorfont1;
-}
-
-#tel {
-  font-size: 80%;
-  width: 75%;
-  font-family: $font;
-  color: $colorfont1;
-}
-
-#descripcion {
-  font-size: 80%;
-  width: 75%;
-  font-family: $font;
-  color: $colorfont1;
-}
-
-img {
-  border-radius: 50px;
-  width: 20%;
-  display: inline;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
 }
 
 .input {
@@ -97,13 +65,13 @@ img {
   font-family: $font;
   background-color: $col-naranja;
   color: $colorfont1;
-  font-size: 140%;
+  font-size: 110%;
   margin-left: auto;
   margin-right: auto;
-  width: 11rem;
+  width: 8rem;
   margin-left: 15%;
   margin: 0 auto;
-  margin-top: 12rem;
+  margin-top: 2rem;
   display: block;
 }
 

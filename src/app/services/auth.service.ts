@@ -6,6 +6,7 @@ import { ISession } from '../interfaces/session.interface';
 import { JwtHelperService } from '@auth0/angular-jwt'; //npm install @auth0/angular-jwt
 import { HttpClient } from '@angular/common/http';
 import { ContactJsonPlaceholder } from '../interfaces/contact.interface';
+import { IUser } from '../interfaces/user.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -39,10 +40,10 @@ export class AuthService {
     return true;
   }
 
-  async addUser(user: iRegisterRequest) {
+  async addUser(user: iRegisterRequest): Promise<IUser> {
     //: Promise<ContactJsonPlaceholder>
     console.log(user);
-    const res = await fetch(BACKEND_URL + '/api/User', {
+    const res = await fetch(BACKEND_URL + '/api/authentication', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

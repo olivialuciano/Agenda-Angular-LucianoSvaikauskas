@@ -8,6 +8,39 @@ $col-violeta-claro: #e9ebf9;
 $colorfont1: #424242;
 $col-naranja: #f09e42;
 
+#barratareas {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $colorfont2;
+}
+#grupos {
+  float: left;
+  background-color: $col-rosa;
+}
+.nuevo {
+  float: right;
+  background-color: $col-violeta;
+}
+#profile {
+  background-color: $col-naranja;
+}
+#grupos:hover,
+.nuevo:hover {
+  background-color: $col-naranja;
+}
+.botonera {
+  display: flex;
+  font-family: $font;
+  color: #faf4e9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+//---------------------------------------
+
 // .listagruposflex {
 //   width: 100%;
 //   display: flex;
@@ -17,45 +50,42 @@ $col-naranja: #f09e42;
 // }
 
 #grupo {
-    font-family: $font;
-    font-weight: 100%;
-    font-size: 170%;
-    color: $colorfont1;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 9rem;
-  }
-
+  font-family: $font;
+  font-weight: 100%;
+  font-size: 170%;
+  color: $colorfont1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 9rem;
+}
 
 #nuevo {
-    margin-left: auto;
-    margin-right: auto;
-    width: 9rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    background-color: $col-violeta
-  }
-
+  margin-left: auto;
+  margin-right: auto;
+  width: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  background-color: $col-violeta;
+}
 
 .botonera {
-    display: flex;
-    font-family: $font;
-    color: #faf4e9;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+  display: flex;
+  font-family: $font;
+  color: #faf4e9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 .listagruposflex {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-  }
-  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}

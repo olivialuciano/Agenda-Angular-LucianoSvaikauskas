@@ -1,45 +1,51 @@
 <h2 id="nuevocontacto">NUEVO CONTACTO</h2>
 <div class="tarjeta">
-  <form action="">
+  <form (ngSubmit)="newcontact(form)" #form="ngForm">
     <div>
-      <label class="label" for="nombre">Nombre</label>
+      <label class="label" for="Name">Nombre</label>
       <input
         type="text"
-        id="nombre"
+        id="Name"
         class="input"
-        name="nombre"
+        name="Name"
         placeholder="Ingrese su nombre"
+        [(ngModel)]="contactData.Name"
+        #Name="ngModel"
+        [maxlength]="15"
       />
     </div>
     <div>
-      <label class="label" for="tel">Teléfono</label>
+      <label class="label" for="CelularNumber">Teléfono</label>
       <input
         type="text"
-        id="tel"
+        id="CelularNumber"
         class="input"
-        name="tel"
+        name="CelularNumber"
         placeholder="Ingrese su numero telefónico"
+        [(ngModel)]="contactData.CelularNumber"
+        #CelularNumber="ngModel"
+        [maxlength]="15"
       />
     </div>
     <div>
-      <label class="label" for="descripcion">Descripción</label>
+      <label class="label" for="Description">Descripción</label>
       <textarea
-        name="descripcion"
-        id="descripcion"
+        name="Description"
+        id="Description"
         class="input"
         cols="30"
         rows="3"
       ></textarea>
     </div>
-    <div>
+    <!-- <div>
       <label class="label" for="group">Grupo</label>
       <select multiple>
         <option *ngFor="let group of groupsData" [value]="group.nombre">
           {{ group.nombre }}
         </option>
       </select>
-    </div>
-    <button id="Bguardar" type="submit" [routerLink]="['/contacts']">
+    </div> -->
+    <button id="Bguardar" type="submit" [disabled]="form.invalid">
       Guardar
     </button>
   </form>

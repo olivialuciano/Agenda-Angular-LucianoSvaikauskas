@@ -1,9 +1,12 @@
 <ul id="barratareas">
   <li id="grupos"><a class="botonera" [routerLink]="['/group']">Grupos</a></li>
-  <li id="nuevo">
+  <li class="nuevo" id="profile">
+    <a class="botonera" [routerLink]="['/profile']">Perfil</a>
+  </li>
+  <li class="nuevo">
     <a class="botonera" [routerLink]="['/newcontact']">Nuevo contacto</a>
   </li>
-</ul> 
+</ul>
 
 <input id="buscar" type="text" placeholder="Buscar.." />
 <div class="listacontactosflex">
