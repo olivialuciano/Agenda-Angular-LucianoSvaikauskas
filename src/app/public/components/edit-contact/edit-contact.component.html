@@ -1,4 +1,4 @@
-<!-- <h2 id="editarcontacto">EDITAR CONTACTO</h2>
+<h2 id="editarcontacto">EDITAR CONTACTO</h2>
 <div class="tarjeta">
   <form
     (ngSubmit)="editContactFull(contactForeditData.id!, form)"
@@ -41,16 +41,16 @@
         [maxlength]="60"
       ></textarea>
     </div>
-     <div>
+    <!-- <div>
       <label class="label" for="group">Grupo</label>
       <select multiple>
         <option *ngFor="let group of groupsData" [value]="group.nombre">
           {{ group.nombre }}
         </option>
       </select>
-    </div> 
+    </div>  -->
     <button id="Baceptar" type="submit" [disabled]="form.invalid">
       Aceptar
     </button>
   </form>
-</div> -->
+</div>

@@ -1,83 +1,83 @@
-//VARIABLES
-$font: "Merriweather", serif;
-$colorfont2: #f4edd7;
-$col-rosa: #feb4b4;
-$col-rosa-claro: #fbe4e4;
-$col-violeta: #b4bbef;
-$col-violeta-claro: #e9ebf9;
-$colorfont1: #424242;
-$col-naranja: #f09e42;
+// //VARIABLES
+// $font: "Merriweather", serif;
+// $colorfont2: #f4edd7;
+// $col-rosa: #feb4b4;
+// $col-rosa-claro: #fbe4e4;
+// $col-violeta: #b4bbef;
+// $col-violeta-claro: #e9ebf9;
+// $colorfont1: #424242;
+// $col-naranja: #f09e42;
 
-.tarjeta {
-  text-align: center;
-  width: 20rem;
-  height: 30rem;
-  background-color: $col-naranja;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-}
+// .tarjeta {
+//   text-align: center;
+//   width: 20rem;
+//   height: 30rem;
+//   background-color: $col-naranja;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-top: 2rem;
+// }
 
-#imgcontacto {
-  border-radius: 50px;
-  width: 7rem;
-}
+// #imgcontacto {
+//   border-radius: 50px;
+//   width: 7rem;
+// }
 
-#nombre {
-  font-size: 150%;
-  font-family: $font;
-  color: $colorfont1;
-  font-weight: bold;
-}
+// #nombre {
+//   font-size: 150%;
+//   font-family: $font;
+//   color: $colorfont1;
+//   font-weight: bold;
+// }
 
-#tel {
-  font-size: 100%;
-  font-family: $font;
-  color: $colorfont1;
-}
+// #tel {
+//   font-size: 100%;
+//   font-family: $font;
+//   color: $colorfont1;
+// }
 
-#descr {
-  font-size: 60%;
-  font-family: $font;
-  color: $colorfont1;
-}
+// #descr {
+//   font-size: 60%;
+//   font-family: $font;
+//   color: $colorfont1;
+// }
 
-img {
-  border-radius: 50px;
-  width: 20%;
-  display: inline;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-}
+// img {
+//   border-radius: 50px;
+//   width: 20%;
+//   display: inline;
+//   margin-right: 0.5rem;
+//   margin-left: 0.5rem;
+// }
 
-#editar {
-  margin-top: auto;
-  border: none;
-  color: $colorfont1;
-  background-color: $col-rosa;
-  text-align: center;
-  width: 6rem;
-  font-size: 100%;
-  font-family: $font;
-  border-radius: 1px;
-  float: left;
-}
+// #editar {
+//   margin-top: auto;
+//   border: none;
+//   color: $colorfont1;
+//   background-color: $col-rosa;
+//   text-align: center;
+//   width: 6rem;
+//   font-size: 100%;
+//   font-family: $font;
+//   border-radius: 1px;
+//   float: left;
+// }
 
-#editar:hover,
-#eliminar:hover {
-  background-color: $col-rosa-claro;
-}
+// #editar:hover,
+// #eliminar:hover {
+//   background-color: $col-rosa-claro;
+// }
 
-#eliminar {
-  border: none;
-  color: $colorfont1;
-  background-color: $col-rosa;
-  text-align: center;
-  width: 6rem;
-  font-size: 100%;
-  font-family: $font;
-  border-radius: 1px;
-  display: flex;
-  float: right;
-  margin-bottom: 0%;
-}
+// #eliminar {
+//   border: none;
+//   color: $colorfont1;
+//   background-color: $col-rosa;
+//   text-align: center;
+//   width: 6rem;
+//   font-size: 100%;
+//   font-family: $font;
+//   border-radius: 1px;
+//   display: flex;
+//   float: right;
+//   margin-bottom: 0%;
+// }

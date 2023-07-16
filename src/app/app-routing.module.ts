@@ -19,20 +19,20 @@ const routes: Routes = [
         (m) => m.ContactsModule
       ),
   },
-  {
-    path: 'contactdetail',
-    loadChildren: () =>
-      import('./public/pages/contactdetail/contactdetail.module').then(
-        (m) => m.ContactdetailModule
-      ),
-  },
-  {
-    path: 'editcontact',
-    loadChildren: () =>
-      import('./public/pages/editcontact/editcontact.module').then(
-        (m) => m.EditcontactModule
-      ),
-  },
+  // {
+  //   path: 'contactdetail',
+  //   loadChildren: () =>
+  //     import('./public/pages/contactdetail/contactdetail.module').then(
+  //       (m) => m.ContactdetailModule
+  //     ),
+  // },
+  // {
+  //   path: 'editcontact',
+  //   loadChildren: () =>
+  //     import('./public/pages/editcontact/editcontact.module').then(
+  //       (m) => m.EditcontactModule
+  //     ),
+  // },
 
   {
     path: 'signin',

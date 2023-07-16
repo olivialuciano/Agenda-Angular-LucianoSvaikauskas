@@ -1,14 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ContactJsonPlaceholder } from 'src/app/interfaces/contact.interface';
 import { ContactsComponent } from '../../pages/contacts/contacts.component';
+import { ContactService } from 'src/app/services/contact.service.service';
 @Component({
   selector: 'app-contactcard',
   templateUrl: './contactcard.component.html',
   styleUrls: ['./contactcard.component.scss'],
 })
 export class ContactcardComponent implements OnInit {
-  constructor(private cc: ContactsComponent, private router: Router) {}
+  constructor(
+    private cc: ContactsComponent,
+    private router: Router,
+    private cs: ContactService
+  ) {}
 
   @Input() contact: ContactJsonPlaceholder = {
     //recibe los datos del contacto
@@ -18,8 +23,13 @@ export class ContactcardComponent implements OnInit {
     TelephoneNumber: '',
     Description: '',
   };
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.getData();
+  }
 
+  // async getData(): Promise<void> {
+  //   this.contact = await this.cs.getContactDetails(this.contact.id); //rellena ContactData con todos los contactos de una agenda
+  // }
   deleteContacto(id: number) {
     //metodo llamado desde el boton borrar del html(recibe el id del contacto de esa agenda)
     console.log('contacto id: ', id, ' eliminado');
@@ -30,6 +40,7 @@ export class ContactcardComponent implements OnInit {
     //metodo llamado desde el boton edit del html(recibe el id del contacto de esa agenda)
     console.log('contacto id: ', id, ' edit');
     this.cc.idContactoForEdit = id; //cambia el valor de idContactoForEdit en el contact component
-    this.cc.abrirContactEdit = 1; //cambia el valor de abrirContactEdit en el contact component por 1 para q se cierre las contact-card y se abra el edit-form
+    this.cc.abrirContactEdit = 1;
+    //cambia el valor de abrirContactEdit en el contact component por 1 para q se cierre las contact-card y se abra el edit-form
   }
 }
