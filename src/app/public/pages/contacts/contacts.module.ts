@@ -6,6 +6,7 @@ import { ContactsComponent } from './contacts.component';
 import { ContactcardComponent } from '../../components/contactcard/contactcard.component';
 import { FormsModule } from '@angular/forms';
 import { EditcontactComponent } from '../../components/edit-contact/edit-contact.component';
+// import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [ContactsComponent, ContactcardComponent, EditcontactComponent],
@@ -13,3 +14,5 @@ import { EditcontactComponent } from '../../components/edit-contact/edit-contact
   imports: [CommonModule, ContactsRoutingModule, FormsModule],
 })
 export class ContactsModule {}
+
+// , SharedModule

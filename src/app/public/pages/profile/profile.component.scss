@@ -1,0 +1,82 @@
+//VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
+
+#editarcontacto {
+  font-family: $font;
+  font-weight: 100%;
+  font-size: 200%;
+  color: $colorfont1;
+  text-align: center;
+}
+
+#name,
+#lastname,
+#email {
+  margin-top: 2rem;
+  font-size: 150%;
+  font-family: $font;
+  color: $colorfont1;
+  font-weight: bold;
+}
+
+#lastname {
+  margin-top: 1rem;
+}
+
+.tarjeta {
+  text-align: center;
+  width: 20rem;
+  height: 20rem;
+  background-color: $col-rosa;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  padding-top: 0.5rem;
+}
+
+#email {
+  font-size: 100%;
+}
+
+#editar {
+  margin-top: auto;
+  border: none;
+  color: $colorfont1;
+  background-color: $col-naranja;
+  text-align: center;
+  width: 6rem;
+  font-size: 100%;
+  font-family: $font;
+  border-radius: 1px;
+  float: left;
+  margin-top: 4rem;
+  padding: 3%;
+}
+
+#editar:hover,
+#eliminar:hover {
+  background-color: $col-rosa-claro;
+}
+
+#eliminar {
+  border: none;
+  color: $colorfont2;
+  background-color: #ff0000;
+  text-align: center;
+  width: 9.5rem;
+  font-size: 100%;
+  font-family: $font;
+  border-radius: 1px;
+  display: flex;
+  float: right;
+  margin-bottom: 0%;
+  margin-top: 4rem;
+  padding: 3%;
+}

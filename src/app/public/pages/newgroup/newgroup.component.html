@@ -1,6 +1,6 @@
 <h2 id="editarcontacto">NUEVO GRUPO</h2>
 <div class="tarjeta">
-  <form action="">
+  <form (ngSubmit)="newgroup(form)" #form="ngForm">
     <div class="inputsEditarContacto">
       <label class="label" for="nombre">Nombre</label>
       <input
@@ -9,8 +9,13 @@
         class="input"
         name="nombre"
         placeholder="Ingrese el nombre del grupo"
+        [(ngModel)]="groupData.Name"
+        #Name="ngModel"
+        [maxlength]="15"
       />
-      <button id="Bguardar" type="submit">Guardar</button>
+      <button id="Bguardar" type="submit" [disabled]="form.invalid">
+        Guardar
+      </button>
     </div>
   </form>
 </div>

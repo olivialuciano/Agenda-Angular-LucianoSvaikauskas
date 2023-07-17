@@ -9,6 +9,7 @@ import { ContactService } from 'src/app/services/contact.service.service';
   styleUrls: ['./contactcard.component.scss'],
 })
 export class ContactcardComponent implements OnInit {
+  contactsData: ContactJsonPlaceholder[] = [];
   constructor(
     private cc: ContactsComponent,
     private router: Router,
@@ -24,12 +25,10 @@ export class ContactcardComponent implements OnInit {
     Description: '',
   };
   ngOnInit(): void {
+    // this.getContactData(this.contact.id);
     // this.getData();
   }
 
-  // async getData(): Promise<void> {
-  //   this.contact = await this.cs.getContactDetails(this.contact.id); //rellena ContactData con todos los contactos de una agenda
-  // }
   deleteContacto(id: number) {
     //metodo llamado desde el boton borrar del html(recibe el id del contacto de esa agenda)
     console.log('contacto id: ', id, ' eliminado');
@@ -43,4 +42,12 @@ export class ContactcardComponent implements OnInit {
     this.cc.abrirContactEdit = 1;
     //cambia el valor de abrirContactEdit en el contact component por 1 para q se cierre las contact-card y se abra el edit-form
   }
+
+  // async getContactData(id: number): Promise<void> {
+  //   this.contact = await this.cs.getContactDetails(id);
+  //   //rellena ContactData con todos los contactos de una agenda
+  // }
+  // async getData(): Promise<void> {
+  //   this.contactsData = await this.cs.getContacts(); //rellena ContactData con todos los contactos de una agenda
+  // }
 }

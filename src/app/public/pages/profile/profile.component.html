@@ -1,1 +1,42 @@
-<p>profile works!</p>
+<h2 id="editarcontacto">PERFIL</h2>
+
+<div class="tarjeta" *ngIf="!isEditing">
+  <h2 id="name">Victoria {{ user.name }}</h2>
+  <h2 id="lastname">Svaikauskas {{ user.lastName }}</h2>
+  <p id="email">vicky@gmail.com {{ user.email }}</p>
+  <button id="eliminar" title="Borrar" (click)="deleteUsuario(user.id!)">
+    Eliminar Cuenta
+  </button>
+  <button id="editar" title="Editar" (click)="isEditing = true">Editar</button>
+</div>
+
+<div *ngIf="isEditing" class="tarjeta">
+  <div>
+    <label class="label" for="name">Nombre</label>
+    <input
+      type="text"
+      id="name"
+      class="input"
+      name="name"
+      [(ngModel)]="userData.name"
+    />
+  </div>
+  <div>
+    <label class="label" for="lastname">Apellido </label>
+    <input
+      type="text"
+      id="lastname"
+      class="input"
+      name="lastname"
+      [(ngModel)]="userData.lastname"
+    />
+  </div>
+  <div>
+    <label class="label" for="email">Correo electrónico</label>
+    <input name="email" id="email" class="input" [(ngModel)]="userData.email" />
+  </div>
+
+  <button id="Baceptar" type="submit" (click)="isEditing = false">
+    Aceptar
+  </button>
+</div>

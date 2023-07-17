@@ -59,10 +59,10 @@ const routes: Routes = [
       import('./public/pages/group/group.module').then((m) => m.GroupModule),
   },
   {
-    path: 'groupdetail',
+    path: 'groupdetail1',
     loadChildren: () =>
-      import('./public/pages/groupdetail/groupdetail.module').then(
-        (m) => m.GroupdetailModule
+      import('./public/pages/groupdetail1/groupdetail1.module').then(
+        (m) => m.Groupdetail1Module
       ),
   },
   {
@@ -72,6 +72,13 @@ const routes: Routes = [
         (m) => m.NewgroupModule
       ),
   },
+  // {
+  //   path: 'editgroup',
+  //   loadChildren: () =>
+  //     import('./public/pages/editgroup/editgroup.module').then(
+  //       (m) => m.EditgroupModule
+  //     ),
+  // },
   {
     path: 'profile',
     loadChildren: () =>

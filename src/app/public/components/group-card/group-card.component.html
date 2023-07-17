@@ -1,5 +1,31 @@
-<div class="tarjeta" [routerLink]="['/groupdetail']">
-  <p id="nombre">facultad{{ group.nombre }}</p>
+<div *ngIf="!isEditing" class="tarjeta">
+  <p id="Name">facultad{{ group.Name }}</p>
+  <button class="p6" title="Borrar" (click)="eliminarGrupo(group.id!)">
+    Borrar
+  </button>
+  <button
+    class="p7"
+    title="Editar"
+    (click)="isEditing = true"
+    (click)="editGrupo()"
+  >
+    Editar
+  </button>
 </div>
 
+<div *ngIf="isEditing" class="tarjeta">
+  <input [(ngModel)]="groupData.Name" placeholder="Nombre del grupo" />
+  <button (click)="isEditing = false">Guardar</button>
+</div>
+
+<!-- <div class="tarjeta">
+  <p id="Name">facultad{{ group.Name }}</p>
+
+  <button class="p6" title="Borrar" (click)="eliminarGrupo(group.id!)">
+    Borrar
+  </button>
+  <button class="p7" title="Editar" (click)="editGrupo()">Editar</button>
+</div> -->
+
 <!-- [routerLink]="['/group']" -->
+<!-- [routerLink]="['/groupdetail1']" -->

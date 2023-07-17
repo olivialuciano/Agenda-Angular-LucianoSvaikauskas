@@ -17,7 +17,7 @@ export class ContactService {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
-        Authorization: `Bearer ${this.auth.getSession().token!}`, ////******************* */
+        Authorization: `Bearer ${this.auth.getSession().token!}`,
       },
     });
     return await data.json();
@@ -28,7 +28,7 @@ export class ContactService {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
-        Authorization: `Bearer ${this.auth.getSession().token!}`, ////******************* */
+        Authorization: `Bearer ${this.auth.getSession().token!}`,
       },
     });
     return await data.json();

@@ -12,6 +12,8 @@
 
 <br />
 <div class="listacontactosflex" id="contacts" *ngIf="abrirContactEdit === 0">
+  <app-contactcard></app-contactcard>
+
   <app-contactcard
     *ngFor="let contact of contactsData"
     [contact]="contact"
@@ -22,34 +24,3 @@
   id="editcontact"
   *ngIf="abrirContactEdit === 1"
 ></app-edit-contact>
-<!-- 
-<app-header-agenda>
-</app-header-agenda>
-<div id="container">
-
-  <h1 *ngIf="agendaMostrada !== -1 && abrirContactEdit === 0 "  >Agenda: {{agendaMostradaNombre}} - {{agendaMostrada}}</h1>
-  <h1 *ngIf="agendaMostrada === -1 && abrirContactEdit === 0" >Seleccione una Agenda </h1>
-
-  <div class="botones">
-    <button id="b1"  title="Editar Agenda Actual" *ngIf="agendaMostrada !== -1 && abrirContactEdit === 0 " (click)="editAgenda()"  >
-      <img id="icon" src="./../../../../assets/img/edit_black.png"></button>
-
-    <button id="b2"  title="Agregar Contacto" *ngIf="agendaMostrada !== -1 && abrirContactEdit === 0 " (click)="agregarcontacto()"  >
-      <img id="icon-2" src="./../../../../assets/img/add_black.png"></button>
-
-    <button id="b3"  title="ELIMINAR AGENDA" *ngIf="agendaMostrada !== -1 && abrirContactEdit === 0 " (dblclick)="deleteAgenda()"  >
-      <img id="icon-3" src="./../../../../assets/img/trash_black.png"></button>
-  </div>
-
-  <div id="contacts" *ngIf="abrirContactEdit === 0">
-      <app-contact-card
-      *ngFor="let contact of contactsData"
-      [contact]="contact"
-      >
-      </app-contact-card>
-  </div>
-
-  <app-edit-contact id="editcontact" *ngIf="abrirContactEdit === 1"></app-edit-contact>
-  <app-agenda id="agenda" *ngIf="abrirContactEdit === 2"></app-agenda>
-
-</div> -->

@@ -33,7 +33,7 @@ export class GroupService {
 
   async editGroup(id: number, group: GroupJsonPlaceholder) {
     console.log('Enviando edit de grupo a la api');
-    const res = await fetch(BACKEND_URL + '/api/Group/' + id, {
+    const res = await fetch(BACKEND_URL + '/api/Group/' + id + '/update-name', {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -44,7 +44,7 @@ export class GroupService {
     return await res.json();
   }
 
-  async addContact(group: GroupJsonPlaceholder): Promise<GroupJsonPlaceholder> {
+  async addGroup(group: GroupJsonPlaceholder): Promise<GroupJsonPlaceholder> {
     //: Promise<GroupJsonPlaceholder>
     console.log(group);
     const res = await fetch(BACKEND_URL + '/api/Group', {
@@ -55,6 +55,27 @@ export class GroupService {
       },
       body: JSON.stringify(group),
     });
+    return await res.json();
+    //console.log(res.json())
+  }
+
+  async AssignContact(
+    id: number,
+    group: GroupJsonPlaceholder
+  ): Promise<GroupJsonPlaceholder> {
+    //: Promise<GroupJsonPlaceholder>
+    console.log(group);
+    const res = await fetch(
+      BACKEND_URL + '/api/Group' + id + '/assign-contact',
+      {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+          Authorization: `Bearer ${this.auth.getSession().token!}`,
+        },
+        body: JSON.stringify(group),
+      }
+    );
     return await res.json();
     //console.log(res.json())
   }
