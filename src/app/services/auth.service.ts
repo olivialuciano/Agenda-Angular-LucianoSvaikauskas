@@ -41,7 +41,6 @@ export class AuthService {
   }
 
   async addUser(user: iRegisterRequest): Promise<IUser> {
-    //: Promise<ContactJsonPlaceholder>
     console.log(user);
     const res = await fetch(BACKEND_URL + '/api/authentication', {
       method: 'POST',
@@ -68,7 +67,6 @@ export class AuthService {
   }
 
   setUserId(id: string) {
-    //**************
     localStorage.setItem('Id', id);
   }
 
@@ -95,6 +93,7 @@ export class AuthService {
     return await res.json();
   }
 
+  //hacer boton cerrar sesion e impolementar este mátodo
   resetSession() {
     localStorage.removeItem('session');
     localStorage.removeItem('Id');

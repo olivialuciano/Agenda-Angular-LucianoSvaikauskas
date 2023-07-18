@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GroupComponent } from '../group/group.component';
 import { Router } from '@angular/router';
 import { GroupJsonPlaceholder } from 'src/app/interfaces/group.interface';
 import { ContactJsonPlaceholder } from 'src/app/interfaces/contact.interface';
 import { ContactService } from 'src/app/services/contact.service.service';
+import { GroupService } from 'src/app/services/group.service';
 
 @Component({
   selector: 'app-groupdetail1',
@@ -13,15 +13,15 @@ import { ContactService } from 'src/app/services/contact.service.service';
 export class Groupdetail1Component implements OnInit {
   contactsData: ContactJsonPlaceholder[] = [];
   constructor(
-    private gc: GroupComponent,
     private router: Router,
-    private cs: ContactService
+    private cs: ContactService,
+    private gs: GroupService
   ) {}
 
   @Input() group: GroupJsonPlaceholder = {
     //recibe los datos del grupo
     id: 0,
-    Name: '',
+    name: '',
   };
   ngOnInit(): void {
     this.getData();
@@ -33,6 +33,6 @@ export class Groupdetail1Component implements OnInit {
   deleteGroup(id: number) {
     //metodo llamado desde el boton borrar del html(recibe el id del grupo)
     console.log('grupo id: ', id, ' eliminado');
-    this.gc.deleteGroup(id); //ejecuta el metodo deleteGroup() del group component
+    this.gs.deleteGroup(id); //ejecuta el metodo deleteGroup() del group component
   }
 }

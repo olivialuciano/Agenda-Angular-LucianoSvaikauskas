@@ -45,7 +45,6 @@ export class GroupService {
   }
 
   async addGroup(group: GroupJsonPlaceholder): Promise<GroupJsonPlaceholder> {
-    //: Promise<GroupJsonPlaceholder>
     console.log(group);
     const res = await fetch(BACKEND_URL + '/api/Group', {
       method: 'POST',
@@ -56,14 +55,12 @@ export class GroupService {
       body: JSON.stringify(group),
     });
     return await res.json();
-    //console.log(res.json())
   }
 
   async AssignContact(
     id: number,
     group: GroupJsonPlaceholder
   ): Promise<GroupJsonPlaceholder> {
-    //: Promise<GroupJsonPlaceholder>
     console.log(group);
     const res = await fetch(
       BACKEND_URL + '/api/Group' + id + '/assign-contact',
@@ -77,7 +74,6 @@ export class GroupService {
       }
     );
     return await res.json();
-    //console.log(res.json())
   }
 
   async deleteGroup(id: number): Promise<boolean> {

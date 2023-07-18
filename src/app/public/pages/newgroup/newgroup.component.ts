@@ -12,7 +12,7 @@ import { GroupService } from 'src/app/services/group.service';
 export class NewgroupComponent implements OnInit {
   groupData: GroupJsonPlaceholder = {
     id: 0,
-    Name: '',
+    name: '',
   };
 
   constructor(

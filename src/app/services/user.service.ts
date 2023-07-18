@@ -32,6 +32,7 @@ export class UserService {
     });
     return await res.json();
   }
+
   async deleteUser(id: number): Promise<boolean> {
     const res = await fetch(BACKEND_URL + '/api/User/' + id, {
       method: 'DELETE',

@@ -16,10 +16,10 @@ export class NewcontactComponent implements OnInit {
 
   contactData: ContactJsonPlaceholder = {
     id: 0,
-    Name: '',
-    TelephoneNumber: '',
-    CelularNumber: '',
-    Description: '',
+    name: '',
+    telephoneNumber: 0,
+    celularNumber: 0,
+    description: '',
   };
 
   constructor(
@@ -42,7 +42,7 @@ export class NewcontactComponent implements OnInit {
     const contactocreado = this.cs.addContact(this.contactData); //ejectua addContact del contact service con los valores del form
     console.log(
       'el contacto ',
-      (await contactocreado).Name,
+      (await contactocreado).name,
       ' fue creado con el id: ',
       (await contactocreado).id
     );

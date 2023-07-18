@@ -1,16 +1,21 @@
 <h2 id="editarcontacto">PERFIL</h2>
 
 <div class="tarjeta" *ngIf="!isEditing">
-  <h2 id="name">Victoria {{ user.name }}</h2>
-  <h2 id="lastname">Svaikauskas {{ user.lastName }}</h2>
-  <p id="email">vicky@gmail.com {{ user.email }}</p>
+  <h2 id="name">{{ user.name }}</h2>
+  <h2 id="lastname">{{ user.lastName }}</h2>
+  <p id="email">{{ user.email }}</p>
   <button id="eliminar" title="Borrar" (click)="deleteUsuario(user.id!)">
     Eliminar Cuenta
   </button>
   <button id="editar" title="Editar" (click)="isEditing = true">Editar</button>
 </div>
 
-<div *ngIf="isEditing" class="tarjeta">
+<form
+  *ngIf="isEditing"
+  class="tarjeta"
+  (ngSubmit)="editUsuario(userForEditData.id!, user, form)"
+  #form="ngForm"
+>
   <div>
     <label class="label" for="name">Nombre</label>
     <input
@@ -18,7 +23,7 @@
       id="name"
       class="input"
       name="name"
-      [(ngModel)]="userData.name"
+      [(ngModel)]="userForEditData.name"
     />
   </div>
   <div>
@@ -28,15 +33,25 @@
       id="lastname"
       class="input"
       name="lastname"
-      [(ngModel)]="userData.lastname"
+      [(ngModel)]="userForEditData.lastname"
     />
   </div>
   <div>
     <label class="label" for="email">Correo electrónico</label>
-    <input name="email" id="email" class="input" [(ngModel)]="userData.email" />
+    <input
+      name="email"
+      id="email"
+      class="input"
+      [(ngModel)]="userForEditData.email"
+    />
   </div>
 
-  <button id="Baceptar" type="submit" (click)="isEditing = false">
+  <button
+    id="Baceptar"
+    type="submit"
+    [disabled]="form.invalid"
+    (click)="isEditing = false"
+  >
     Aceptar
   </button>
-</div>
+</form>

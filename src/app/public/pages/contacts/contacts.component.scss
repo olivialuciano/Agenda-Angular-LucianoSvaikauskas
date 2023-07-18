@@ -63,7 +63,8 @@ $col-naranja: #f09e42;
 .listacontactosflex {
   width: 100%;
   display: flex;
-  // flex-direction: row;
+  flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin: 1rem;
 }

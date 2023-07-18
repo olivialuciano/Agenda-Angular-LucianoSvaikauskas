@@ -8,19 +8,18 @@
   </li>
 </ul>
 
-<input id="buscar" type="text" placeholder="Buscar.." />
+<!-- <input id="buscar" type="text" placeholder="Buscar.." /> -->
 
 <br />
-<div class="listacontactosflex" id="contacts" *ngIf="abrirContactEdit === 0">
-  <app-contactcard></app-contactcard>
-
+<!-- <div class="listacontactosflex" id="contacts" *ngIf="abrirContactEdit === 0"> -->
+<!-- <app-contactcard></app-contactcard> -->
+<div class="listacontactosflex" id="contacts">
   <app-contactcard
+    (onButtonEditClick)="editContacto($event)"
     *ngFor="let contact of contactsData"
     [contact]="contact"
   ></app-contactcard>
 </div>
+<!-- </div> -->
 
-<app-edit-contact
-  id="editcontact"
-  *ngIf="abrirContactEdit === 1"
-></app-edit-contact>
+<app-edit-contact id="editcontact" *ngIf="abrirContactEdit"></app-edit-contact>

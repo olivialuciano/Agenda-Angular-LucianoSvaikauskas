@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IUser } from 'src/app/interfaces/user.interface';
 import { UserService } from 'src/app/services/user.service';
@@ -11,24 +12,24 @@ import { UserService } from 'src/app/services/user.service';
 export class ProfileComponent implements OnInit {
   constructor(private router: Router, private us: UserService) {}
 
-  @Input() user: IUser = {
+  user: IUser = {
     //recibe los datos del user
     id: 0,
     name: '',
     lastName: '',
     email: '',
+    password: '',
   };
 
-  ngOnInit(): void {
-    // this.getUsuario(this.user.id)
-  }
+  ngOnInit(): void {}
 
-  userData: any = {
-    name: 'Victoria',
-    lastName: 'Svaikauskas',
-    email: 'vicky@gmail.com',
+  userForEditData: any = {
+    name: '',
+    lastName: '',
+    email: '',
   };
   isEditing = false;
+
   deleteUsuario(id: number) {
     //metodo llamado desde el boton borrar del html(recibe el id del contacto de esa agenda)
     console.log('contacto id: ', id, ' eliminado');
@@ -36,13 +37,8 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  // getUsuario(id: number){
-  //   this.us.getUserDetails(id);
-  // }
-
-  editUsuario(id: number, user: IUser) {
+  editUsuario(id: number, user: IUser, form: NgForm) {
     //metodo llamado desde el boton edit del html(recibe el id del contacto de esa agenda)
-    console.log('contacto id: ', id, ' edit');
-    this.us.editUser(id, user);
+    const usuarioeditado = this.us.editUser(id, this.user);
   }
 }

@@ -2,15 +2,15 @@
 <div class="tarjeta">
   <form (ngSubmit)="newgroup(form)" #form="ngForm">
     <div class="inputsEditarContacto">
-      <label class="label" for="nombre">Nombre</label>
+      <label class="label" for="name">Nombre</label>
       <input
         type="text"
-        id="nombre"
+        id="name"
         class="input"
-        name="nombre"
+        name="name"
         placeholder="Ingrese el nombre del grupo"
-        [(ngModel)]="groupData.Name"
-        #Name="ngModel"
+        [(ngModel)]="groupData.name"
+        #name="ngModel"
         [maxlength]="15"
       />
       <button id="Bguardar" type="submit" [disabled]="form.invalid">

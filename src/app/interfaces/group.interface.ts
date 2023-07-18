@@ -1,9 +1,9 @@
 export interface Group {
   id: number;
-  Name: string;
+  name: string;
 }
 
 export interface GroupJsonPlaceholder {
   id?: number;
-  Name: string;
+  name: string;
 }

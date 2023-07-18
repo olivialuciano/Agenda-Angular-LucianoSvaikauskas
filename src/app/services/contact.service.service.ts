@@ -35,7 +35,7 @@ export class ContactService {
   }
 
   async editContact(id: number, contact: ContactJsonPlaceholder) {
-    console.log('Enviando edit de usuario a la api');
+    console.log('Enviando edit de usuario a la api. EL ID: ', id);
     const res = await fetch(BACKEND_URL + '/api/Contact/' + id, {
       method: 'PUT',
       headers: {
@@ -44,13 +44,13 @@ export class ContactService {
       },
       body: JSON.stringify(contact),
     });
+    //console.log(res.json());
     return await res.json();
   }
 
   async addContact(
     contact: ContactJsonPlaceholder
   ): Promise<ContactJsonPlaceholder> {
-    //: Promise<ContactJsonPlaceholder>
     console.log(contact);
     const res = await fetch(BACKEND_URL + '/api/Contact', {
       method: 'POST',
@@ -61,7 +61,6 @@ export class ContactService {
       body: JSON.stringify(contact),
     });
     return await res.json();
-    //console.log(res.json())
   }
 
   async deleteContact(id: number): Promise<boolean> {
@@ -74,4 +73,7 @@ export class ContactService {
     });
     return res.ok;
   }
+
+  //idContactoForEdit: number = 0;
+  //abrirContactEdit: number = 0;
 }

@@ -1,22 +1,35 @@
 <div *ngIf="!isEditing" class="tarjeta">
-  <p id="Name">facultad{{ group.Name }}</p>
-  <button class="p6" title="Borrar" (click)="eliminarGrupo(group.id!)">
+  <p class="gname" id="name">{{ group.name }}</p>
+  <button
+    id="borrar"
+    class="p6"
+    title="Borrar"
+    (click)="eliminarGrupo(group.id!)"
+  >
     Borrar
   </button>
-  <button
-    class="p7"
-    title="Editar"
-    (click)="isEditing = true"
-    (click)="editGrupo()"
-  >
+  <button id="editar" class="p7" title="Editar" (click)="isEditing = true">
     Editar
   </button>
 </div>
 
-<div *ngIf="isEditing" class="tarjeta">
-  <input [(ngModel)]="groupData.Name" placeholder="Nombre del grupo" />
-  <button (click)="isEditing = false">Guardar</button>
-</div>
+<form
+  *ngIf="isEditing"
+  class="tarjeta"
+  (ngSubmit)="editgroup(groupForeditData.id!, groupForeditData, form)"
+  #form="ngForm"
+>
+  <label class="label" for="name">Nombre</label>
+  <input
+    type="text"
+    id="name"
+    class="input"
+    name="name"
+    [(ngModel)]="groupForeditData.name"
+    placeholder="Nombre del grupo"
+  />
+  <button id="guardar" type="submit" [disabled]="form.invalid">Guardar</button>
+</form>
 
 <!-- <div class="tarjeta">
   <p id="Name">facultad{{ group.Name }}</p>

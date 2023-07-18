@@ -2,36 +2,36 @@
 <div class="tarjeta">
   <form (ngSubmit)="newcontact(form)" #form="ngForm">
     <div>
-      <label class="label" for="Name">Nombre</label>
+      <label class="label" for="name">Nombre</label>
       <input
         type="text"
-        id="Name"
+        id="name"
         class="input"
-        name="Name"
+        name="name"
         placeholder="Ingrese su nombre"
-        [(ngModel)]="contactData.Name"
-        #Name="ngModel"
+        [(ngModel)]="contactData.name"
+        #name="ngModel"
         [maxlength]="15"
       />
     </div>
     <div>
-      <label class="label" for="CelularNumber">Teléfono</label>
+      <label class="label" for="celularNumber">Teléfono</label>
       <input
         type="text"
-        id="CelularNumber"
+        id="celularNumber"
         class="input"
-        name="CelularNumber"
+        name="celularNumber"
         placeholder="Ingrese su numero telefónico"
-        [(ngModel)]="contactData.CelularNumber"
-        #CelularNumber="ngModel"
+        [(ngModel)]="contactData.celularNumber"
+        #celularNumber="ngModel"
         [maxlength]="15"
       />
     </div>
     <div>
-      <label class="label" for="Description">Descripción</label>
+      <label class="label" for="description">Descripción</label>
       <textarea
-        name="Description"
-        id="Description"
+        name="description"
+        id="description"
         class="input"
         cols="30"
         rows="3"

@@ -14,19 +14,11 @@
   </button>
 
 -->
+<input id="buscar" type="text" placeholder="Buscar.." />
 
-<!-- <input id="buscar" type="text" placeholder="Buscar.." />
-
-  <div class="listacontactosflex">
-    <app-contactcard></app-contactcard>
-    <app-contactcard></app-contactcard>
-    <app-contactcard></app-contactcard>
-  </div>
-  <br />
-  <div class="listacontactosflex">
-    <app-contactcard
-      *ngFor="let contact of contactsData"
-      [contact]="contact"
-    ></app-contactcard>
-  </div>
-</div>  -->
+<div class="listacontactosflex">
+  <app-contactcard
+    *ngFor="let contact of contactsData"
+    [contact]="contact"
+  ></app-contactcard>
+</div>

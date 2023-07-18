@@ -20,9 +20,38 @@ $col-naranja: #f09e42;
   transform: scale(1.1);
 }
 
-#nombre {
+.gname {
   font-size: 130%;
   font-family: $font;
   color: $colorfont2;
   text-align: center;
+}
+
+.input {
+  font-size: 90%;
+}
+
+.label {
+  font-size: 90%;
+  font-family: $font;
+  color: $colorfont1;
+}
+
+#guardar {
+  background-color: $col-rosa;
+  border: none;
+  color: $colorfont1;
+  font-family: $font;
+}
+
+#editar,
+#borrar {
+  background-color: $col-rosa;
+  border: none;
+  color: $colorfont1;
+  font-family: $font;
+}
+#borrar {
+  background-color: #e23131;
+  color: $colorfont2;
 }

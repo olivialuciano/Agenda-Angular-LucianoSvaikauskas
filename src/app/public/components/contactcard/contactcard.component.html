@@ -1,20 +1,31 @@
 <div class="tarjeta">
-  <p id="Name">Olivia Lu{{ contact.Name }}</p>
-  <p id="CelularNumber">341546637{{ contact.CelularNumber }}</p>
-  <p id="Description">Amiga{{ contact.Description }}</p>
-  <a href="tel:{{ contact.CelularNumber }}"
+  <p id="name">{{ contact.name }}</p>
+  <p id="celularNumber">{{ contact.celularNumber }}</p>
+
+  <a href="tel:{{ contact.celularNumber }}"
     ><img src="./../../../../assets/img/llamar-agenda.webp" alt="llamar"
   /></a>
-  <a href="https://wa.me/{{ contact.CelularNumber }}" target="_blank"
+  <a href="https://wa.me/{{ contact.celularNumber }}" target="_blank"
     ><img src="./../../../../assets/img/wpp-agenda.jpg" alt="whatsapp"
   /></a>
   <a href="https://web.telegram.org/" target="_blank"
     ><img src="./../../../../assets/img/telegram-agenda.png" alt="telegram"
   /></a>
-  <button class="p6" title="Borrar" (click)="deleteContacto(contact.id!)">
+  <p id="description">{{ contact.description }}</p>
+  <button
+    id="eliminar"
+    class="p6"
+    title="Borrar"
+    (click)="deleteContacto(contact.id!)"
+  >
     Borrar
   </button>
-  <button class="p7" title="Editar" (click)="editContacto(contact.id!)">
+  <button
+    id="editar"
+    class="p7"
+    title="Editar"
+    (click)="editContacto(contact.id!)"
+  >
     Editar
   </button>
 </div>
