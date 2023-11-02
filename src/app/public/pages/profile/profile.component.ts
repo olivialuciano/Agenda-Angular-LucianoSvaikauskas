@@ -32,7 +32,7 @@ export class ProfileComponent implements OnInit {
 
   deleteUsuario(id: number) {
     //metodo llamado desde el boton borrar del html(recibe el id del contacto de esa agenda)
-    console.log('contacto id: ', id, ' eliminado');
+    console.log('contacto id: ', id, ' veremos si se elimina el maldito');
     this.us.deleteUser(id);
     this.router.navigate(['']);
   }

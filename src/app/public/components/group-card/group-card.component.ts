@@ -44,22 +44,6 @@ export class GroupCardComponent implements OnInit {
     return await grupo;
   }
 
-  // async contactForEditData(id: number) {
-  //   const contactForEdit = this.getGrupo(id); //ejecuta getContacto() con el id del contacto que va a ser editado
-
-  //   this.contactForeditData.id = (await contactForEdit).id; //reemplaza todos los valores del contactForeditData con los del contacto buscado
-  //   (this.contactForeditData.name = (await contactForEdit).name), //para que cuando se abra el form aparezcan todos los datos actuales del contacto
-  //     (this.contactForeditData.celularNumber = (
-  //       await contactForEdit
-  //     ).celularNumber),
-  //     (this.contactForeditData.telephoneNumber = (
-  //       await contactForEdit
-  //     ).telephoneNumber),
-  //     (this.contactForeditData.description = (
-  //       await contactForEdit
-  //     ).description);
-  // }
-
   async editgroup(id: number, groupForeditData: any, form: NgForm) {
     // toma  el id y los datos editados del contacto desde el form
 

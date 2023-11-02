@@ -44,7 +44,13 @@ export class NewcontactComponent implements OnInit {
       'el contacto ',
       (await contactocreado).name,
       ' fue creado con el id: ',
-      (await contactocreado).id
+      (await contactocreado).id,
+      'con celu',
+      (await contactocreado).telephoneNumber,
+      ' con descripción: ',
+      (await contactocreado).celularNumber,
+      ' con descripción: ',
+      (await contactocreado).description
     );
     this.router.navigate(['/contacts']); //cuando iniciamos secion nos lleva a contactos if(await contactocreado)
   }

@@ -28,21 +28,28 @@ export class ContactcardComponent implements OnInit {
   id: number | undefined;
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      console.log(params);
-      this.id = params['id'];
-      this.getContactDetails(this.id!);
-    });
+    // this.route.params.subscribe((params) => {
+    //   console.log(params);
+    //   this.id = params['id'];
+    //   this.getContactDetails(this.id!);
+    // });
   }
 
-  getContactDetails(id: number) {
-    this.cs.getContactDetails(id).then((r) => (this.contact = r));
+  // getContactDetails(id: number) {
+  //   this.cs.getContactDetails(id).then((r) => (this.contact = r));
+  // }
+
+  async getContact(id: number) {
+    //recibe el id de un contacto
+    const contactoo = this.cs.getContactDetails(id); //trae un objeto contacto con todos sus datos
+    return await contactoo;
   }
 
   deleteContacto(id: number) {
     //metodo llamado desde el boton borrar del html(recibe el id del contacto de esa agenda)
     console.log('contacto id: ', id, ' eliminado');
     this.cc.deleteContacto(id); //ejecuta el metodo deleteContacto() del contact component
+    this.router.navigate(['/contacts']);
   }
 
   editContacto(id: number) {

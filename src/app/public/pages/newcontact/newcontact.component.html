@@ -8,20 +8,30 @@
         id="name"
         class="input"
         name="name"
-        placeholder="Ingrese su nombre"
         [(ngModel)]="contactData.name"
         #name="ngModel"
         [maxlength]="15"
       />
     </div>
     <div>
-      <label class="label" for="celularNumber">Teléfono</label>
+      <label class="label" for="telephoneNumber">Teléfono</label>
+      <input
+        type="text"
+        id="telephoneNumber"
+        class="input"
+        name="telephoneNumberr"
+        [(ngModel)]="contactData.telephoneNumber"
+        #telephoneNumber="ngModel"
+        [maxlength]="15"
+      />
+    </div>
+    <div>
+      <label class="label" for="celularNumber">Celuar</label>
       <input
         type="text"
         id="celularNumber"
         class="input"
         name="celularNumber"
-        placeholder="Ingrese su numero telefónico"
         [(ngModel)]="contactData.celularNumber"
         #celularNumber="ngModel"
         [maxlength]="15"
@@ -33,6 +43,8 @@
         name="description"
         id="description"
         class="input"
+        [(ngModel)]="contactData.description"
+        #description="ngModel"
         cols="30"
         rows="3"
       ></textarea>

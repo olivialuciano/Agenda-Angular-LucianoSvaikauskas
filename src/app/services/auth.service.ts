@@ -17,7 +17,7 @@ export class AuthService {
   private loggedIn: boolean = false;
 
   async login(authentication: iAuthRequest): Promise<boolean> {
-    const res = await fetch(BACKEND_URL + '/api/authentication/authenticate', {
+    const res = await fetch(BACKEND_URL + '/api/User/authenticate', {
       method: 'POST',
       mode: 'cors',
       cache: 'no-cache',
@@ -42,7 +42,7 @@ export class AuthService {
 
   async addUser(user: iRegisterRequest): Promise<IUser> {
     console.log(user);
-    const res = await fetch(BACKEND_URL + '/api/authentication', {
+    const res = await fetch(BACKEND_URL + '/api/User', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
