@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ContactJsonPlaceholder } from 'src/app/interfaces/contact.interface';
 import { ContactsComponent } from '../../pages/contacts/contacts.component';
 import { ContactService } from 'src/app/services/contact.service.service';
@@ -9,11 +9,12 @@ import { ContactService } from 'src/app/services/contact.service.service';
   styleUrls: ['./contactcard.component.scss'],
 })
 export class ContactcardComponent implements OnInit {
-  contactsData: ContactJsonPlaceholder[] = [];
+  //contactsData: ContactJsonPlaceholder[] = [];
   constructor(
     private cc: ContactsComponent,
     private router: Router,
-    private cs: ContactService
+    private cs: ContactService,
+    private route: ActivatedRoute
   ) {}
 
   @Input() contact: ContactJsonPlaceholder = {
@@ -23,10 +24,19 @@ export class ContactcardComponent implements OnInit {
     CelularNumber: '',
     TelephoneNumber: '',
     Description: '',
-  };
+  }
+  id: number | undefined
+
   ngOnInit(): void {
-    // this.getContactData(this.contact.id);
-    // this.getData();
+    this.route.params.subscribe(params => {
+      console.log(params)
+      this.id = params['id'];
+      this.getContactDetails(this.id!);
+    })
+  }
+
+  getContactDetails(id: number) {
+    this.cs.getContactDetails(id).then(r => this.contact = r);
   }
 
   deleteContacto(id: number) {
