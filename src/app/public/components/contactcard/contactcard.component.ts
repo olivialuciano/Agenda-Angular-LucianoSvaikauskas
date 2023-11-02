@@ -49,7 +49,7 @@ export class ContactcardComponent implements OnInit {
     //metodo llamado desde el boton edit del html(recibe el id del contacto de esa agenda)
     console.log('contacto id: ', id, ' edit');
     this.cc.idContactoForEdit = id; //cambia el valor de idContactoForEdit en el contact component
-    this.cc.abrirContactEdit = 1;
+    this.cc.abrirContactEdit = true;
     //cambia el valor de abrirContactEdit en el contact component por 1 para q se cierre las contact-card y se abra el edit-form
   }
 

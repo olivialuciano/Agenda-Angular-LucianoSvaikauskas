@@ -15,7 +15,6 @@
 <!-- <app-contactcard></app-contactcard> -->
 <div class="listacontactosflex" id="contacts">
   <app-contactcard
-    (onButtonEditClick)="editContacto($event)"
     *ngFor="let contact of contactsData"
     [contact]="contact"
   ></app-contactcard>
@@ -23,3 +22,5 @@
 <!-- </div> -->
 
 <app-edit-contact id="editcontact" *ngIf="abrirContactEdit"></app-edit-contact>
+
+<!-- (onButtonEditClick)="editContacto($event)"  ESTO IBA EN APP-CONTACTCARD-->
