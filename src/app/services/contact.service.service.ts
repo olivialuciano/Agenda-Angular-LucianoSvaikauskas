@@ -34,19 +34,62 @@ export class ContactService {
     return await data.json();
   }
 
+  // async editContact(id: number, contact: ContactJsonPlaceholder) {
+  //   console.log('Enviando edit de usuario a la api');
+  //   const res = await fetch(BACKEND_URL + '/api/Contact/' + id, {
+  //     method: 'PUT',
+  //     headers: {
+  //       'Content-type': 'application/json',
+  //       Authorization: `Bearer ${this.auth.getSession().token!}`,
+  //     },
+  //     body: JSON.stringify(contact),
+  //   });
+  //   return await res.json();
+  // }
   async editContact(id: number, contact: ContactJsonPlaceholder) {
-    console.log('Enviando edit de usuario a la api. EL ID: ', id);
-    const res = await fetch(BACKEND_URL + '/api/Contact/' + id, {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: `Bearer ${this.auth.getSession().token!}`,
-      },
-      body: JSON.stringify(contact),
-    });
-    //console.log(res.json());
-    return await res.json();
+    try {
+      console.log('Enviando edit de usuario a la api');
+      const res = await fetch(BACKEND_URL + '/api/Contact/' + id, {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json',
+          Authorization: `Bearer ${this.auth.getSession().token!}`,
+        },
+        body: JSON.stringify(contact),
+      });
+
+      if (res.ok) {
+        return await res.json();
+      } else {
+        console.error(
+          'La solicitud PUT no fue exitosa:',
+          res.status,
+          res.statusText
+        );
+        // Manejo de errores específico, si es necesario.
+      }
+    } catch (error) {
+      console.error('Error en la solicitud PUT:', error);
+      // Manejo de errores específico, si es necesario.
+    }
   }
+
+  // async editContact(id: number, contact: ContactJsonPlaceholder) {
+  //   if (id === undefined || isNaN(id)) {
+  //     throw new Error('ID de contacto no válido');
+  //   }
+
+  //   console.log('Enviando edit de usuario a la API');
+  //   const res = await fetch(BACKEND_URL + '/api/Contact/' + id, {
+  //     method: 'PUT',
+  //     headers: {
+  //       'Content-type': 'application/json',
+  //       Authorization: `Bearer ${this.auth.getSession().token!}`,
+  //     },
+  //     body: JSON.stringify(contact),
+  //   });
+  //   return await res.json();
+  // }
 
   async addContact(
     contact: ContactJsonPlaceholder

@@ -1,97 +1,213 @@
-//VARIABLES
-$font: "Merriweather", serif;
-$colorfont2: #f4edd7;
-$col-rosa: #feb4b4;
-$col-rosa-claro: #fbe4e4;
-$col-violeta: #b4bbef;
-$col-violeta-claro: #e9ebf9;
-$colorfont1: #424242;
-$col-naranja: #f09e42;
+// //VARIABLES
+// $font: "Merriweather", serif;
+// $colorfont2: #f4edd7;
+// $col-rosa: #feb4b4;
+// $col-rosa-claro: #fbe4e4;
+// $col-violeta: #b4bbef;
+// $col-violeta-claro: #e9ebf9;
+// $colorfont1: #424242;
+// $col-naranja: #f09e42;
 
-#editarcontacto {
-  font-family: $font;
-  font-weight: 100%;
-  font-size: 200%;
-  color: $colorfont1;
-  text-align: center;
+// #editarcontacto {
+//   font-family: $font;
+//   font-weight: 100%;
+//   font-size: 200%;
+//   color: $colorfont1;
+//   text-align: center;
+// }
+
+// .tarjeta {
+//   text-align: center;
+//   width: 20rem;
+//   height: 29rem;
+//   background-color: $col-naranja;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding-top: 2rem;
+//   position: absolute;
+//   top: 12rem;
+//   left: 30rem;
+// }
+
+// .label {
+//   color: $colorfont1;
+//   font-weight: 10%;
+//   width: 60%;
+//   font-family: $font;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-top: 1rem;
+//   margin-bottom: 0.5rem;
+// }
+
+// #nombre,
+// #tel,
+// #descripcion,
+// select {
+//   font-size: 80%;
+//   width: 75%;
+//   font-family: $font;
+//   color: $colorfont1;
+// }
+
+// .input,
+// select {
+//   padding: 1.5% 1.5%;
+//   box-sizing: border-box;
+//   border: 1px solid $col-rosa-claro;
+//   border-radius: 4px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 2%;
+// }
+
+// .input {
+//   padding: 1.5% 1.5%;
+//   box-sizing: border-box;
+//   border: 1px solid $col-naranja;
+//   border-radius: 4px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 2%;
+// }
+// .input:focus,
+// select:focus {
+//   background-color: $col-rosa-claro;
+// }
+
+// #Baceptar {
+//   border: none;
+//   font-style: normal;
+//   font-family: $font;
+//   background-color: $col-rosa;
+//   color: $colorfont1;
+//   font-size: 140%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 11rem;
+//   margin-left: 15%;
+//   margin: 0 auto;
+//   margin-top: 1rem;
+//   display: block;
+// }
+
+// #Baceptar:hover {
+//   background-color: $col-rosa-claro;
+// }
+
+$background-color: rgb(235, 235, 235);
+$celeste: rgb(7, 152, 201);
+$color-blanco: rgb(239, 240, 234);
+$color-1: rgb(104, 166, 201); // rgb(108,153,138);
+$color-2: rgb(63, 129, 167); //rgb(84, 117, 106);
+$tipografia-1: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+.fondo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.tarjeta {
-  text-align: center;
-  width: 20rem;
-  height: 29rem;
-  background-color: $col-naranja;
+#fondo-ingresos {
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.275);
+  padding: 25px;
+  padding-top: 0px;
+  margin-top: 70px;
+  border-radius: 10px;
+  width: 330px;
+}
+
+#ingresos .container {
+  max-width: 330px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: left;
+  padding: 10px 10px;
+}
+
+#title h1 {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13px 30px;
+  font-weight: bold;
+  font-size: 35px;
+  color: $color-1;
+  font-weight: bold;
+  font-family: $tipografia-1;
+}
+
+.container input {
+  margin: 10px;
+  border-color: rgba(255, 255, 255, 0.507);
+  border-radius: 10px;
+  height: 35px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: $color-1;
+  font-size: 20px;
+  font-family: $tipografia-1;
+}
+
+.container input::placeholder {
+  color: $color-1;
+  font-size: 17px;
+  font-family: $tipografia-1;
+  padding: 30px;
+}
+
+.container label {
+  color: $color-blanco;
+  font-family: $tipografia-1;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10px;
+  color: $color-1;
+}
+
+.container #mal-ingreso {
+  color: $color-blanco;
+  font-family: $tipografia-1;
+  font-weight: lighter;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.container button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: $color-1;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2rem;
-  position: absolute;
-  top: 12rem;
-  left: 30rem;
 }
 
-.label {
-  color: $colorfont1;
-  font-weight: 10%;
-  width: 60%;
-  font-family: $font;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+.container button:hover {
+  background-color: $color-2;
 }
 
-#nombre,
-#tel,
-#descripcion,
-select {
-  font-size: 80%;
-  width: 75%;
-  font-family: $font;
-  color: $colorfont1;
-}
-
-.input,
-select {
-  padding: 1.5% 1.5%;
-  box-sizing: border-box;
-  border: 1px solid $col-rosa-claro;
-  border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2%;
-}
-
-.input {
-  padding: 1.5% 1.5%;
-  box-sizing: border-box;
-  border: 1px solid $col-naranja;
-  border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2%;
-}
-.input:focus,
-select:focus {
-  background-color: $col-rosa-claro;
-}
-
-#Baceptar {
-  border: none;
-  font-style: normal;
-  font-family: $font;
-  background-color: $col-rosa;
-  color: $colorfont1;
-  font-size: 140%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 11rem;
-  margin-left: 15%;
-  margin: 0 auto;
-  margin-top: 1rem;
-  display: block;
-}
-
-#Baceptar:hover {
-  background-color: $col-rosa-claro;
+p {
+  color: $color-blanco;
+  font-family: $tipografia-1;
+  font-weight: lighter;
+  font-size: 13px;
+  margin-left: 10px;
 }

@@ -21,7 +21,15 @@ export class ProfileComponent implements OnInit {
     password: '',
   };
 
+  id: number | undefined;
+
   ngOnInit(): void {}
+
+  async getUser(id: number) {
+    //recibe el id de un contacto
+    const usuarioo = this.us.getUserDetails(id); //trae un objeto contacto con todos sus datos
+    return await usuarioo;
+  }
 
   userForEditData: any = {
     name: '',

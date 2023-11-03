@@ -1,4 +1,4 @@
-<div class="tarjeta">
+<!-- <div class="tarjeta">
   <form (ngSubmit)="editcontact(contactForeditData, form)" #form="ngForm">
     <div>
       <label class="label" for="name">Nombre</label>
@@ -103,4 +103,78 @@
 <!-- (ngSubmit)="editcontact(contactForeditData, form)" -->
 <!-- 
 (ngSubmit)="contactForEditData()" -->
-<!-- (ngSubmit)="contactForEditData(contactForeditData.id!)" -->
+<!-- (ngSubmit)="contactForEditData(contactForeditData.id!)"  -->
+
+<div class="fondo">
+  <div id="fondo-ingresos">
+    <section id="title">
+      <h1>Editar Contato</h1>
+    </section>
+
+    <section id="ingresos">
+      <div class="container">
+        <form (ngSubmit)="editContactFull(form)" #form="ngForm">
+          <div class="inputs">
+            <label for="name">Nombre</label>
+            <input
+              type="text"
+              value="algo"
+              name="name"
+              id="name"
+              autocomplete="name"
+              placeholder="Ingrese el nombre"
+              [(ngModel)]="contactForeditData.name"
+              #name="ngModel"
+              [maxlength]="15"
+            />
+          </div>
+          <div class="inputs">
+            <label for="celularNumber">Celular</label>
+            <input
+              type="text"
+              name="celularNumber"
+              id="celularNumber"
+              autocomplete="celularNumber"
+              placeholder="Ingrese el celular"
+              [(ngModel)]="contactForeditData.celularNumber"
+              #celularNumber="ngModel"
+              [maxlength]="15"
+            />
+          </div>
+
+          <div class="inputs">
+            <label for="telephoneNumber">Telefono</label>
+            <input
+              type="text"
+              name="telephoneNumber"
+              id="telephoneNumber"
+              placeholder="Ingrese el telefono"
+              [(ngModel)]="contactForeditData.telephoneNumber"
+              #telephoneNumber="ngModel"
+              [maxlength]="15"
+            />
+          </div>
+
+          <div class="inputs">
+            <label for="description">descripción</label>
+            <textarea
+              type="text"
+              name="description"
+              id="description"
+              placeholder="Ingrese la descripción"
+              [(ngModel)]="contactForeditData.description"
+              #description="ngModel"
+              cols="30"
+              rows="3"
+            >
+            </textarea>
+          </div>
+
+          <div>
+            <button type="submit" [disabled]="form.invalid">Cargar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

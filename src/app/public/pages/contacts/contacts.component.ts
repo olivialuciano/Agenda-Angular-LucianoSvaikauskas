@@ -45,7 +45,7 @@ export class ContactsComponent implements OnInit {
   // }
   editContacto(id: number) {
     //metodo llamado desde el boton edit del html(recibe el id del contacto de esa agenda)
-    console.log('contacto id: ', id, ' edit');
+    console.log('contacto id: ', id, ' editjajajajjajajajajja');
     this.abrirContactEdit = true;
 
     //this.cs.idContactoForEdit = id; //cambia el valor de idContactoForEdit en el contact component
