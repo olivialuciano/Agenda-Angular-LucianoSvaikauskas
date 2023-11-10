@@ -75,11 +75,12 @@ img {
 }
 
 #editar:hover,
-#eliminar:hover {
+#eliminar:hover
+#grupo:hover {
   background-color: $col-rosa-claro;
 }
 
-#eliminar {
+#eliminar, #grupo{
   border: none;
   color: $colorfont1;
   background-color: $col-naranja;

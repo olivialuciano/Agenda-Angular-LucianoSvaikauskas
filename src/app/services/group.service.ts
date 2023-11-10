@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BACKEND_URL } from '../constants/backends';
-import { GroupJsonPlaceholder } from '../interfaces/group.interface';
+import { AllGroup, GroupJsonPlaceholder, iGroupandContact } from '../interfaces/group.interface';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { AuthService } from './auth.service';
 export class GroupService {
   constructor(private auth: AuthService) {}
 
-  async getGroupDetails(id: number): Promise<GroupJsonPlaceholder> {
+  async getGroupDetails(id: number): Promise<AllGroup> {
     const data = await fetch(BACKEND_URL + '/api/Group/' + id, {
       method: 'GET',
       headers: {
@@ -20,7 +20,7 @@ export class GroupService {
     return await data.json();
   }
 
-  async getGroup(): Promise<GroupJsonPlaceholder[]> {
+  async getGroup(): Promise<AllGroup[]> {
     const data = await fetch(BACKEND_URL + '/api/Group', {
       method: 'GET',
       headers: {
@@ -58,21 +58,20 @@ export class GroupService {
   }
 
   async AssignContact(
-    id: number,
-    group: GroupJsonPlaceholder
-  ): Promise<GroupJsonPlaceholder> {
-    console.log(group);
+    grupo: iGroupandContact) {
+    console.log(grupo);
     const res = await fetch(
-      BACKEND_URL + '/api/Group' + id + '/assign-contact',
+      BACKEND_URL + '/api/Group/' + grupo.groupId + '/assign-contact',
       {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',
           Authorization: `Bearer ${this.auth.getSession().token!}`,
         },
-        body: JSON.stringify(group),
+        body: JSON.stringify(grupo),
       }
     );
+    console.log(grupo.groupId)
     return await res.json();
   }
 
@@ -85,5 +84,18 @@ export class GroupService {
       },
     });
     return res.ok;
+  }
+
+  async addtogroup(grupo: iGroupandContact) {
+    console.log('Enviando edit de usuario a la api');
+    const res = await fetch(BACKEND_URL + '/api/Group/' + grupo.groupId + '/assign-contact', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${this.auth.getSession().token!}`
+      },
+      body: JSON.stringify(grupo),
+    });
+    return await res.json();
   }
 }

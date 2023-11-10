@@ -19,6 +19,22 @@ const routes: Routes = [
         (m) => m.ContactsModule
       ),
   },
+
+  {
+    path: 'groupdetail/:id',
+    loadChildren: () =>
+      import('./public/pages/group-detail/group-detail.module').then(
+        (m) => m.GroupDetailModule
+      ),
+  },
+
+  {
+    path: 'selectgroup/:id',
+    loadChildren: () =>
+      import('./public/pages/select-group/select-group.module').then(
+        (m) => m.SelectGroupModule
+      ),
+  },
   // {
   //   path: 'contactdetail',
   //   loadChildren: () =>
@@ -58,13 +74,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./public/pages/group/group.module').then((m) => m.GroupModule),
   },
-  {
-    path: 'groupdetail1',
-    loadChildren: () =>
-      import('./public/pages/groupdetail1/groupdetail1.module').then(
-        (m) => m.Groupdetail1Module
-      ),
-  },
+
   {
     path: 'newgroup',
     loadChildren: () =>

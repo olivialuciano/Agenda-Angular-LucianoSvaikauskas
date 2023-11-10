@@ -49,8 +49,8 @@ export class GroupCardComponent implements OnInit {
 
     console.log(form.value);
 
-    const grupoeditado = this.gs.editGroup(id, this.groupForeditData); //ejecuta el metodo editContact del contact service
-
+    const grupoeditado = await this.gs.editGroup(id,groupForeditData); //ejecuta el metodo editContact del contact service
+    
     console.log(
       "el contacto '",
       (await grupoeditado).name,
@@ -61,5 +61,7 @@ export class GroupCardComponent implements OnInit {
     this.isEditing = false;
   }
 }
+
+//INTENTO HACER EL EDIT
 
 //hacer una funcion que al apretar el nombre del grupo, vaya a group detail de ESE grupo con un navigate [routerLink]="['/groupdetail1']"

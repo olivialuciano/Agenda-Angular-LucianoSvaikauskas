@@ -1,13 +1,14 @@
 <div *ngIf="!isEditing" class="tarjeta">
   <p class="gname" id="name">{{ group.name }}</p>
-  <button
+  <!-- <button
     id="borrar"
     class="p6"
     title="Borrar"
     (click)="eliminarGrupo(group.id!)"
   >
     Borrar
-  </button>
+  </button> -->
+  <span [routerLink]="['/groupdetail', group.id]" class="vm">Ver mas...</span>
   <button id="editar" class="p7" title="Editar" (click)="isEditing = true">
     Editar
   </button>

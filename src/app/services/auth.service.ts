@@ -7,12 +7,13 @@ import { JwtHelperService } from '@auth0/angular-jwt'; //npm install @auth0/angu
 import { HttpClient } from '@angular/common/http';
 import { ContactJsonPlaceholder } from '../interfaces/contact.interface';
 import { IUser } from '../interfaces/user.interface';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router:Router) {}
 
   private loggedIn: boolean = false;
 
@@ -93,11 +94,15 @@ export class AuthService {
     return await res.json();
   }
 
-  //hacer boton cerrar sesion e impolementar este mátodo
+  //hacer boton cerrar sesion e impolementar este método
   resetSession() {
     localStorage.removeItem('session');
     localStorage.removeItem('Id');
     this.loggedIn = false;
+    this.router.navigate(['/login']);
     //window.location.reload();
   }
+
+
+
 }
