@@ -1,74 +1,54 @@
-.for{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.formulario{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 500px;
-    height: auto;
-    background: #fff;
-    border-radius: 5px;
-}
-.formulario h1{
-    text-align: center;
-    padding: 0 0 1px 0;
-    border-bottom: 1px solid silver;
-}
-.formulario p{
-    text-align: center;
-    padding: 0 0 1px 0;
-    font-size: 18px;
-}
-.formulario label{
-    text-align: center;
-    padding: 0 0 1px 0;
-    font-size: 18px;
+// VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
+
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
-.submit{
-    margin-top: 35px;
-    display: flex;
-    flex-direction: row;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 10px;
-}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 
-.boton{
-    text-align: center;
-    width: 150px;
-    height: 50px;
-    border: 1px solid;
-    background: #7C88FF;
-    font-size:28px;
-    color:#fff;
-    border-radius: 50px;
-    cursor: pointer;
-    outline: none;
-}
-.boton:hover{
-    border: 1px solid #7C88FF;
-    transition: .5s;
-    background-color: #fff;
-    color: #7C88FF;
-    transition: 250ms;
-}
+  h1 {
+    font-size: 140%;
+    font-family: $font;
+    color: $colorfont1;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
 
-@media screen and (max-width:650px){
-    .formulario{
-        display:block;
-        width: 80%;
+  p {
+    font-size: 100%;
+    font-family: $font;
+    color: $colorfont1;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    margin-top: 1rem;
+
+    .boton {
+      margin-top: 1.5rem;
+      border: none;
+      color: $colorfont1;
+      background-color: $col-naranja;
+      text-align: center;
+      width: 8rem;
+      font-size: 100%;
+      font-family: $font;
+      border-radius: 1px;
     }
-    .submit{
-        display: flex;
-        flex-direction: row;
-        justify-content: center
-    }
-    .submit{
-        font-size: 25px;
-    }
+  }
 }

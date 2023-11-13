@@ -1,114 +1,7 @@
-<!-- <div class="tarjeta">
-  <form (ngSubmit)="editcontact(contactForeditData, form)" #form="ngForm">
-    <div>
-      <label class="label" for="name">Nombre</label>
-      <input
-        type="text"
-        id="name"
-        class="input"
-        name="name"
-        [(ngModel)]="contactForeditData.name"
-        #name="ngModel"
-        [maxlength]="15"
-        placeholder="{{ contactForeditData.name }}"
-      />
-    </div>
-    <div>
-      <label class="label" for="celularNumber">Teléfono </label>
-      <input
-        type="text"
-        id="celularNumber"
-        class="input"
-        name="celularNumber"
-        [(ngModel)]="contactForeditData.celularNumber"
-        #celularNumber="ngModel"
-        [maxlength]="15"
-      />
-    </div>
-    <div>
-      <label class="label" for="description">Descripción</label>
-      <textarea
-        name="description"
-        id="description"
-        class="input"
-        cols="30"
-        rows="3"
-        [(ngModel)]="contactForeditData.description"
-        #description="ngModel"
-        [maxlength]="60"
-      ></textarea>
-    </div>
-    <button id="Baceptar" type="submit" [disabled]="form.invalid">
-      Aceptar
-    </button>
-  </form>
-</div>
-
-<!-- <div class="tarjeta">
-  <form (ngSubmit)="editcontact(contactForeditData.id, form)" #form="ngForm">
-    <div>
-      <label class="label" for="name">Nombre</label>
-      <input
-        type="text"
-        id="name"
-        class="input"
-        name="name"
-        [(ngModel)]="contactForeditData.name"
-        #name="ngModel"
-        [maxlength]="15"
-        placeholder="{{ contactForeditData.name }}"
-      />
-    </div>
-    <div>
-      <label class="label" for="celularNumber">Teléfono </label>
-      <input
-        type="text"
-        id="celularNumber"
-        class="input"
-        name="celularNumber"
-        [(ngModel)]="contactForeditData.celularNumber"
-        #celularNumber="ngModel"
-        [maxlength]="15"
-      />
-    </div>
-    <div>
-      <label class="label" for="description">Descripción</label>
-      <textarea
-        name="description"
-        id="description"
-        class="input"
-        cols="30"
-        rows="3"
-        [(ngModel)]="contactForeditData.description"
-        #description="ngModel"
-        [maxlength]="60"
-      ></textarea>
-    </div>
-
-    <button id="Baceptar" type="submit" [disabled]="form.invalid">
-      Aceptar
-    </button>
-  </form>
-</div> -->
-
-<!-- <div>
-      <label class="label" for="group">Grupo</label>
-      <select multiple>
-        <option *ngFor="let group of groupsData" [value]="group.nombre">
-          {{ group.nombre }}
-        </option>
-      </select>
-    </div>  -->
-
-<!-- (ngSubmit)="editcontact(contactForeditData, form)" -->
-<!-- 
-(ngSubmit)="contactForEditData()" -->
-<!-- (ngSubmit)="contactForEditData(contactForeditData.id!)"  -->
-
 <div class="fondo">
   <div id="fondo-ingresos">
     <section id="title">
-      <h1>Editar Contato</h1>
+      <h1>Editar Contacto</h1>
     </section>
 
     <section id="ingresos">
@@ -118,7 +11,6 @@
             <label for="name">Nombre</label>
             <input
               type="text"
-              value="algo"
               name="name"
               id="name"
               autocomplete="name"
@@ -156,7 +48,7 @@
           </div>
 
           <div class="inputs">
-            <label for="description">descripción</label>
+            <label for="description">Descripción</label>
             <textarea
               type="text"
               name="description"
@@ -166,8 +58,7 @@
               #description="ngModel"
               cols="30"
               rows="3"
-            >
-            </textarea>
+            ></textarea>
           </div>
 
           <div>

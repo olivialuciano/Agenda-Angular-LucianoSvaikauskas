@@ -1,12 +1,17 @@
 <div class="formulario">
-    <h1>Grupos</h1>
-    <p>Selecciona el grupo al cual quieres agregar el contacto</p>
-    <form (ngSubmit)="addToGroup(form)" #form="ngForm" id="agregar-form">
+  <h1>Grupos</h1>
+  <p>Selecciona el grupo al cual quieres agregar el contacto</p>
+  <form (ngSubmit)="addToGroup(form)" #form="ngForm" id="agregar-form">
     <div class="for">
-        <app-group-select *ngFor="let grupo of grupos" [groups]="grupo" (valor)="union.groupId=$event"></app-group-select>
+      <app-group-select
+        *ngFor="let grupo of grupos"
+        [groups]="grupo"
+        (valor)="union.groupId = $event"
+      ></app-group-select>
     </div>
     <div class="submit">
-        <input class="boton" type="submit" value="Submit">
-        <input class="boton" [routerLink]="['/contacts']" value="Cancelar">
+      <input class="boton" type="submit" value="Submit" />
+      <input class="boton" [routerLink]="['/contacts']" value="Cancelar" />
     </div>
-</form>
+  </form>
+</div>
