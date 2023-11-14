@@ -16,4 +16,9 @@
     *ngFor="let group of groupsData"
     [group]="group"
   ></app-group-card>
+  <img
+    class="cartel-ux"
+    *ngIf="!groupsData || groupsData.length === 0"
+    src="../../../../assets/img/no-groups.png"
+  />
 </div>

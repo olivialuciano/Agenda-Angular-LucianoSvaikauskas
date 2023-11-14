@@ -1,4 +1,4 @@
-//VARIABLES
+// VARIABLES
 $font: "Merriweather", serif;
 $colorfont2: #f4edd7;
 $col-rosa: #feb4b4;
@@ -20,20 +20,15 @@ $col-naranja: #f09e42;
   text-align: center;
   width: 15rem;
   height: 18rem;
+  position: relative;
 }
 
 .tarjeta:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #name {
   margin-top: 1rem;
-  font-size: 100%;
-  font-family: $font;
-  color: $colorfont2;
-}
-
-#name {
   font-size: 140%;
   font-family: $font;
   color: $colorfont1;
@@ -41,13 +36,13 @@ $col-naranja: #f09e42;
 }
 
 #celularNumber {
-  font-size: 110%;
+  font-size: 100%;
   font-family: $font;
   color: $colorfont1;
 }
 
 #description {
-  font-size: 90%;
+  font-size: 80%;
   font-family: $font;
   color: $colorfont1;
 }
@@ -59,37 +54,27 @@ img {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 }
-
-#editar {
-  margin-top: auto;
-  border: none;
-  color: $colorfont1;
-  background-color: $col-naranja;
-  text-align: center;
-  width: 6rem;
-  font-size: 100%;
-  font-family: $font;
-  border-radius: 1px;
-  float: left;
-  margin-top: 1.5rem;
+.edit {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem; // Ajustado para estar a la izquierda
+  width: 30px; // Ajusta según sea necesario
+  height: 30px; // Ajusta según sea necesario
 }
 
-#editar:hover,
-#eliminar:hover
-#grupo:hover {
-  background-color: $col-rosa-claro;
+.group {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%; // Centrado en el medio
+  transform: translateX(-50%);
+  width: 30px; // Ajusta según sea necesario
+  height: 30px; // Ajusta según sea necesario
 }
 
-#eliminar, #grupo{
-  border: none;
-  color: $colorfont1;
-  background-color: $col-naranja;
-  text-align: center;
-  width: 6rem;
-  font-size: 100%;
-  font-family: $font;
-  border-radius: 1px;
-  display: flex;
-  float: right;
-  margin-top: 1.5rem;
+.eliminar {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem; // Ajustado para estar a la derecha
+  width: 30px; // Ajusta según sea necesario
+  height: 30px; // Ajusta según sea necesario
 }

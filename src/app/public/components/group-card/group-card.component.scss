@@ -1,4 +1,4 @@
-//VARIABLES
+// VARIABLES
 $font: "Merriweather", serif;
 $colorfont2: #f4edd7;
 $col-rosa: #feb4b4;
@@ -9,15 +9,21 @@ $colorfont1: #424242;
 $col-naranja: #f09e42;
 
 .tarjeta {
+  position: relative; // Para posicionar elementos hijos de forma absoluta con respecto a este contenedor
   box-shadow: 0 2px 4px 0 #bbad8f;
   width: 28rem;
   height: 3rem;
   transition: 0.4s;
   background-color: $col-naranja;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Para centrar horizontalmente
+  justify-content: center; // Para centrar verticalmente
+  margin-top: 1rem;
 }
 
 .tarjeta:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 .gname {
@@ -27,14 +33,42 @@ $col-naranja: #f09e42;
   text-align: center;
 }
 
-.input {
-  font-size: 90%;
+.vm {
+  align-self: flex-start; // Para posicionar a la izquierda
+  margin-left: 10px; // Ajusta según sea necesario
+  margin-bottom: 10px; // Ajusta según sea necesario
+  color: $colorfont1;
 }
 
-.label {
+.editar {
+  position: absolute; // Posicionamiento absoluto con respecto al padre
+  bottom: 10px; // Ajusta según sea necesario
+  right: 10px; // Ajusta según sea necesario
+  height: 27px;
+  width: 27px;
+}
+
+// ... (mantén las variables y estilos anteriores)
+
+.tarjeta-edicion {
+  box-shadow: 0 2px 4px 0 #bbad8f;
+  width: 28rem;
+  height: auto; // Ajusta según sea necesario
+  transition: 0.4s;
+  background-color: $col-violeta-claro;
+  margin-top: 20px; // Ajusta según sea necesario
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-edicion:hover {
+  transform: scale(1.1);
+}
+
+.input {
   font-size: 90%;
-  font-family: $font;
-  color: $colorfont1;
+  margin-bottom: 10px; // Ajusta según sea necesario
 }
 
 #guardar {
@@ -42,16 +76,11 @@ $col-naranja: #f09e42;
   border: none;
   color: $colorfont1;
   font-family: $font;
+  margin-top: 10px; // Ajusta según sea necesario
 }
 
-#editar,
-#borrar {
-  background-color: $col-rosa;
-  border: none;
-  color: $colorfont1;
+.label {
+  font-size: 90%;
   font-family: $font;
-}
-#borrar {
-  background-color: #e23131;
-  color: $colorfont2;
+  color: $colorfont1;
 }

@@ -1,22 +1,22 @@
-<div *ngIf="!isEditing" class="tarjeta">
+<!-- tarjeta normal -->
+<div
+  *ngIf="!isEditing"
+  class="tarjeta"
+  [routerLink]="['/groupdetail', group.id]"
+>
   <p class="gname" id="name">{{ group.name }}</p>
-  <!-- <button
-    id="borrar"
-    class="p6"
-    title="Borrar"
-    (click)="eliminarGrupo(group.id!)"
-  >
-    Borrar
-  </button> -->
-  <span [routerLink]="['/groupdetail', group.id]" class="vm">Ver mas...</span>
-  <button id="editar" class="p7" title="Editar" (click)="isEditing = true">
-    Editar
-  </button>
+  <input
+    class="editar"
+    type="image"
+    src="../../../../assets/img/edit.png"
+    (click)="isEditing = true"
+  />
 </div>
 
+<!-- tarjeta cuando se está editando -->
 <form
   *ngIf="isEditing"
-  class="tarjeta"
+  class="tarjeta tarjeta-edicion"
   (ngSubmit)="editgroup(groupForeditData.id!, groupForeditData, form)"
   #form="ngForm"
 >
@@ -26,20 +26,7 @@
     id="name"
     class="input"
     name="name"
-    [(ngModel)]="groupForeditData.name"
-    placeholder="Nombre del grupo"
+    [(ngModel)]="group.name"
   />
   <button id="guardar" type="submit" [disabled]="form.invalid">Guardar</button>
 </form>
-
-<!-- <div class="tarjeta">
-  <p id="Name">facultad{{ group.Name }}</p>
-
-  <button class="p6" title="Borrar" (click)="eliminarGrupo(group.id!)">
-    Borrar
-  </button>
-  <button class="p7" title="Editar" (click)="editGrupo()">Editar</button>
-</div> -->
-
-<!-- [routerLink]="['/group']" -->
-<!-- [routerLink]="['/groupdetail1']" -->

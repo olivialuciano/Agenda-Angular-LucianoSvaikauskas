@@ -18,6 +18,11 @@
     *ngFor="let contact of contactsData"
     [contact]="contact"
   ></app-contactcard>
+  <img
+    class="cartel-ux"
+    *ngIf="!contactsData || contactsData.length === 0"
+    src="../../../../assets/img/no-contacts.png"
+  />
 </div>
 <!-- </div> -->
 

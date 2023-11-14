@@ -163,13 +163,14 @@ export class EditContactComponent implements OnInit {
 
   async editContactFull(form: NgForm) {
     await this.editcontact(form);
-    this.router.navigate(['/contacts']);
     console.log('ya podría dejar de mostrarme che');
     this.cc.abrirContactEdit = false;
+    this.router.navigate(['/contacts']);
   }
 
   noEditContacto() {
     console.log('contacto editado ya está me desaparezco');
     this.cc.abrirContactEdit = false;
+    this.router.navigate(['/contacts']);
   }
 }

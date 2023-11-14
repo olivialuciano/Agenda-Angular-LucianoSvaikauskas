@@ -37,9 +37,9 @@ export class ContactcardComponent implements OnInit {
     return await contactoo;
   }
 
-  deleteContacto(id: number) {
+  async deleteContacto(id: number) {
     console.log('contacto id: ', id, ' eliminado');
-    this.cc.deleteContacto(id); //ejecuta el metodo deleteContacto() del contact component en el botón
+    await this.cc.deleteContacto(id); //ejecuta el metodo deleteContacto() del contact component en el botón
     this.router.navigate(['/contacts']);
   }
 

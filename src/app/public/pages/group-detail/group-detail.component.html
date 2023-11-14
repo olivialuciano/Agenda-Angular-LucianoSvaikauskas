@@ -1,26 +1,19 @@
-
-<h1>Group detail</h1>
-
-<div class="letras-container">
-    <div class="letras">
-    </div>
-    <div class="title">
-        <div class="nombre"><strong>{{group.name}}</strong></div>
-    </div>
+<div class="nombre">
+  <strong>{{ group.name }}</strong>
+  <input
+    class="eliminar"
+    type="image"
+    src="../../../../assets/img/trash.png"
+    (click)="deleteGroup(group.id!)"
+  />
 </div>
-
 
 <div class="card">
-    <div class="top">
-    <h2>Informacion del grupo</h2>
-    <input class="eliminar" type="image" src="https://cdn-icons-png.flaticon.com/512/1345/1345874.png"
-        (click)="deleteGroup(group.id!)">
-    </div>
-    
-
-<div class="info">
-    <label><strong>Contactos: </strong></label>
-    <div class="for" *ngFor="let contactsData of group.contacts">Nombre: {{contactsData?.name}},</div>
+  <p id="contactos">Contactos:</p>
+  <div class="for" *ngFor="let contactsData of group.contacts">
+    Nombre: {{ contactsData?.name }},
+  </div>
+  <p class="cartel-ux" *ngIf="!group.contacts || group.contacts.length === 0">
+    No tenés contactos en este grupo.
+  </p>
 </div>
-</div>
-

@@ -1,6 +1,8 @@
 <div class="tarjeta">
   <p id="name">{{ contact.name }}</p>
-  <p id="celularNumber">{{ contact.celularNumber }}</p>
+  <p id="celularNumber">tel: {{ contact.telephoneNumber }}</p>
+  <p id="celularNumber">cel: {{ contact.celularNumber }}</p>
+  <p id="description">{{ contact.description }}</p>
 
   <a href="tel:{{ contact.celularNumber }}"
     ><img src="./../../../../assets/img/llamar-agenda.webp" alt="llamar"
@@ -11,24 +13,23 @@
   <a href="https://web.telegram.org/" target="_blank"
     ><img src="./../../../../assets/img/telegram-agenda.png" alt="telegram"
   /></a>
-  <p id="description">{{ contact.description }}</p>
-  <button
-    id="eliminar"
-    class="p6"
-    title="Borrar"
-    (click)="deleteContacto(contact.id!)"
-  >
-    Borrar
-  </button>
-  <button
-    id="editar"
-    class="p7"
-    title="Editar"
-    (click)="editContacto(contact.id!)"
-  >
-    Editar
-  </button>
 
-  <a  id="grupo" [routerLink]="['/selectgroup', contact.id]"><img src="https://cdn-icons-png.flaticon.com/512/47/47768.png"
-    alt="grupo"></a>
+  <input
+    class="edit"
+    type="image"
+    src="../../../../assets/img/edit.png"
+    (click)="editContacto(contact.id!)"
+  />
+  <input
+    class="group"
+    type="image"
+    src="../../../../assets/img/group-icon.png"
+    [routerLink]="['/selectgroup', contact.id]"
+  />
+  <input
+    class="eliminar"
+    type="image"
+    src="../../../../assets/img/trash.png"
+    (click)="deleteContacto(contact.id!)"
+  />
 </div>

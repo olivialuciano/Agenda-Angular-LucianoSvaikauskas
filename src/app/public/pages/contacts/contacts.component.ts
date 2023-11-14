@@ -31,6 +31,7 @@ export class ContactsComponent implements OnInit {
   async deleteContacto(contactoId: number): Promise<void> {
     //se ejecuta desde la contact card
     await this.cs.deleteContact(contactoId);
+    this.router.navigate(['/contacts']);
   }
 
   agregarcontacto() {

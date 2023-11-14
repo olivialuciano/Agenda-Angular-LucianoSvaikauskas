@@ -1,6 +1,5 @@
 <div class="formulario">
-  <h1>Grupos</h1>
-  <p>Selecciona el grupo al cual quieres agregar el contacto</p>
+  <h1>Agregar el contacto a un grupo</h1>
   <form (ngSubmit)="addToGroup(form)" #form="ngForm" id="agregar-form">
     <div class="for">
       <app-group-select
@@ -10,8 +9,8 @@
       ></app-group-select>
     </div>
     <div class="submit">
-      <input class="boton" type="submit" value="Submit" />
-      <input class="boton" [routerLink]="['/contacts']" value="Cancelar" />
+      <input class="boton" type="submit" value="Agregar" />
+      <input class="boton" [routerLink]="['/contacts']" value="Atrás" />
     </div>
   </form>
 </div>
