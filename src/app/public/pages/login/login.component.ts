@@ -12,7 +12,6 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent {
   constructor(private auth: AuthService, private router: Router) {}
 
-  //Hecho usando NgModel
   authData: iAuthRequest = {
     email: '',
     password: '',
@@ -20,7 +19,7 @@ export class LoginComponent {
 
   async login(form: NgForm) {
     console.log(form.value);
-    const token = await this.auth.login(form.value); //ejecutamos el metodo login de auth service con los datos del form
-    if (token) this.router.navigate(['/contacts']); //si recibe el token nos lleva a contactos
+    const token = await this.auth.login(form.value);
+    if (token) this.router.navigate(['/contacts']);
   }
 }

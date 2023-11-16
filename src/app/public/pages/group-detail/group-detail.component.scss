@@ -22,14 +22,14 @@ $col-naranja-claro: #f1d8bc;
   }
 
   .eliminar {
-    width: 20px; // Ajusta según sea necesario
-    height: 20px; // Ajusta según sea necesario
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 0.5rem; // Ajusta según sea necesario
-    margin-right: 4rem; // Ajusta según sea necesario
+    margin-top: 0.5rem;
+    margin-right: 4rem;
   }
 }
 
@@ -48,7 +48,7 @@ $col-naranja-claro: #f1d8bc;
 
   label {
     strong {
-      font-size: 120%; // Ajusta según sea necesario
+      font-size: 120%;
       font-family: $font;
       color: $colorfont1;
     }
@@ -56,9 +56,10 @@ $col-naranja-claro: #f1d8bc;
 
   .cartel-ux,
   .for {
-    font-size: 90%; // Ajusta según sea necesario
+    font-size: 120%;
+    font-weight: bold;
     font-family: $font;
     color: $colorfont1;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
   }
 }

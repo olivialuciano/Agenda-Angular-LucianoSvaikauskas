@@ -33,7 +33,7 @@ export class AuthService {
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(token);
     const sub = decodedToken.sub;
-    console.log(sub); ///busca el id del usuario
+    console.log(sub);
 
     if (!token) return false;
     this.setSession(token);
@@ -51,7 +51,6 @@ export class AuthService {
       body: JSON.stringify(user),
     });
     return await res.json();
-    // console.log(res.json())
   }
 
   isLoggedIn() {
@@ -82,7 +81,6 @@ export class AuthService {
 
     this.loggedIn = true;
     localStorage.setItem('session', JSON.stringify(session));
-    //window.location.reload();
   }
 
   async getMe() {
@@ -100,11 +98,9 @@ export class AuthService {
     localStorage.removeItem('Id');
     this.loggedIn = false;
     this.router.navigate(['/login']);
-    //window.location.reload();
   }
 
   //para poder mostrar los datos del usuario en profile. traemos el id.
-
   getUserId(): number | null {
     const storedUserId = localStorage.getItem('Id');
     return storedUserId ? +storedUserId : null;

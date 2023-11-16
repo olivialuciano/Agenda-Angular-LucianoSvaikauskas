@@ -12,7 +12,6 @@ import { AuthService } from 'src/app/services/auth.service';
 export class SigninComponent {
   constructor(private auth: AuthService, private router: Router) {}
 
-  //Hecho usando NgModel
   registerData: iRegisterRequest = {
     name: '',
     email: '',
@@ -22,7 +21,7 @@ export class SigninComponent {
 
   async registrarme(form: NgForm) {
     console.log(form.value);
-    const user = await this.auth.addUser(form.value); //ejectua addUser del auth service con los valores del form
-    if (user) this.router.navigate(['/login']); //cuando nos registramos nos lleva al inicio de sesion
+    const user = await this.auth.addUser(form.value);
+    if (user) this.router.navigate(['/login']);
   }
 }

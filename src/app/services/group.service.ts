@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BACKEND_URL } from '../constants/backends';
-import { AllGroup, GroupJsonPlaceholder, iGroupandContact } from '../interfaces/group.interface';
+import {
+  AllGroup,
+  GroupJsonPlaceholder,
+  iGroupandContact,
+} from '../interfaces/group.interface';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -14,7 +18,7 @@ export class GroupService {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
-        Authorization: `Bearer ${this.auth.getSession().token!}`, ////******************* */
+        Authorization: `Bearer ${this.auth.getSession().token!}`,
       },
     });
     return await data.json();
@@ -25,56 +29,39 @@ export class GroupService {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
-        Authorization: `Bearer ${this.auth.getSession().token!}`, ////******************* */
+        Authorization: `Bearer ${this.auth.getSession().token!}`,
       },
     });
     return await data.json();
   }
 
-  // async editGroup(id: number, group: GroupJsonPlaceholder) {
-  //   console.log('Enviando edit de grupo a la api');
-  //   const res = await fetch(BACKEND_URL + '/api/Group/' + id + '/update-name', {
-  //     method: 'PUT',
-  //     headers: {
-  //       'Content-type': 'application/json',
-  //       Authorization: `Bearer ${this.auth.getSession().token!}`,
-  //     },
-  //     body: JSON.stringify(group),
-  //   });
-  //   return await res.json();
-  // }
-
   async editGroup(id: number, group: GroupJsonPlaceholder) {
     console.log('Enviando edit de grupo a la api');
-    
+
     try {
-      const res = await fetch(BACKEND_URL + '/api/Group/' + id + '/update-name', {
-        method: 'PUT',
-        headers: {
-          'Content-type': 'application/json',
-          Authorization: `Bearer ${this.auth.getSession().token!}`,
-        },
-        body: JSON.stringify(group.name),
-      });
-  
+      const res = await fetch(
+        BACKEND_URL + '/api/Group/' + id + '/update-name',
+        {
+          method: 'PUT',
+          headers: {
+            'Content-type': 'application/json',
+            Authorization: `Bearer ${this.auth.getSession().token!}`,
+          },
+          body: JSON.stringify(group.name),
+        }
+      );
+
       if (!res.ok) {
-        // Si la respuesta no es exitosa, lanzar un error con el cuerpo de la respuesta
-        const errorResponse = await res.text(); // Cambiado de .json() a .text()
+        const errorResponse = await res.text();
         throw new Error(errorResponse);
       }
-  
-      return await res.text(); // Cambiado de .json() a .text()
+
+      return await res.text();
     } catch (error) {
       console.error('Error al editar el grupo:', error);
-      throw error; // Puedes manejar el error según tus necesidades
+      throw error;
     }
   }
-  
-  
-
-
-  
-  
 
   async addGroup(group: GroupJsonPlaceholder): Promise<GroupJsonPlaceholder> {
     console.log(group);
@@ -89,8 +76,7 @@ export class GroupService {
     return await res.json();
   }
 
-  async AssignContact(
-    grupo: iGroupandContact) {
+  async AssignContact(grupo: iGroupandContact) {
     console.log(grupo);
     const res = await fetch(
       BACKEND_URL + '/api/Group/' + grupo.groupId + '/assign-contact',
@@ -103,7 +89,7 @@ export class GroupService {
         body: JSON.stringify(grupo),
       }
     );
-    console.log(grupo.groupId)
+    console.log(grupo.groupId);
     return await res.json();
   }
 
@@ -120,14 +106,17 @@ export class GroupService {
 
   async addtogroup(grupo: iGroupandContact) {
     console.log('Enviando edit de usuario a la api');
-    const res = await fetch(BACKEND_URL + '/api/Group/' + grupo.groupId + '/assign-contact', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-        'Authorization': `Bearer ${this.auth.getSession().token!}`
-      },
-      body: JSON.stringify(grupo),
-    });
+    const res = await fetch(
+      BACKEND_URL + '/api/Group/' + grupo.groupId + '/assign-contact',
+      {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+          Authorization: `Bearer ${this.auth.getSession().token!}`,
+        },
+        body: JSON.stringify(grupo),
+      }
+    );
     return await res.json();
   }
 }

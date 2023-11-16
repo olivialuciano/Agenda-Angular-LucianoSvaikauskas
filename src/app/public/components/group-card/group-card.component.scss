@@ -9,7 +9,7 @@ $colorfont1: #424242;
 $col-naranja: #f09e42;
 
 .tarjeta {
-  position: relative; // Para posicionar elementos hijos de forma absoluta con respecto a este contenedor
+  position: relative;
   box-shadow: 0 2px 4px 0 #bbad8f;
   width: 28rem;
   height: 3rem;
@@ -17,8 +17,8 @@ $col-naranja: #f09e42;
   background-color: $col-naranja;
   display: flex;
   flex-direction: column;
-  align-items: center; // Para centrar horizontalmente
-  justify-content: center; // Para centrar verticalmente
+  align-items: center;
+  justify-content: center;
   margin-top: 1rem;
 }
 
@@ -34,29 +34,27 @@ $col-naranja: #f09e42;
 }
 
 .vm {
-  align-self: flex-start; // Para posicionar a la izquierda
-  margin-left: 10px; // Ajusta según sea necesario
-  margin-bottom: 10px; // Ajusta según sea necesario
+  align-self: flex-start;
+  margin-left: 10px;
+  margin-bottom: 10px;
   color: $colorfont1;
 }
 
 .editar {
-  position: absolute; // Posicionamiento absoluto con respecto al padre
-  bottom: 10px; // Ajusta según sea necesario
-  right: 10px; // Ajusta según sea necesario
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
   height: 27px;
   width: 27px;
 }
 
-// ... (mantén las variables y estilos anteriores)
-
 .tarjeta-edicion {
   box-shadow: 0 2px 4px 0 #bbad8f;
   width: 28rem;
-  height: auto; // Ajusta según sea necesario
+  height: auto;
   transition: 0.4s;
   background-color: $col-violeta-claro;
-  margin-top: 20px; // Ajusta según sea necesario
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +66,7 @@ $col-naranja: #f09e42;
 
 .input {
   font-size: 90%;
-  margin-bottom: 10px; // Ajusta según sea necesario
+  margin-bottom: 10px;
 }
 
 #guardar {
@@ -76,7 +74,7 @@ $col-naranja: #f09e42;
   border: none;
   color: $colorfont1;
   font-family: $font;
-  margin-top: 10px; // Ajusta según sea necesario
+  margin-top: 10px;
 }
 
 .label {

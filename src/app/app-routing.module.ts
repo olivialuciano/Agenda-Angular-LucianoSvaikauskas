@@ -35,20 +35,6 @@ const routes: Routes = [
         (m) => m.SelectGroupModule
       ),
   },
-  // {
-  //   path: 'contactdetail',
-  //   loadChildren: () =>
-  //     import('./public/pages/contactdetail/contactdetail.module').then(
-  //       (m) => m.ContactdetailModule
-  //     ),
-  // },
-  // {
-  //   path: 'editcontact',
-  //   loadChildren: () =>
-  //     import('./public/pages/editcontact/editcontact.module').then(
-  //       (m) => m.EditcontactModule
-  //     ),
-  // },
 
   {
     path: 'signin',
@@ -82,13 +68,7 @@ const routes: Routes = [
         (m) => m.NewgroupModule
       ),
   },
-  // {
-  //   path: 'editgroup',
-  //   loadChildren: () =>
-  //     import('./public/pages/editgroup/editgroup.module').then(
-  //       (m) => m.EditgroupModule
-  //     ),
-  // },
+
   {
     path: 'profile',
     loadChildren: () =>
@@ -96,13 +76,7 @@ const routes: Routes = [
         (m) => m.ProfileModule
       ),
   },
-  {
-    path: 'editprofile',
-    loadChildren: () =>
-      import('./public/pages/editprofile/editprofile.module').then(
-        (m) => m.EditprofileModule
-      ),
-  },
+
   {
     path: '**',
     loadChildren: () =>

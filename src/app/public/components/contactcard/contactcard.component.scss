@@ -57,24 +57,24 @@ img {
 .edit {
   position: absolute;
   bottom: 1rem;
-  left: 1rem; // Ajustado para estar a la izquierda
-  width: 30px; // Ajusta según sea necesario
-  height: 30px; // Ajusta según sea necesario
+  left: 1rem;
+  width: 30px;
+  height: 30px;
 }
 
 .group {
   position: absolute;
   bottom: 1rem;
-  left: 50%; // Centrado en el medio
+  left: 50%;
   transform: translateX(-50%);
-  width: 30px; // Ajusta según sea necesario
-  height: 30px; // Ajusta según sea necesario
+  width: 30px;
+  height: 30px;
 }
 
 .eliminar {
   position: absolute;
   bottom: 1rem;
-  right: 1rem; // Ajustado para estar a la derecha
-  width: 30px; // Ajusta según sea necesario
-  height: 30px; // Ajusta según sea necesario
+  right: 1rem;
+  width: 30px;
+  height: 30px;
 }

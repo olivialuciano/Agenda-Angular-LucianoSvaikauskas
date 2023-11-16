@@ -9,21 +9,17 @@ import { GroupService } from 'src/app/services/group.service';
   styleUrls: ['./group.component.scss'],
 })
 export class GroupComponent implements OnInit {
-  groupsData: GroupJsonPlaceholder[] = []; //lista con la cual itera el ngfor en el html
+  groupsData: GroupJsonPlaceholder[] = [];
   constructor(private gs: GroupService, private router: Router) {}
-  idGroupForEdit: number = 0; //este dato llega desde la contact card y es utilizado por el edit contact component
-
-  abrirGroupEdit: number = 0; //0 contact card,1 editar contacto
 
   ngOnInit(): void {
     this.getData();
   }
 
   async getData(): Promise<void> {
-    this.groupsData = await this.gs.getGroup(); //rellena ContactData con todos los contactos de una agenda
+    this.groupsData = await this.gs.getGroup();
   }
   async deleteGroup(groupId: number): Promise<void> {
-    //se ejecuta desde la contact card?????????????????????
     await this.gs.deleteGroup(groupId);
   }
 

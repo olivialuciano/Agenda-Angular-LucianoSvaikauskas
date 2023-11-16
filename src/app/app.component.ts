@@ -9,12 +9,4 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'Agenda-Angular-LucianoSvaikauskas';
-  constructor(private router: Router, private authService: AuthService) {}
-
-  estaLogeado() {
-    if (!this.authService.isLoggedIn) {
-      return false;
-    }
-    return true;
-  }
 }

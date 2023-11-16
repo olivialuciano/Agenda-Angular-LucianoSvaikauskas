@@ -15,7 +15,6 @@
     <p id="mal-ingreso" *ngIf="email.touched && email.errors">
       Correo electrónico no válido.
     </p>
-    <!-- for="password" -->
     <label class="label" for="password">Contraseña</label>
     <input
       type="password"
@@ -31,15 +30,6 @@
     <p id="mal-ingreso" *ngIf="password.touched && password.errors">
       Contraseña inválida. Debe tener al menos 6 caracteres.
     </p>
-
-    <!-- <label for="guardar" id="lguardar"
-      ><input
-        type="checkbox"
-        id="guardar"
-        name="mantentersesioniniciada"
-        class="guardar"
-      />Mantener mi sesión iniciada.</label
-    > -->
 
     <button id="Bingresar" type="submit" [disabled]="form.invalid">
       ingresar

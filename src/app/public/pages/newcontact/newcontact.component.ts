@@ -12,8 +12,6 @@ import { GroupService } from 'src/app/services/group.service';
   styleUrls: ['./newcontact.component.scss'],
 })
 export class NewcontactComponent implements OnInit {
-  // groupsData: GroupJsonPlaceholder[] = [];
-
   contactData: ContactJsonPlaceholder = {
     id: 0,
     name: '',
@@ -32,14 +30,12 @@ export class NewcontactComponent implements OnInit {
   ngOnInit(): void {
     this.ar.params.subscribe((params) => {
       const sub: any = params['id'] || null;
-      // this.contactData.agendaId =parseInt(sub)
     });
   }
 
   async newcontact(form: NgForm) {
-    /***************** */
     console.log(form.value);
-    const contactocreado = this.cs.addContact(this.contactData); //ejectua addContact del contact service con los valores del form
+    const contactocreado = this.cs.addContact(this.contactData);
     console.log(
       'el contacto ',
       (await contactocreado).name,
@@ -52,19 +48,6 @@ export class NewcontactComponent implements OnInit {
       ' con descripción: ',
       (await contactocreado).description
     );
-    this.router.navigate(['/contacts']); //cuando iniciamos secion nos lleva a contactos if(await contactocreado)
+    this.router.navigate(['/contacts']);
   }
 }
-
-// ngOnInit(): void {
-//   // this.getData();
-//   this.addContact()
-// }
-
-// // async getData(): Promise<void> {
-// //   this.groupsData = await this.gs.getGroup(); //rellena ContactData con todos los contactos de una agenda
-// // }
-
-// async newContact(): Promise<void>{
-//   this.
-// }

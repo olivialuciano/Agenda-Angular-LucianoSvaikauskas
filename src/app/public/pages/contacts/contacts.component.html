@@ -7,12 +7,8 @@
     <a class="botonera" [routerLink]="['/newcontact']">Nuevo contacto</a>
   </li>
 </ul>
-
-<!-- <input id="buscar" type="text" placeholder="Buscar.." /> -->
-
 <br />
-<!-- <div class="listacontactosflex" id="contacts" *ngIf="abrirContactEdit === 0"> -->
-<!-- <app-contactcard></app-contactcard> -->
+
 <div class="listacontactosflex" id="contacts">
   <app-contactcard
     *ngFor="let contact of contactsData"
@@ -24,8 +20,5 @@
     src="../../../../assets/img/no-contacts.png"
   />
 </div>
-<!-- </div> -->
 
 <app-edit-contact id="editcontact" *ngIf="abrirContactEdit"></app-edit-contact>
-
-<!-- (onButtonEditClick)="editContacto($event)"  ESTO IBA EN APP-CONTACTCARD-->

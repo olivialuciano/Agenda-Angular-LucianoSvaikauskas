@@ -14,50 +14,29 @@ export class GroupCardComponent implements OnInit {
   constructor(private router: Router, private gs: GroupService) {}
 
   @Input() group: GroupJsonPlaceholder = {
-    //recibe los datos del grupo
     id: 0,
     name: '',
   };
   ngOnInit(): void {}
 
-
   isEditing = false;
 
   eliminarGrupo(id: number) {
-    //metodo llamado desde el boton borrar del html(recibe el id del contacto de esa agenda)
     console.log('grupo id: ', id, ' eliminado');
     this.gs.deleteGroup(id);
-    this.router.navigate(['/group']); //ejecuta el metodo deleteContacto() del contact component
+    this.router.navigate(['/group']);
   }
 
-  // async editarGrupo(id: number, group: GroupJsonPlaceholder, form: NgForm) {
-
-  //   this.gs.editGroup(id, group);
-  // }
   async getGrupo(id: number) {
-    //recibe el id de un contacto
-    const grupo = this.gs.getGroupDetails(id); //trae un objeto contacto con todos sus datos
+    const grupo = this.gs.getGroupDetails(id);
     return await grupo;
   }
 
-  async editgroup(id: number, group:any, form: NgForm) {
-    // toma  el id y los datos editados del contacto desde el form
-
+  async editgroup(id: number, group: any, form: NgForm) {
     console.log(form.value);
 
-    const grupoeditado = await this.gs.editGroup(id,group); //ejecuta el metodo editContact del contact service
-    
-    // console.log(
-    //   "el contacto '",
-    //   (await grupoeditado).name,
-    //   "' id:",
-    //   (await grupoeditado).id,
-    //   'fue editado correctamente'
-    // ); //hace un console.log con los valores devueltos
+    const grupoeditado = await this.gs.editGroup(id, group);
+
     this.isEditing = false;
   }
 }
-
-//INTENTO HACER EL EDIT
-
-//hacer una funcion que al apretar el nombre del grupo, vaya a group detail de ESE grupo con un navigate [routerLink]="['/groupdetail1']"

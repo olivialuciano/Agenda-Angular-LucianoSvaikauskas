@@ -1,4 +1,4 @@
-import { ContactJsonPlaceholder } from "./contact.interface";
+import { ContactJsonPlaceholder } from './contact.interface';
 
 export interface AllGroup {
   id: number;
@@ -11,7 +11,7 @@ export interface GroupJsonPlaceholder {
   name: string;
 }
 
-export interface iGroupandContact{
+export interface iGroupandContact {
   groupId: number;
   contactId: number;
 }

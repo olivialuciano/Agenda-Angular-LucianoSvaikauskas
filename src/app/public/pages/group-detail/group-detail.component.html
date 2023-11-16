@@ -10,8 +10,12 @@
 
 <div class="card">
   <p id="contactos">Contactos:</p>
-  <div class="for" *ngFor="let contactsData of group.contacts">
-    Nombre: {{ contactsData?.name }},
+  <div
+    class="for"
+    id="nombrecontacto"
+    *ngFor="let contactsData of group.contacts"
+  >
+    ⦿ {{ contactsData?.name }},
   </div>
   <p class="cartel-ux" *ngIf="!group.contacts || group.contacts.length === 0">
     No tenés contactos en este grupo.
