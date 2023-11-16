@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient, private router:Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   private loggedIn: boolean = false;
 
@@ -103,6 +103,10 @@ export class AuthService {
     //window.location.reload();
   }
 
+  //para poder mostrar los datos del usuario en profile. traemos el id.
 
-
+  getUserId(): number | null {
+    const storedUserId = localStorage.getItem('Id');
+    return storedUserId ? +storedUserId : null;
+  }
 }

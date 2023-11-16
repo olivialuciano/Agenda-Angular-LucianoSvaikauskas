@@ -1,19 +1,32 @@
 <h2 id="editarcontacto">PERFIL</h2>
+<button id="cerrar" title="Cerrar" (click)="cerrarSesion()">
+  Cerrar Sesión
+</button>
 
+<!-- Se muestran los datos del usuario logeado -->
 <div class="tarjeta" *ngIf="!isEditing">
-  <h2 id="name">{{ user.name }} </h2>
+  <h2 id="name">{{ user.name }}</h2>
   <h2 id="lastname">{{ user.lastName }}</h2>
   <p id="email">{{ user.email }}</p>
-  <button id="eliminar" title="Borrar" (click)="deleteUsuario(user.id!)">
+
+  <button id="eliminar" title="Borrar" (click)="showConfirmationDialog = true">
     Eliminar Cuenta
   </button>
   <button id="editar" title="Editar" (click)="isEditing = true">Editar</button>
 </div>
 
+<!-- Cuadro de diálogo de confirmación -->
+<div class="confirmation-dialog" *ngIf="showConfirmationDialog">
+  <p>¿Estás seguro de que querés eliminar tu cuenta?</p>
+  <button (click)="confirmDelete()">Aceptar</button>
+  <button (click)="cancelDelete()">Cancelar</button>
+</div>
+
+<!-- formulario para editar el usuario -->
 <form
   *ngIf="isEditing"
   class="tarjeta"
-  (ngSubmit)="editUsuario(userForEditData.id!, user, form)"
+  (ngSubmit)="editUsuario(form)"
   #form="ngForm"
 >
   <div>
@@ -23,7 +36,7 @@
       id="name"
       class="input"
       name="name"
-      [(ngModel)]="userForEditData.name"
+      [(ngModel)]="user.name"
     />
   </div>
   <div>
@@ -33,25 +46,13 @@
       id="lastname"
       class="input"
       name="lastname"
-      [(ngModel)]="userForEditData.lastname"
+      [(ngModel)]="user.lastName"
     />
   </div>
   <div>
     <label class="label" for="email">Correo electrónico</label>
-    <input
-      name="email"
-      id="email"
-      class="input"
-      [(ngModel)]="userForEditData.email"
-    />
+    <input name="email" id="email" class="input" [(ngModel)]="user.email" />
   </div>
 
-  <button
-    id="Baceptar"
-    type="submit"
-    [disabled]="form.invalid"
-    (click)="isEditing = false"
-  >
-    Aceptar
-  </button>
+  <button id="Baceptar" type="submit" [disabled]="form.invalid">Aceptar</button>
 </form>

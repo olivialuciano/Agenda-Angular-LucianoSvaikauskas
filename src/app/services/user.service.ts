@@ -20,9 +20,8 @@ export class UserService {
     return await data.json();
   }
 
-  async editUser(id: number, user: IUser) {
-    console.log('Enviando edit de usuario a la api');
-    const res = await fetch(BACKEND_URL + '/api/User/' + id, {
+  async editUser(id: number, user: IUser): Promise<any> {
+    const data = await fetch(BACKEND_URL + '/api/User/' + id, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -30,7 +29,7 @@ export class UserService {
       },
       body: JSON.stringify(user),
     });
-    return await res.json();
+    return await data.json();
   }
 
   async deleteUser(id: number): Promise<boolean> {
