@@ -31,18 +31,50 @@ export class GroupService {
     return await data.json();
   }
 
+  // async editGroup(id: number, group: GroupJsonPlaceholder) {
+  //   console.log('Enviando edit de grupo a la api');
+  //   const res = await fetch(BACKEND_URL + '/api/Group/' + id + '/update-name', {
+  //     method: 'PUT',
+  //     headers: {
+  //       'Content-type': 'application/json',
+  //       Authorization: `Bearer ${this.auth.getSession().token!}`,
+  //     },
+  //     body: JSON.stringify(group),
+  //   });
+  //   return await res.json();
+  // }
+
   async editGroup(id: number, group: GroupJsonPlaceholder) {
     console.log('Enviando edit de grupo a la api');
-    const res = await fetch(BACKEND_URL + '/api/Group/' + id + '/update-name', {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: `Bearer ${this.auth.getSession().token!}`,
-      },
-      body: JSON.stringify(group),
-    });
-    return await res.json();
+    
+    try {
+      const res = await fetch(BACKEND_URL + '/api/Group/' + id + '/update-name', {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json',
+          Authorization: `Bearer ${this.auth.getSession().token!}`,
+        },
+        body: JSON.stringify(group.name),
+      });
+  
+      if (!res.ok) {
+        // Si la respuesta no es exitosa, lanzar un error con el cuerpo de la respuesta
+        const errorResponse = await res.text(); // Cambiado de .json() a .text()
+        throw new Error(errorResponse);
+      }
+  
+      return await res.text(); // Cambiado de .json() a .text()
+    } catch (error) {
+      console.error('Error al editar el grupo:', error);
+      throw error; // Puedes manejar el error según tus necesidades
+    }
   }
+  
+  
+
+
+  
+  
 
   async addGroup(group: GroupJsonPlaceholder): Promise<GroupJsonPlaceholder> {
     console.log(group);

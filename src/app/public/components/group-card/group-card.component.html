@@ -17,7 +17,7 @@
 <form
   *ngIf="isEditing"
   class="tarjeta tarjeta-edicion"
-  (ngSubmit)="editgroup(groupForeditData.id!, groupForeditData, form)"
+  (ngSubmit)="editgroup(group.id!, group, form)"
   #form="ngForm"
 >
   <label class="label" for="name">Nombre</label>

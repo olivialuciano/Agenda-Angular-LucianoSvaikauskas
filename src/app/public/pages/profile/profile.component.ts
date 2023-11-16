@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class ProfileComponent implements OnInit {
   constructor(private router: Router, private us: UserService) {}
 
-  user: IUser = {
+   @Input() user: IUser = {
     //recibe los datos del user
     id: 0,
     name: '',
@@ -27,7 +27,8 @@ export class ProfileComponent implements OnInit {
 
   async getUser(id: number) {
     //recibe el id de un contacto
-    const usuarioo = this.us.getUserDetails(id); //trae un objeto contacto con todos sus datos
+    const usuarioo = this.us.getUserDetails(id);
+    console.log("usuario de id: ", id , usuarioo) //trae un objeto contacto con todos sus datos
     return await usuarioo;
   }
 

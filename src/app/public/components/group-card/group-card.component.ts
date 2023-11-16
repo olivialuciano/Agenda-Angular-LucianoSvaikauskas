@@ -20,10 +20,6 @@ export class GroupCardComponent implements OnInit {
   };
   ngOnInit(): void {}
 
-  groupForeditData: GroupJsonPlaceholder = {
-    id: 0,
-    name: '',
-  };
 
   isEditing = false;
 
@@ -44,20 +40,20 @@ export class GroupCardComponent implements OnInit {
     return await grupo;
   }
 
-  async editgroup(id: number, groupForeditData: any, form: NgForm) {
+  async editgroup(id: number, group:any, form: NgForm) {
     // toma  el id y los datos editados del contacto desde el form
 
     console.log(form.value);
 
-    const grupoeditado = await this.gs.editGroup(id,groupForeditData); //ejecuta el metodo editContact del contact service
+    const grupoeditado = await this.gs.editGroup(id,group); //ejecuta el metodo editContact del contact service
     
-    console.log(
-      "el contacto '",
-      (await grupoeditado).name,
-      "' id:",
-      (await grupoeditado).id,
-      'fue editado correctamente'
-    ); //hace un console.log con los valores devueltos
+    // console.log(
+    //   "el contacto '",
+    //   (await grupoeditado).name,
+    //   "' id:",
+    //   (await grupoeditado).id,
+    //   'fue editado correctamente'
+    // ); //hace un console.log con los valores devueltos
     this.isEditing = false;
   }
 }

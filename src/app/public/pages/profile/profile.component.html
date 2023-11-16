@@ -1,7 +1,7 @@
 <h2 id="editarcontacto">PERFIL</h2>
 
 <div class="tarjeta" *ngIf="!isEditing">
-  <h2 id="name">{{ user.name }}</h2>
+  <h2 id="name">{{ user.name }} </h2>
   <h2 id="lastname">{{ user.lastName }}</h2>
   <p id="email">{{ user.email }}</p>
   <button id="eliminar" title="Borrar" (click)="deleteUsuario(user.id!)">
