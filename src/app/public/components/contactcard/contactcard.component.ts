@@ -35,11 +35,18 @@ export class ContactcardComponent implements OnInit {
     return await contactoo;
   }
 
-  async deleteContacto(id: number) {
+  // async deleteContacto(id: number) {
+  //   console.log('contacto id: ', id, ' eliminado');
+  //   await this.cc.deleteContacto(id);
+  //   this.router.navigate(['/contacts']);
+  // }
+  async deleteContacto(id: number): Promise<void> {
     console.log('contacto id: ', id, ' eliminado');
     await this.cc.deleteContacto(id);
-    this.router.navigate(['/contacts']);
+    // No navegues aquí; deja que el componente padre maneje la navegación después de actualizar la lista
   }
+  
+  
 
   editContacto(id: number) {
     console.log('contacto id: ', id, ' edit');

@@ -32,4 +32,5 @@ export class NewgroupComponent implements OnInit {
     const grupocreado = this.gs.addGroup(this.groupData);
     this.router.navigate(['/group']);
   }
+
 }

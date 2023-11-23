@@ -6,10 +6,12 @@ import {
 } from '../interfaces/contact.interface';
 import { AuthService } from './auth.service';
 
+
 @Injectable({
   providedIn: 'root',
 })
 export class ContactService {
+
   constructor(private auth: AuthService) {}
 
   async getContactDetails(id: number): Promise<ContactJsonPlaceholder> {

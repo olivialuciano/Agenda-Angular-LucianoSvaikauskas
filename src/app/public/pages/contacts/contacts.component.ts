@@ -28,10 +28,17 @@ export class ContactsComponent implements OnInit {
   async getData(): Promise<void> {
     this.contactsData = await this.cs.getContacts();
   }
+  
+
   async deleteContacto(contactoId: number): Promise<void> {
     await this.cs.deleteContact(contactoId);
+    // Actualizar la lista después de eliminar
+    this.contactsData = await this.cs.getContacts();
+    // Navegar después de actualizar la lista
     this.router.navigate(['/contacts']);
   }
+  
+  
 
   agregarcontacto() {
     this.router.navigate(['/newcontact']);
