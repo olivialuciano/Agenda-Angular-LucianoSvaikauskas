@@ -13,9 +13,11 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient, private router: Router) {}
-
   private loggedIn: boolean = false;
+
+  constructor(private http: HttpClient, private router: Router) {
+    this.loggedIn = !!localStorage.getItem('session'); //para que quede la sesión guardada
+  }
 
   async login(authentication: iAuthRequest): Promise<boolean> {
     const res = await fetch(BACKEND_URL + '/api/User/authenticate', {

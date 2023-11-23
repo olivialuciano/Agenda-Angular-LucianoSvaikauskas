@@ -11,7 +11,7 @@
       [(ngModel)]="registerData.name"
       [required]="true"
       #name="ngModel"
-      pattern="/^\S.*\S$/"
+      [minlength]="1"
     />
     <p class="error-message" *ngIf="name.touched && name.errors">
       Ingresá tu nombre.
@@ -27,7 +27,7 @@
       [(ngModel)]="registerData.lastname"
       [required]="true"
       #lastname="ngModel"
-      pattern="/^\S.*\S$/"
+      [minlength]="1"
     />
     <p class="error-message" *ngIf="lastname.touched && lastname.errors">
       Ingresá tu apellido.
