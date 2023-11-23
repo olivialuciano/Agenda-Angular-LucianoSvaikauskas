@@ -9,8 +9,13 @@
       name="name"
       placeholder=""
       [(ngModel)]="registerData.name"
+      [required]="true"
       #name="ngModel"
+      pattern="/^\S.*\S$/"
     />
+    <p class="error-message" *ngIf="name.touched && name.errors">
+      Ingresá tu nombre.
+    </p>
 
     <label class="label" for="lastname" autocomplete="lastname">Apellido</label>
     <input
@@ -20,8 +25,13 @@
       name="lastname"
       placeholder=""
       [(ngModel)]="registerData.lastname"
-      #name="ngModel"
+      [required]="true"
+      #lastname="ngModel"
+      pattern="/^\S.*\S$/"
     />
+    <p class="error-message" *ngIf="lastname.touched && lastname.errors">
+      Ingresá tu apellido.
+    </p>
 
     <label class="label" for="email">Correo electrónico</label>
     <input
@@ -31,11 +41,12 @@
       name="email"
       placeholder=""
       [(ngModel)]="registerData.email"
+      [required]="true"
       #email="ngModel"
       pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
       [maxlength]="30"
     />
-    <p id="mal-ingreso" *ngIf="email.touched && email.errors">
+    <p class="error-message" *ngIf="email.touched && email.errors">
       Correo electrónico inválido.
     </p>
 
@@ -51,15 +62,16 @@
       [minlength]="6"
       #password="ngModel"
     />
-    <p id="mal-ingreso" *ngIf="password.touched && password.errors">
-      Contraseña inválida. Debe tener al menos 6 caracteres.
+    <p class="error-message" *ngIf="password.touched && password.errors">
+      Contraseña inválida. <br />
+      Debe tener al menos 6 caracteres.
     </p>
 
     <button id="Bregistrarse" type="submit" [disabled]="form.invalid">
       registrar
     </button>
     <a id="Llogin" [routerLink]="['/login']"
-      >¿Ya tienes una cuenta? Inicia sesión!</a
+      >¿Ya tenés una cuenta? Iniciá sesión!</a
     >
   </form>
 </div>

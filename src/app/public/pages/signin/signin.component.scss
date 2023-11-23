@@ -24,7 +24,8 @@ $colorfont1: #424242;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 9rem;
+  text-align: center;
+  width: 13rem;
 }
 
 .input {
@@ -33,16 +34,16 @@ $colorfont1: #424242;
   margin-bottom: 1rem;
   display: block;
   width: 13rem;
-  background: $col-violeta-claro;
+  background: #f4edd7;
+  border: #feb4b4;
   padding: 10px 12px;
-  border-radius: 1px;
-  border: solid 1px;
-  border-color: transparent;
+  border-radius: 5px;
+  border: solid 2px;
+  border-color: $col-violeta;
   transition: 0.2s;
 }
 .input:hover {
   background-color: #faf4e9;
-  border-color: #ea777b;
 }
 .input:focus {
   background-color: #faf4e9;
@@ -61,7 +62,7 @@ $colorfont1: #424242;
 #Bregistrarse {
   border: none;
   background-color: $col-violeta;
-  border-radius: 1px;
+  border-radius: 3px;
   font-family: $font;
   font-size: 100%;
   color: $colorfont2;
@@ -69,9 +70,9 @@ $colorfont1: #424242;
   margin-right: auto;
   display: block;
   width: 14.6rem;
+  margin-top: 2rem;
   height: 1.7rem;
   margin-bottom: 1%;
-  margin-top: 1rem;
 }
 
 #Bregistrarse:hover {
@@ -79,7 +80,7 @@ $colorfont1: #424242;
 }
 
 #Llogin {
-  color: #94919a;
+  color: $colorfont1;
   font-weight: 100%;
   font-size: 70%;
   width: 13rem;
@@ -87,4 +88,11 @@ $colorfont1: #424242;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.error-message {
+  font-family: $font;
+  font-size: 70%;
+  color: rgb(156, 56, 56);
+  text-align: center;
 }
