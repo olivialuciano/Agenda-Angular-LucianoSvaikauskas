@@ -21,6 +21,8 @@ export class GroupComponent implements OnInit {
   }
   async deleteGroup(groupId: number): Promise<void> {
     await this.gs.deleteGroup(groupId);
+    // this.groupsData = await this.gs.getGroup();
+    // this.router.navigate(['/group']);
   }
 
   agregargroup() {
