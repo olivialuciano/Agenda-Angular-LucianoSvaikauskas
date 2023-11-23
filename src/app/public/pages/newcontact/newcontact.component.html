@@ -11,6 +11,20 @@
         [(ngModel)]="contactData.name"
         #name="ngModel"
         [maxlength]="15"
+        required
+      />
+    </div>
+    <div>
+      <label class="label" for="celularNumber">Celuar</label>
+      <input
+        type="text"
+        id="celularNumber"
+        class="input"
+        name="celularNumber"
+        [(ngModel)]="contactData.celularNumber"
+        #celularNumber="ngModel"
+        [maxlength]="15"
+        required
       />
     </div>
     <div>
@@ -26,18 +40,6 @@
       />
     </div>
     <div>
-      <label class="label" for="celularNumber">Celuar</label>
-      <input
-        type="text"
-        id="celularNumber"
-        class="input"
-        name="celularNumber"
-        [(ngModel)]="contactData.celularNumber"
-        #celularNumber="ngModel"
-        [maxlength]="15"
-      />
-    </div>
-    <div>
       <label class="label" for="description">Descripción</label>
       <textarea
         name="description"
@@ -47,6 +49,7 @@
         #description="ngModel"
         cols="30"
         rows="3"
+        required
       ></textarea>
     </div>
     <button id="Bguardar" type="submit" [disabled]="form.invalid">

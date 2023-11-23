@@ -1,7 +1,9 @@
 <div class="tarjeta">
   <p id="name">{{ contact.name }}</p>
-  <p id="celularNumber">tel: {{ contact.telephoneNumber }}</p>
   <p id="celularNumber">cel: {{ contact.celularNumber }}</p>
+  <p id="celularNumber" *ngIf="contact.telephoneNumber">
+    tel: {{ contact.telephoneNumber }}
+  </p>
   <p id="description">{{ contact.description }}</p>
 
   <a href="tel:{{ contact.celularNumber }}"

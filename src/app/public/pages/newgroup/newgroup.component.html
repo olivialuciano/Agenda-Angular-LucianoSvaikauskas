@@ -12,6 +12,7 @@
         [(ngModel)]="groupData.name"
         #name="ngModel"
         [maxlength]="15"
+        required
       />
       <button id="Bguardar" type="submit" [disabled]="form.invalid">
         Guardar
