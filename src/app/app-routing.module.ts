@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,11 +14,17 @@ const routes: Routes = [
       import('./public/pages/login/login.module').then((m) => m.LoginModule),
   },
   {
+    path: 'signin',
+    loadChildren: () =>
+      import('./public/pages/signin/signin.module').then((m) => m.SigninModule),
+  },
+  {
     path: 'contacts',
     loadChildren: () =>
       import('./public/pages/contacts/contacts.module').then(
         (m) => m.ContactsModule
       ),
+    canActivate: [AuthGuard],
   },
 
   {
@@ -26,6 +33,7 @@ const routes: Routes = [
       import('./public/pages/group-detail/group-detail.module').then(
         (m) => m.GroupDetailModule
       ),
+    canActivate: [AuthGuard],
   },
 
   {
@@ -34,12 +42,7 @@ const routes: Routes = [
       import('./public/pages/select-group/select-group.module').then(
         (m) => m.SelectGroupModule
       ),
-  },
-
-  {
-    path: 'signin',
-    loadChildren: () =>
-      import('./public/pages/signin/signin.module').then((m) => m.SigninModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'newcontact',
@@ -47,6 +50,7 @@ const routes: Routes = [
       import('./public/pages/newcontact/newcontact.module').then(
         (m) => m.NewcontactModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'alumnas',
@@ -59,6 +63,7 @@ const routes: Routes = [
     path: 'group',
     loadChildren: () =>
       import('./public/pages/group/group.module').then((m) => m.GroupModule),
+    canActivate: [AuthGuard],
   },
 
   {
@@ -67,6 +72,7 @@ const routes: Routes = [
       import('./public/pages/newgroup/newgroup.module').then(
         (m) => m.NewgroupModule
       ),
+    canActivate: [AuthGuard],
   },
 
   {
@@ -75,6 +81,7 @@ const routes: Routes = [
       import('./public/pages/profile/profile.module').then(
         (m) => m.ProfileModule
       ),
+    canActivate: [AuthGuard],
   },
 
   {
