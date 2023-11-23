@@ -63,7 +63,7 @@ export class GroupService {
     }
   }
 
-  async addGroup(group: GroupJsonPlaceholder): Promise<GroupJsonPlaceholder> {
+  async addGroup(group: GroupJsonPlaceholder): Promise<boolean> {
     console.log(group);
     const res = await fetch(BACKEND_URL + '/api/Group', {
       method: 'POST',
@@ -73,7 +73,7 @@ export class GroupService {
       },
       body: JSON.stringify(group),
     });
-    return await res.json();
+    return await true;
   }
 
   async AssignContact(grupo: iGroupandContact) {
