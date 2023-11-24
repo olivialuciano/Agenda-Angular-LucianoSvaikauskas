@@ -5,9 +5,9 @@
 
 <!-- Se muestran los datos del usuario logeado -->
 <div class="tarjeta" *ngIf="!isEditing">
-  <h2 id="name">{{ user.name }}</h2>
-  <h2 id="lastname">{{ user.lastName }}</h2>
-  <p id="email">{{ user.email }}</p>
+  <h2 class="name" id="name">{{ user.name }}</h2>
+  <h2 class="lastname" id="lastname">{{ user.lastName }}</h2>
+  <p class="email" id="email">{{ user.email }}</p>
 
   <button id="eliminar" title="Borrar" (click)="showConfirmationDialog = true">
     Eliminar Cuenta
@@ -25,34 +25,31 @@
 <!-- formulario para editar el usuario -->
 <form
   *ngIf="isEditing"
-  class="tarjeta"
+  class="tarjetae"
   (ngSubmit)="editUsuario(form)"
   #form="ngForm"
 >
   <div>
-    <label class="label" for="name">Nombre</label>
     <input
       type="text"
       id="name"
-      class="input"
+      class="inpute"
       name="name"
       [(ngModel)]="user.name"
     />
   </div>
   <div>
-    <label class="label" for="lastname">Apellido </label>
     <input
       type="text"
       id="lastname"
-      class="input"
+      class="inpute"
       name="lastname"
       [(ngModel)]="user.lastName"
     />
   </div>
   <div>
-    <label class="label" for="email">Correo electrónico</label>
-    <input name="email" id="email" class="input" [(ngModel)]="user.email" />
+    <input name="email" id="email" class="inpute" [(ngModel)]="user.email" />
   </div>
 
-  <button id="Baceptar" type="submit" [disabled]="form.invalid">Aceptar</button>
+  <button id="Baceptar" type="submit" [disabled]="form.invalid">Guardar</button>
 </form>

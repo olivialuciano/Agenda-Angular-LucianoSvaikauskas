@@ -15,7 +15,7 @@
       />
     </div>
     <div>
-      <label class="label" for="celularNumber">Celuar</label>
+      <label class="label" for="celularNumber">Celular</label>
       <input
         type="text"
         id="celularNumber"
@@ -51,6 +51,11 @@
         rows="3"
         required
       ></textarea>
+    </div>
+    <div>
+      <button id="atras" type="submit" [routerLink]="['/contacts']">
+        Atrás
+      </button>
     </div>
     <button id="Bguardar" type="submit" [disabled]="form.invalid">
       Guardar
