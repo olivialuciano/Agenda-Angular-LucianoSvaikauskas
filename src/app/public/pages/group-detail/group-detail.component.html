@@ -1,23 +1,35 @@
-<div class="nombre">
-  <strong>{{ group.name }}</strong>
+<div id="todo">
   <input
-    class="eliminar"
+    class="atras"
     type="image"
-    src="../../../../assets/img/trash.png"
-    (click)="deleteGroup(group.id!)"
+    src="../../../../assets/img/atras.png"
+    alt="atras"
+    [routerLink]="['/group']"
   />
-</div>
 
-<div class="card">
-  <p id="contactos">Contactos:</p>
-  <div
-    class="for"
-    id="nombrecontacto"
-    *ngFor="let contactsData of group.contacts"
-  >
-    ⦿ {{ contactsData?.name }},
+  <div class="nombre">
+    <strong>{{ group.name }}</strong>
+
+    <input
+      class="eliminar"
+      type="image"
+      src="../../../../assets/img/trash.png"
+      (click)="deleteGroup(group.id!)"
+    />
   </div>
-  <p class="cartel-ux" *ngIf="!group.contacts || group.contacts.length === 0">
-    No tenés contactos en este grupo.
-  </p>
+
+  <div class="card">
+    <!-- <p id="contactos">Contactos:</p> -->
+    <div
+      class="tarjeta"
+      id="nombrecontacto"
+      *ngFor="let contactsData of group.contacts"
+    >
+      ❀ {{ contactsData?.name }},
+    </div>
+
+    <p class="cartel-ux" *ngIf="!group.contacts || group.contacts.length === 0">
+      No tenés contactos en este grupo.
+    </p>
+  </div>
 </div>

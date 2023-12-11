@@ -1,9 +1,24 @@
-.container{
-    display:flex;
-    justify-content: center;
-    font-size: 17px;
-    border:none;
+// VARIABLES
+$font: "Merriweather", serif;
+$colorfont2: #f4edd7;
+$col-rosa: #feb4b4;
+$col-rosa-claro: #fbe4e4;
+$col-violeta: #b4bbef;
+$col-violeta-claro: #e9ebf9;
+$colorfont1: #424242;
+$col-naranja: #f09e42;
+
+.container {
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  border: none;
 }
-fieldset{
-    border:none;
+fieldset {
+  border: none;
+}
+label {
+  font-family: $font;
+  font-size: 100%;
+  color: $colorfont1;
 }

@@ -14,7 +14,6 @@
               name="name"
               id="name"
               autocomplete="name"
-              placeholder="Ingrese el nombre"
               [(ngModel)]="contactForeditData.name"
               #name="ngModel"
               [maxlength]="15"
@@ -27,7 +26,6 @@
               name="celularNumber"
               id="celularNumber"
               autocomplete="celularNumber"
-              placeholder="Ingrese el celular"
               [(ngModel)]="contactForeditData.celularNumber"
               #celularNumber="ngModel"
               [maxlength]="15"
@@ -40,7 +38,6 @@
               type="text"
               name="telephoneNumber"
               id="telephoneNumber"
-              placeholder="Ingrese el telefono"
               [(ngModel)]="contactForeditData.telephoneNumber"
               #telephoneNumber="ngModel"
               [maxlength]="15"
@@ -53,7 +50,6 @@
               type="text"
               name="description"
               id="description"
-              placeholder="Ingrese la descripción"
               [(ngModel)]="contactForeditData.description"
               #description="ngModel"
               cols="30"
@@ -61,11 +57,15 @@
             ></textarea>
           </div>
           <div>
-            <button type="submit" (click)="noEditContacto()">Atrás</button>
+            <button id="atras" type="submit" (click)="noEditContacto()">
+              Atrás
+            </button>
           </div>
 
           <div>
-            <button type="submit" [disabled]="form.invalid">Cargar</button>
+            <button id="cargar" type="submit" [disabled]="form.invalid">
+              Cargar
+            </button>
           </div>
         </form>
       </div>
