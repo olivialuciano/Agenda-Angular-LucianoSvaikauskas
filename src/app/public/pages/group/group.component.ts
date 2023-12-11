@@ -19,11 +19,12 @@ export class GroupComponent implements OnInit {
   async getData(): Promise<void> {
     this.groupsData = await this.gs.getGroup();
   }
-  async deleteGroup(groupId: number): Promise<void> {
-    await this.gs.deleteGroup(groupId);
-    // this.groupsData = await this.gs.getGroup();
-    // this.router.navigate(['/group']);
-  }
+  
+  // async deleteGroup(groupId: number): Promise<void> {
+  //   await this.gs.deleteGroup(groupId);
+  //   this.groupsData = await this.gs.getGroup();
+  //   this.router.navigate(['/group']);
+  // }
 
   agregargroup() {
     this.router.navigate(['/newgroup']);

@@ -28,9 +28,9 @@ export class NewcontactComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.ar.params.subscribe((params) => {
-      const sub: any = params['id'] || null;
-    });
+    // this.ar.params.subscribe((params) => {
+    //   const sub: any = params['id'] || null;
+    // });
   }
 
   async newcontact(form: NgForm) {
