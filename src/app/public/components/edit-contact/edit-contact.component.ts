@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -25,10 +24,10 @@ export class EditContactComponent implements OnInit {
     private cs: ContactService,
     private router: Router,
     private cc: ContactsComponent,
-    private dss: DataSharingService,
+    private dss: DataSharingService
   ) {}
   idContactoForEdit: number = 0; //toma el valor de idContactoForEdit del contact component
-  
+
   ngOnInit(): void {
     this.dss.idContactoParaEditar$.subscribe((id) => {
       this.idContactoForEdit = id;
@@ -56,41 +55,29 @@ export class EditContactComponent implements OnInit {
     this.router.navigate(['/contacts']);
   }
 
-  // async editcontact(form: NgForm) {
-  //   console.log(form.value);
-  //   const contactoeditado = this.cs.editContact(
-  //     this.idContactoForEdit,
-  //     this.contactForeditData
-  //   );
-  //   console.log(
-  //     "El contacto '",
-  //     (await contactoeditado).name,
-  //     "' id:",
-  //     (await contactoeditado).id,
-  //     'fue editado correctamente'
-  //   );
-  //   this.router.navigate(['/contacts']);
-  // }
-
   async editcontact(form: NgForm) {
     console.log(form.value);
-    const contactoeditado = await this.cs.editContact(this.idContactoForEdit, this.contactForeditData);
-  
+    const contactoeditado = await this.cs.editContact(
+      this.idContactoForEdit,
+      this.contactForeditData
+    );
     if (contactoeditado) {
-      console.log(`El contacto '${contactoeditado.name}' id: ${contactoeditado.id} fue editado correctamente`);
+      console.log(
+        `El contacto '${contactoeditado.name}' id: ${contactoeditado.id} fue editado correctamente`
+      );
     } else {
       console.error('Error al editar el contacto');
     }
-  
+
+    this.dss.emitContactoEditado();
+
     this.router.navigate(['/contacts']);
   }
-  
 
   async editContactFull(form: NgForm) {
     await this.editcontact(form);
     console.log('ya podría dejar de mostrarme che');
     this.cc.abrirContactEdit = false;
-    // this.router.navigate(['/contacts']);
   }
 
   noEditContacto() {
