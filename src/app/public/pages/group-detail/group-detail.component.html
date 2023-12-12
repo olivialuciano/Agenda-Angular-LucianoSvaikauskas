@@ -1,4 +1,4 @@
-<div id="todo">
+<div id="todo" *ngIf="groupFound && group.name">
   <input
     class="atras"
     type="image"
@@ -32,3 +32,10 @@
     </p>
   </div>
 </div>
+
+<img
+  class="cartel-ux"
+  *ngIf="!groupFound || !group.name"
+  src="../../../../assets/img/no-grupo.png"
+  alt="no se ha encontrado el grupo"
+/>

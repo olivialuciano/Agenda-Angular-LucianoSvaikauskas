@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AllGroup } from 'src/app/interfaces/group.interface';
+import {
+  AllGroup,
+  GroupJsonPlaceholder,
+} from 'src/app/interfaces/group.interface';
 import { GroupService } from 'src/app/services/group.service';
 
 @Component({
@@ -9,6 +12,8 @@ import { GroupService } from 'src/app/services/group.service';
   styleUrls: ['./group-detail.component.scss'],
 })
 export class GroupDetailComponent implements OnInit {
+  groupsData: GroupJsonPlaceholder[] = [];
+
   constructor(
     private gs: GroupService,
     private router: Router,
@@ -21,17 +26,33 @@ export class GroupDetailComponent implements OnInit {
     contacts: [],
   };
   id: number | undefined;
+  groupFound: boolean = true;
 
   ngOnInit(): void {
+    this.getData();
     this.route.params.subscribe((params) => {
       console.log(params);
       this.id = params['id'];
-      this.getGroupDetails(this.id!);
+      this.checkAndLoadGroupDetails(this.id!);
     });
   }
 
-  getGroupDetails(id: number) {
-    this.gs.getGroupDetails(id).then((r) => (this.group = r));
+  async getData(): Promise<void> {
+    this.groupsData = await this.gs.getGroup();
+  }
+
+  async checkAndLoadGroupDetails(id: number) {
+    const groupDetails = await this.gs.getGroupDetails(id);
+
+    // Verificar si el grupo con el ID pertenece a la lista de grupos del usuario
+    const isGroupInList = this.groupsData.some((group) => group.id == id);
+
+    if (isGroupInList) {
+      this.group = groupDetails;
+    } else {
+      console.log('El grupo no se encontró');
+      this.groupFound = false;
+    }
   }
 
   async deleteGroup(id: number) {
