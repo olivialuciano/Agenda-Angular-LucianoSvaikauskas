@@ -38,8 +38,8 @@ export class SelectGroupComponent implements OnInit {
   async addToGroup(form:NgForm){
     console.log(form.value) 
     console.log(this.union);
-    const contactcreado = await this.gs.AssignContact(this.union);
-    if (contactcreado) this.router.navigate(['/contacts']);
+    const contactoAsignado = await this.gs.AssignContact(this.union);
+    if (contactoAsignado) this.router.navigate(['/contacts']);
     }
   }
 

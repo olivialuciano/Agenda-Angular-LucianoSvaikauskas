@@ -22,9 +22,9 @@ export class NewgroupComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.ar.params.subscribe((params) => {
-      const sub: any = params['id'] || null;
-    });
+    // this.ar.params.subscribe((params) => {
+    //   const sub: any = params['id'] || null;
+    // });
   }
 
   async newgroup(form: NgForm) {

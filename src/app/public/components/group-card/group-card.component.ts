@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-
 import { GroupJsonPlaceholder } from 'src/app/interfaces/group.interface';
 import { Router } from '@angular/router';
 import { GroupService } from 'src/app/services/group.service';

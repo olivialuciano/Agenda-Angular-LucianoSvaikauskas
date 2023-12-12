@@ -36,9 +36,35 @@ export class ContactService {
     return await data.json();
   }
 
+  // async editContact(id: number, contact: ContactJsonPlaceholder) {
+  //   try {
+  //     console.log('Enviando edit de usuario a la api');
+  //     const res = await fetch(BACKEND_URL + '/api/Contact/' + id, {
+  //       method: 'PUT',
+  //       headers: {
+  //         'Content-type': 'application/json',
+  //         Authorization: `Bearer ${this.auth.getSession().token!}`,
+  //       },
+  //       body: JSON.stringify(contact),
+  //     });
+
+  //     if (res.ok) {
+  //       return await res.json();
+  //     } else {
+  //       console.error(
+  //         'La solicitud PUT no fue exitosa:',
+  //         res.status,
+  //         res.statusText
+  //       );
+  //     }
+  //   } catch (error) {
+  //     console.error('Error en la solicitud PUT:', error);
+  //   }
+  // }
+
   async editContact(id: number, contact: ContactJsonPlaceholder) {
     try {
-      console.log('Enviando edit de usuario a la api');
+      console.log('Enviando edit de usuario a la API');
       const res = await fetch(BACKEND_URL + '/api/Contact/' + id, {
         method: 'PUT',
         headers: {
@@ -47,20 +73,28 @@ export class ContactService {
         },
         body: JSON.stringify(contact),
       });
-
+  
       if (res.ok) {
-        return await res.json();
+        try {
+          return await res.json();
+        } catch (jsonError) {
+          console.error('Error al analizar la respuesta JSON:', jsonError);
+          return null; // Puedes ajustar esto según tus necesidades
+        }
       } else {
         console.error(
           'La solicitud PUT no fue exitosa:',
           res.status,
           res.statusText
         );
+        return null; // Puedes ajustar esto según tus necesidades
       }
     } catch (error) {
       console.error('Error en la solicitud PUT:', error);
+      return null; // Puedes ajustar esto según tus necesidades
     }
   }
+  
 
   async addContact(
     contact: ContactJsonPlaceholder

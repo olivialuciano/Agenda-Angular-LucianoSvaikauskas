@@ -47,5 +47,6 @@ export class ContactsComponent implements OnInit {
   editContacto(id: number) {
     console.log('contacto id: ', id, ' editjajajajjajajajajja');
     this.abrirContactEdit = true;
+
   }
 }

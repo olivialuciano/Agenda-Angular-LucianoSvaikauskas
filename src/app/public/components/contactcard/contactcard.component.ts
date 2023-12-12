@@ -15,7 +15,7 @@ export class ContactcardComponent implements OnInit {
     private router: Router,
     private cs: ContactService,
     private route: ActivatedRoute,
-    private dss: DataSharingService
+    private dss: DataSharingService,
   ) {}
 
   @Input() contact: ContactJsonPlaceholder = {

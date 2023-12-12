@@ -12,6 +12,5 @@ import { AuthGuard } from 'src/app/services/auth.guard';
   declarations: [ContactsComponent, ContactcardComponent, EditContactComponent],
   exports: [ContactcardComponent],
   imports: [CommonModule, ContactsRoutingModule, FormsModule],
-  // providers: [AuthGuard],
 })
 export class ContactsModule {}
